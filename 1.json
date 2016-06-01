@@ -1,0 +1,11 @@
+{
+  "lastname": "Melchor",
+  "firstname": "Jérémy",
+  "weather": {
+    "degree": "c",
+    "location": "Marseille"
+  },
+  "time": {
+    "is24Hours": true
+  }
+}
