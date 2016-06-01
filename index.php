@@ -20,5 +20,10 @@
 
 <div id="weather"></div>
 
+
+<?php
+    echo "YCDGFGUILHOMJP";
+?>
+
 </body>
 </html>
