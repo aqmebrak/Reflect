@@ -1,3 +1,8 @@
+$(document).ready(function() {
+    initWeather();
+});
+
+
 function initWeather() {
     $.simpleWeather({
         location: "Valbonne",
