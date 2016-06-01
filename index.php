@@ -18,12 +18,7 @@
 </head>
 <body>
 
-<div id="weather"></div>
-
-
-<?php
-    echo "YCDGFGUILHOMJP";
-?>
+<?php include 'widgets/weather.php';?>
 
 </body>
 </html>

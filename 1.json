@@ -2,7 +2,8 @@
   "lastname": "Melchor",
   "firstname": "Jérémy",
   "weather": {
-    "degree": "c"
+    "degree": "c",
+    "location": "Marseille"
   },
   "time": {
     "is24Hours": true
