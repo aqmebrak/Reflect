@@ -1,3 +1,8 @@
+<?php
+session_start();
+$_SESSION['uid']=$_POST['uid'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
