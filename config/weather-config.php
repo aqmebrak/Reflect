@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,14 +18,14 @@
     <li class="active"><a href="weather-config.php">Weather</a></li>
     <li><a href="clock-config.php">Clock</a></li>
     <li><a href="contact.asp">Contact</a></li>
-    <li><a href="about.asp">About</a></li>
+    <li><a href="../mirror.php">Mirror</a></li>
 </ul>
 
 <div id="content">
     <div id="weather">
 
         <form role="form" method="post" action="weather-config.php">
-
+            <label><?php echo $_SESSION['uid'] ?></label>
             <div class="radio-inline">
                 <label><input value="c" type="radio" name="temp-config">Celsius</label>
             </div>
@@ -39,7 +42,7 @@
         </form>
 
         <?php
-        $jsonString = file_get_contents('../database/1.json');
+        $jsonString = file_get_contents('../database/'.$_SESSION['uid'].'.json');
         $data = json_decode($jsonString, true);
 
         if (!EMPTY($_POST['temp-config'])) {
@@ -49,7 +52,7 @@
             $data['weather']['location'] = $_POST['city'];
         }
         $newJsonString = json_encode($data);
-        file_put_contents('../database/1.json', $newJsonString);
+        file_put_contents('../database/'.$_SESSION['uid'].'.json', $newJsonString);
         ?>
     </div>
 </div>

@@ -2,13 +2,13 @@
   "user": [
     {
       "id": 1,
-      "lastname": "El Koubi",
-      "firstname": "Ugo"
+      "lastname": "Melchor",
+      "firstname": "Jérémy"
     },
     {
       "id": 2,
-      "lastname": "Melchor",
-      "firstname": "Jérémy"
+      "lastname": "El Koubi",
+      "firstname": "Ugo"
     }
   ]
 }

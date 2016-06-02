@@ -1,6 +1,7 @@
 <?php
 session_start();
-$_SESSION['uid']=$_POST['uid'];
+if(!isset($_SESSION['uid']))    
+    $_SESSION['uid']=$_POST['uid'];
 ?>
 
 <!DOCTYPE html>

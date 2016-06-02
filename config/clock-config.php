@@ -25,7 +25,6 @@ session_start();
     <div id="clock">
 
         <form role="form" method="post" action="clock-config.php">
-            <?php echo $_SESSION['uid'] ?>
             <label>Timezone</label>
             <select class="form-control">
                 <option>-4</option>

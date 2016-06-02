@@ -1,7 +1,7 @@
-<div id="weather" class="draggable grabbable widget"></div>
+<div id="weather" class="draggable grabbable widget" style="left:300px;"></div>
 
 <?php
-    $jsonString = file_get_contents('database/'.$_POST['uid'].'.json');
+    $jsonString = file_get_contents('database/'.$_SESSION['uid'].'.json');
     $data = json_decode($jsonString, true);
 
     $city = $data['weather']['location'];

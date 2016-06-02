@@ -2,7 +2,7 @@
 
 </div>
 <?php
-$jsonString = file_get_contents('database/' . $_POST['uid'] . '.json');
+$jsonString = file_get_contents('database/'.$_SESSION['uid'].'.json');
 $data = json_decode($jsonString, true);
 
 ?>
