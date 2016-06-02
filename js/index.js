@@ -1,10 +1,3 @@
-$(document).ready(function() {
-    initWeather();
-    var $draggable = $('.draggable').draggabilly({
-        // options...
-    })
-})
-
 function printUsers(){
     $.getJSON("database/users.json", function(json) {
         var s = "";

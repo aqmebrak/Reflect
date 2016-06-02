@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <title>Weather layer</title>
-    <script src="js/jquery-2.2.4.min.js"></script>
-    <script src="js/jquery.simpleWeather.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/draggable.min.js"></script>
     <script src="js/index.js"></script>
@@ -16,6 +17,12 @@
                 localStorage.removeItem("reload");
             }
         }, 5000);
+       window.onload = function() {
+            initWeather();
+            var $draggable = $('.draggable').draggabilly({
+                // options...
+            })
+        };
     </script>
     <link rel="stylesheet" type="text/css" href="css/meteo.css">
 
