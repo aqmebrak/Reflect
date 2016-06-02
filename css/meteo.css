@@ -73,7 +73,7 @@ section {
     box-sizing: border-box;
     padding: 10px 40px;
     float: left;
-    position: relative;
+    /*position: relative;*/
     background-color: black;
     border-radius: 7px;
     border: medium solid white;
