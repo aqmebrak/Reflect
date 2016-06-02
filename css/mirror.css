@@ -1,0 +1,7 @@
+html{
+	cursor: url(../images/cursor.cur), pointer; 	
+}
+
+.grabbable:active:hover {
+	cursor: url(../images/grab.cur), pointer; 
+}

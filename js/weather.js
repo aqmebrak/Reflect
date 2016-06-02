@@ -1,8 +1,8 @@
-function initWeather(city, temp) {
+function initWeather(city, degree) {
     $.simpleWeather({
-        location: "Valbonne",
+        location: city,
         woeid: '',
-        unit: 'c',
+        unit: degree,
         success: function (weather) {
             var html = '';
             html += '<div class="wrapper"><section>';
@@ -23,8 +23,9 @@ function initWeather(city, temp) {
         error: function (error) {
             $("#weather").html('<p>' + error + '</p>');
         }
-    });
-}
+    }
+}   
+
 
 function getCondition(code) {
     if (code == 32)
