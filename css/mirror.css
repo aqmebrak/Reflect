@@ -15,7 +15,7 @@ html{
 	
 }
 
-#weather {
+.widget {
 	position:absolute;
 }
 
@@ -34,13 +34,18 @@ ul {
 }
 
 ul li {
-	/*width: 200;*/
+	border-radius: 7px;
+    border: medium solid white;
 	display: block;
-    color: white;
+    background-color:black;
     padding: 20% 0 20% 0;
     text-decoration: none;
 	text-align: center;
-	
+	color:white;
+	padding-top: 10%;
+	padding-bottom:10%;
+	height:100px;
+	/*width:200px;*/
 }
 
 
@@ -53,3 +58,31 @@ ul li:hover {
 .active {
     background-color: #8C4646;
 }
+
+#rightPanel ul li div {
+	padding-top:0px;
+	margin-left:29%;
+	width:100px;
+	height:100px;
+}
+
+#maquillageIcon {
+	background-image:url(../images/maquillage.png);
+	background-repeat:no-repeat;
+	background-position:center center;
+	background-size: 100% 100%;
+	
+}
+
+#rightPanel a {
+	margin-top:10%;
+	display:block;
+}
+
+#rightPanel ul li div a {
+	margin-top:0;
+}
+
+
+
+

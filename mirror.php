@@ -39,7 +39,7 @@
 </div>
 <div id="rightPanel">
 	<ul>
-		<li><a >Maquillage</a></li>
+		<li><div id="maquillageIcon"><a ></a><div></li>
 		<li><a >Lorem</a></li>
 		<li><a >Ipsum</a></li>
 		<li><a >Sin</a></li>
