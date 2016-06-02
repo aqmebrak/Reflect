@@ -39,10 +39,10 @@
 </div>
 <div id="rightPanel">
 	<ul>
-		<li><div id="maquillageIcon"><a ></a><div></li>
+		<a><li><div id="maquillageIcon" class="widgetIcon" ><div></li></a>
 		<li><a >Lorem</a></li>
 		<li><a >Ipsum</a></li>
-		<li><a >Sin</a></li>
+		<a href="config/weather-config.php"><li><div id="ecrouIcon" class="widgetIcon"><div></li></a>
 	</ul>
 </div>
 
