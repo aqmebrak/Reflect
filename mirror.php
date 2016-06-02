@@ -23,6 +23,9 @@ if(!isset($_SESSION['uid']))
             type="text/javascript"></script>
     <link rel="stylesheet" href="css/jClocksGMT.css">
     <link rel="stylesheet" type="text/css" href="css/weather.css">
+    <script src="js/draggable.min.js"></script>
+    <script src="js/video.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/meteo.css">
 
     <script>
         window.setInterval(function () {

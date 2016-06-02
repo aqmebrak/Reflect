@@ -12,15 +12,18 @@ if (isset($_SESSION['uid']))
     <script src="js/index.js"></script>
     <script src="lib/bootstrap.min.js"></script>
 
-    <link href="css/index.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
 </head>
 <body>
+
+<div class="row">
+
+</div>
+
 
 <script>
     printUsers();
 </script>
-<div id="users" style="text-align: center">
-</div>
 </body>
 </html>

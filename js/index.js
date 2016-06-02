@@ -3,9 +3,17 @@ function printUsers(){
         var s = "";
         $.each(json.user, function( key, val ) {
             var fct="openMirror("+val.id+")";
-            s+="<button onclick='"+fct+"' class='btn btn-primary btn-lg' role='button'>" + val.firstname + "</button><br/><br/>";
+            //s +="<button onclick='"+fct+"' class='btn btn-primary btn-lg' role='button'>" + val.firstname + "</button><br/><br/>";
+            s += "<div class='col-md-3 thumb' onclick='"+fct+"'>";
+            s += "<div class='thumbnail'>";
+            s += "<img src='images/user.png'>";
+            s += "<div class='caption'>";
+            s += "<h3>"+val.firstname+"</h3>";
+            s += "</div>";
+            s += "<button type='button' class='btn btn-default'>Configure</button>";
+            s += "</div></div>";
         });
-        $("#users").html(s+"</ul>");
+        $('.row').html(s);
     });
 }
 

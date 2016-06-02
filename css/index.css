@@ -1,16 +1,26 @@
-/* centered columns styles */
-.row-centered {
-    text-align:center;
-}
-.col-centered {
-    display:inline-block;
-    float:none;
-    /* reset the text-align */
-    text-align:left;
-    /* inline-block space fix */
-    margin-right:-4px;
+body {
+    background-color: black;
 }
 
-li {
-    list-style-type: none;
+.row {
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    height: 50%;
+    margin-top: 3%;
+}
+
+.row h3 {
+    text-align: center;
+    color: white;
+}
+
+.row button {
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+.thumbnail {
+    background-color: black;
 }
