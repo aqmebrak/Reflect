@@ -1,11 +1,1 @@
-{
-  "lastname": "Melchor",
-  "firstname": "Jérémy",
-  "weather": {
-    "degree": "c",
-    "location": "Marseille"
-  },
-  "time": {
-    "is24Hours": true
-  }
-}
+{"lastname":"Melchor","firstname":"J\u00e9r\u00e9my","weather":{"degree":"c","location":"KARISTOV"},"time":{"is24Hours":true}}
