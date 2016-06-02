@@ -9,13 +9,18 @@ html{
 
 #rightPanel {
 	float:right;
-	margin-right:-20%;
+	margin-left:95%;
 	width: 22%;
+	position:fixed;
 	
 }
 
+#weather {
+	position:absolute;
+}
+
 #rightPanel:hover {
-	margin-right:-0.6%;
+	margin-left:80%;
 }
 
 ul {
@@ -23,8 +28,8 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    /*width: 200%;*/
-    background-color: black;
+    
+    background-color: white;
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 
