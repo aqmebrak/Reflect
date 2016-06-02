@@ -1,7 +1,7 @@
 <div id="weather"></div>
 
 <?php
-    $jsonString = file_get_contents('1.json');
+    $jsonString = file_get_contents('database/1.json');
     $data = json_decode($jsonString, true);
 
     $city = $data['weather']['location'];
