@@ -11,7 +11,7 @@ function initWeather(city, degree) {
                 + '<div class="temperature ' + getCondition(weather.code) + '">'
                 + '<h2 class="white">'
                 + weather.temp
-                + '<span class="degree-symbol">°</span>C</h2></div><br/>';
+                + '<span class="degree-symbol">°</span>'+weather.units.temp+'</h2></div><br/>';
 
             html += '<span class="fontawesome-umbrella left white">    ' + weather.humidity + '    </span>'
                 + '<span class="fontawesome-leaf center white">    ' + weather.wind.direction + '    </span>'
