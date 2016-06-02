@@ -13,6 +13,8 @@
     <script src="lib/draggable.min.js"></script>
     <script src="lib/jquery.rotate.js"></script>
     <script src="lib/jClocksGMT.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjTonWpMnclazoTL22ibJOdAPyb4CmaA"
+            type="text/javascript"></script>
     <link rel="stylesheet" href="css/jClocksGMT.css">
     <link rel="stylesheet" type="text/css" href="css/weather.css">
 
@@ -23,7 +25,7 @@
                 localStorage.removeItem("reload");
                 var $draggable = $('.draggable').draggabilly({
                     // options...
-                }
+                })
             }
         }, 5000);
     </script>
@@ -38,12 +40,15 @@
 <div id="center">
 </div>
 <div id="rightPanel">
-	<ul>
-		<li><div id="maquillageIcon"><a ></a><div></li>
-		<li><a >Lorem</a></li>
-		<li><a >Ipsum</a></li>
-		<li><a >Sin</a></li>
-	</ul>
+    <ul>
+        <li>
+            <div id="maquillageIcon"><a></a>
+                <div>
+        </li>
+        <li><a>Lorem</a></li>
+        <li><a>Ipsum</a></li>
+        <li><a>Sin</a></li>
+    </ul>
 </div>
 
 </body>
