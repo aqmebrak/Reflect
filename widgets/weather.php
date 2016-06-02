@@ -1,7 +1,7 @@
-<div id="weather"></div>
+<div id="weather" class="draggable"></div>
 
 <?php
-    $jsonString = file_get_contents('1.json');
+    $jsonString = file_get_contents('database/'.$_POST['uid'].'.json');
     $data = json_decode($jsonString, true);
 
     $city = $data['weather']['location'];
@@ -13,6 +13,9 @@
         var city = "<?php echo $city; ?>";
         var degree = "<?php echo $degree; ?>";
         initWeather(city,degree);
+        var $draggable = $('.draggable').draggabilly({
+            // options...
+        })
     }
 </script>
 
