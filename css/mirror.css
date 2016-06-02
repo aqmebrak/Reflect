@@ -1,54 +1,52 @@
-html,a{
-	cursor: url(../images/cursor.cur), pointer; 	
+html, a {
+    cursor: url(../images/cursor.cur), pointer;
 }
 
 .grabbable:active:hover {
-	cursor: url(../images/grab.cur), pointer; 
+    cursor: url(../images/grab.cur), pointer;
 }
 
-
 #rightPanel {
-	float:right;
-	margin-left:95%;
-	width: 22%;
-	position:fixed;
-	margin-top:0%;
-	
+    float: right;
+    margin-left: 95%;
+    width: 22%;
+    position: fixed;
+    margin-top: 0%;
+
 }
 
 .widget {
-	position:absolute;
+    position: absolute;
 }
 
 #rightPanel:hover {
-	margin-left:80%;
+    margin-left: 80%;
 }
 
 ul {
-	
+
     list-style-type: none;
     margin: 0;
     padding: 0;
-    
+
     background-color: white;
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 
 ul li {
-	border-radius: 7px;
+    border-radius: 7px;
     border: medium solid white;
-	display: block;
-    background-color:black;
+    display: block;
+    background-color: black;
     padding: 20% 0 20% 0;
     text-decoration: none;
-	text-align: center;
-	color:white;
-	padding-top: 10%;
-	padding-bottom:10%;
-	height:100px;
-	/*width:200px;*/
+    text-align: center;
+    color: white;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    height: 100px;
+    /*width:200px;*/
 }
-
 
 /* Change the link color on hover */
 ul li:hover {
@@ -56,44 +54,62 @@ ul li:hover {
     color: white;
     text-decoration: none;
 }
+
 .active {
     background-color: #8C4646;
 }
 
 #rightPanel ul li div {
-	padding-top:0px;
-	margin-left:29%;
-	width:100px;
-	height:100px;
+    padding-top: 0px;
+    margin-left: 29%;
+    width: 100px;
+    height: 100px;
 }
 
 .widgetIcon {
-	background-repeat:no-repeat;
-	background-position:center center;
-	background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
 }
 
 #maquillageIcon {
-	background-image:url(../images/maquillage.png);
+    background-image: url(../images/maquillage.png);
 }
 
 #ecrouIcon {
-	background-image:url(../images/ecrou.png);
+    background-image: url(../images/ecrou.png);
 }
 
 #exitIcon {
-	background-image:url(../images/exit.png);
+    background-image: url(../images/exit.png);
 }
 
-#rightPanel  ul li a{
-	margin-top:10%;
-	display:block;
+#closeIcon {
+    background-image: url(../images/close.png);
+}
+
+#rightPanel ul li a {
+    margin-top: 10%;
+    display: block;
 }
 
 #rightPanel ul li div a {
-	margin-top:0;
+    margin-top: 0;
 }
 
+#video {
+    position: relative;
+    display: inline-block;
+    border-radius: 7px;
+    border: medium solid white;
+}
+
+#video span{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+}
 
 
 
