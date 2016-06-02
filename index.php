@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,6 +9,8 @@
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/index.js"></script>
     <script src="js/bootstrap.min.js"></script>
+
+    <link href="css/index.css" rel="stylesheet">
     <link href="css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,8 +18,7 @@
 <script>
     printUsers();
 </script>
-<div id="users">
+<div id="users" style="text-align: center">
 </div>
-
 </body>
 </html>

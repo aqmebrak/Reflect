@@ -6,8 +6,12 @@
     <script src="js/jquery-2.2.4.min.js"></script>
     <script src="js/jquery.simpleWeather.min.js"></script>
     <script src="js/weather.js"></script>
+<<<<<<< HEAD:mirror.html
 	<!-- <script src="http://kendo.cdn.telerik.com/2016.2.504/js/kendo.all.min.js"> -->
 	<link href="css/mirror.css" rel="stylesheet">
+=======
+    <script src="js/bootstrap.min.js"></script>
+>>>>>>> efce10de98c4fa5f4bee170c8847f1d586d9a11b:mirror.php
     <script>
         window.setInterval(function(){
             if(localStorage.getItem("reload")) {
@@ -15,12 +19,18 @@
                 localStorage.removeItem("reload");
             }
         }, 5000);
+<<<<<<< HEAD:mirror.html
     </script>
 	
 	
+=======
+    </script>-->
+>>>>>>> efce10de98c4fa5f4bee170c8847f1d586d9a11b:mirror.php
 </head>
 <body>
-
+<?php
+echo $_POST['uid'];
+?>
 <div id="weather"></div>
 
 <div class="grabbable" > Grab me !</div>

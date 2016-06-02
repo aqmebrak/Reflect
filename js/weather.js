@@ -1,21 +1,16 @@
-$(document).ready(function() {
-    initWeather();
-});
+function initWeather(city,degree) {
+        $.simpleWeather({
+            location: city,
+            woeid: '',
+            unit: degree,
+            success: function(weather) {
+                html = '<div id="title">'+weather.title+"</div>"+"<div id='degree'>"+weather.temp+'</div>'+
+                '<div>'+weather.units.temp+'</div>';
 
-
-function initWeather() {
-    $.simpleWeather({
-        location: "Valbonne",
-        woeid: '',
-        unit: 'c',
-        success: function(weather) {
-            var html = '';
-            html += '<p>'+weather.title+"</p>"+"<p>"+weather.temp+'</p>';
-
-            $("#weather").html(html);
-        },
-        error: function(error) {
-            $("#weather").html('<p>'+error+'</p>');
-        }
+                $("#weather").html(html);
+            },
+            error: function(error) {
+                $("#weather").html('<p>'+error+'</p>');
+            }
     });
 }
