@@ -81,6 +81,10 @@ ul li:hover {
 	background-image:url(../images/ecrou.png);
 }
 
+#exitIcon {
+	background-image:url(../images/exit.png);
+}
+
 #rightPanel  ul li a{
 	margin-top:10%;
 	display:block;
