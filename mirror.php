@@ -20,33 +20,28 @@
                 localStorage.removeItem("reload");
                 var $draggable = $('.draggable').draggabilly({
                     // options...
-                }
+                });
             }
         }, 5000);
     </script>
+
 </head>
 <body>
-
 <?php include_once('./widgets/time.php'); ?>
+
 <?php include_once('./widgets/weather.php'); ?>
-
-
-<div id="weather"></div>
-
-<div class="grabbable" > Grab me !</div>
 
 <div id="center">
 </div>
 <div id="rightPanel">
-	<ul>
-		<li><a >Maquillage</a></li>
-		<li><a >Lorem</a></li>
-		<li><a >Ipsum</a></li>
-		<li><a >Sin</a></li>
-	</ul>
+    <ul>
+        <li><a>Maquillage</a></li>
+        <li><a>Lorem</a></li>
+        <li><a>Ipsum</a></li>
+        <li><a>Sin</a></li>
+    </ul>
 </div>
 
 </body>
-
 
 </html>
