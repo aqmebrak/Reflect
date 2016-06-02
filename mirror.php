@@ -23,14 +23,14 @@
                 localStorage.removeItem("reload");
                 var $draggable = $('.draggable').draggabilly({
                     // options...
-                }
+                })
             }
         }, 5000);
     </script>
 </head>
 <body>
 
-<?php include_once('./widgets/time.php'); ?>
+<?php include_once('./widgets/clock.php'); ?>
 
 <?php include_once('./widgets/weather.php'); ?>
 

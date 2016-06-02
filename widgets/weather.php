@@ -13,6 +13,7 @@
         var city = "<?php echo $city; ?>";
         var degree = "<?php echo $degree; ?>";
         initWeather(city,degree);
+        initTime();
         var $draggable = $('.draggable').draggabilly({
             // options...
         })
