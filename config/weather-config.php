@@ -13,7 +13,7 @@
 
 <ul>
     <li class="active"><a href="weather-config.php">Weather</a></li>
-    <li><a href="news.asp">Clock</a></li>
+    <li><a href="clock-config.php">Clock</a></li>
     <li><a href="contact.asp">Contact</a></li>
     <li><a href="about.asp">About</a></li>
 </ul>
@@ -39,7 +39,7 @@
         </form>
 
         <?php
-        $jsonString = file_get_contents('../1.json');
+        $jsonString = file_get_contents('../database/1.json');
         $data = json_decode($jsonString, true);
 
         if (!EMPTY($_POST['temp-config'])) {
