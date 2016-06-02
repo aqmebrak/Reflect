@@ -1,8 +1,4 @@
-<<<<<<< HEAD
 <div id="weather" class="draggable grabbable widget"></div>
-=======
-<div id="weather" class="draggable"></div>
->>>>>>> 48ac1d0bef9fccad536db9b6f782c79eddf04c77
 
 <?php
     $jsonString = file_get_contents('database/'.$_POST['uid'].'.json');

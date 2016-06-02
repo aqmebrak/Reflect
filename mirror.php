@@ -18,6 +18,8 @@ $_SESSION['uid']=$_POST['uid'];
     <script src="lib/draggable.min.js"></script>
     <script src="lib/jquery.rotate.js"></script>
     <script src="lib/jClocksGMT.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjTonWpMnclazoTL22ibJOdAPyb4CmaA"
+            type="text/javascript"></script>
     <link rel="stylesheet" href="css/jClocksGMT.css">
     <link rel="stylesheet" type="text/css" href="css/weather.css">
 
@@ -28,7 +30,7 @@ $_SESSION['uid']=$_POST['uid'];
                 localStorage.removeItem("reload");
                 var $draggable = $('.draggable').draggabilly({
                     // options...
-                }
+                })
             }
         }, 5000);
     </script>
@@ -44,10 +46,10 @@ $_SESSION['uid']=$_POST['uid'];
 </div>
 <div id="rightPanel">
 	<ul>
-		<li><div id="maquillageIcon"><a ></a><div></li>
+		<li><div id="maquillageIcon" class="widgetIcon" ><div></li>
 		<li><a >Lorem</a></li>
 		<li><a >Ipsum</a></li>
-		<li><a >Sin</a></li>
+		<a href="config/weather-config.php"><li><div id="ecrouIcon" class="widgetIcon"><div></li></a>
 	</ul>
 </div>
 
