@@ -1,8 +1,4 @@
-<<<<<<< HEAD:widgets/time.php
-<div id="time" class="draggable grabbable widget">
-=======
-<div id="clock_hou" class="draggable">
->>>>>>> 48ac1d0bef9fccad536db9b6f782c79eddf04c77:widgets/clock.php
+<div id="clock_hou" class="grabbable widget draggable">
 
 </div>
 <?php
