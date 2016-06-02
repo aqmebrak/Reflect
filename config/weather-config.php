@@ -49,7 +49,7 @@
             $data['weather']['location'] = $_POST['city'];
         }
         $newJsonString = json_encode($data);
-        file_put_contents('../1.json', $newJsonString);
+        file_put_contents('../database/1.json', $newJsonString);
         ?>
     </div>
 </div>

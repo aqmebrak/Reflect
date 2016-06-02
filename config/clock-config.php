@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -22,18 +25,22 @@
     <div id="clock">
 
         <form role="form" method="post" action="clock-config.php">
-
-            <div class="radio-inline">
-                <label><input value="c" type="radio" name="temp-config">Celsius</label>
-            </div>
+            <?php echo $_SESSION['uid'] ?>
+            <label>Timezone</label>
+            <select class="form-control">
+                <option>-4</option>
+                <option>-3</option>
+                <option>-1</option>
+                <option>0</option>
+                <option>+1</option>
+                <option>+2</option>
+                <option>+3</option>
+                <option>+4</option>
+            </select>
             <div class="radio-inline">
                 <label><input value="f" type="radio" name="temp-config">Fahrenheit</label>
             </div>
 
-            <label>
-                Enter your city
-                <input type="text" name="city">
-            </label>
             <button type="submit" class="btn btn-primary">Save</button>
 
         </form>

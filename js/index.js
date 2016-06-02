@@ -11,7 +11,6 @@ function printUsers(){
 
 function openMirror(uid)
 {
-    
     var form = document.createElement('form');
     form.setAttribute('action', "mirror.php");
     form.setAttribute('method', 'post');
