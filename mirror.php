@@ -10,7 +10,7 @@
     <script src="js/clock.js"></script>
     <link href="css/mirror.css" rel="stylesheet">
     <script src="lib/bootstrap.min.js"></script>
-    <script src="js/draggable.min.js"></script>
+    <script src="lib/draggable.min.js"></script>
     <script src="lib/jquery.rotate.js"></script>
     <script src="lib/jClocksGMT.js"></script>
     <link rel="stylesheet" href="css/jClocksGMT.css">
