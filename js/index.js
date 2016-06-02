@@ -1,6 +1,6 @@
 
 function printUsers(){
-    $.getJSON("database.json", function(json) {
+    $.getJSON("database/users.json", function(json) {
         var s = "";
         $.each(json.user, function( key, val ) {
             var fct="openMirror("+val.id+")";
