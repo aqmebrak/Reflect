@@ -5,3 +5,46 @@ html{
 .grabbable:active:hover {
 	cursor: url(../images/grab.cur), pointer; 
 }
+
+
+#rightPanel {
+	float:right;
+	margin-right:-20%;
+	width: 22%;
+	
+}
+
+#rightPanel:hover {
+	margin-right:-0.6%;
+}
+
+ul {
+	
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    /*width: 200%;*/
+    background-color: black;
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+ul li {
+	/*width: 200;*/
+	display: block;
+    color: white;
+    padding: 20% 0 20% 0;
+    text-decoration: none;
+	text-align: center;
+	
+}
+
+
+/* Change the link color on hover */
+ul li:hover {
+    background-color: #D96459;
+    color: white;
+    text-decoration: none;
+}
+.active {
+    background-color: #8C4646;
+}

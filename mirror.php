@@ -27,6 +27,17 @@ if (isset($_POST['uid']))
 <div id="weather"></div>
 
 <div class="grabbable" > Grab me !</div>
+
+<div id="center">
+</div>
+<div id="rightPanel">
+	<ul>
+		<li><a >Weather</a></li>
+		<li><a >Clock</a></li>
+		<li><a >Contact</a></li>
+		<li><a >About</a></li>
+	</ul>
+</div>
 </body>
 
 
