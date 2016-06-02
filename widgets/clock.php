@@ -1,4 +1,4 @@
-<div id="clock_hou" class="draggable">
+<div id="clock_hou" class="grabbable widget draggable">
 
 </div>
 <?php

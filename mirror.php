@@ -23,7 +23,7 @@
                 localStorage.removeItem("reload");
                 var $draggable = $('.draggable').draggabilly({
                     // options...
-                })
+                }
             }
         }, 5000);
     </script>
