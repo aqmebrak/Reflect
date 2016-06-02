@@ -30,8 +30,9 @@
 </head>
 <body>
 
-<?php include('./widgets/clock.php'); ?>
-<?php include('./widgets/weather.php'); ?>
+<?php include_once('./widgets/time.php'); ?>
+
+<?php include_once('./widgets/weather.php'); ?>
 
 
 <div id="center">
