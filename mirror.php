@@ -39,10 +39,10 @@
 </div>
 <div id="rightPanel">
 	<ul>
-		<li><a >Weather</a></li>
-		<li><a >Clock</a></li>
-		<li><a >Contact</a></li>
-		<li><a >About</a></li>
+		<li><a >Maquillage</a></li>
+		<li><a >Lorem</a></li>
+		<li><a >Ipsum</a></li>
+		<li><a >Sin</a></li>
 	</ul>
 </div>
 
