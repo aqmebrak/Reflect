@@ -18,7 +18,7 @@ session_start();
     <li><a href="weather-config.php">Weather</a></li>
     <li class="active"><a href="clock-config.php">Clock</a></li>
     <li><a href="contact.asp">Contact</a></li>
-    <li><a href="about.asp">About</a></li>
+    <li><a href="../mirror.php">Mirror</a></li>
 </ul>
 
 <div id="content">
@@ -26,7 +26,7 @@ session_start();
 
         <form role="form" method="post" action="clock-config.php">
             <label>Timezone</label>
-            <select class="form-control">
+            <select class="form-control" name="timezone">
                 <option>-4</option>
                 <option>-3</option>
                 <option>-1</option>
@@ -36,26 +36,20 @@ session_start();
                 <option>+3</option>
                 <option>+4</option>
             </select>
-            <div class="radio-inline">
-                <label><input value="f" type="radio" name="temp-config">Fahrenheit</label>
-            </div>
 
             <button type="submit" class="btn btn-primary">Save</button>
 
         </form>
 
         <?php
-        $jsonString = file_get_contents('../database/1.json');
+        $jsonString = file_get_contents('../database/'.$_SESSION['uid'].'.json');
         $data = json_decode($jsonString, true);
 
-        if (!EMPTY($_POST['temp-config'])) {
-            $data['weather']['degree'] = $_POST['temp-config'];
-        }
-        if (!EMPTY($_POST['city'])) {
-            $data['weather']['location'] = $_POST['city'];
+        if (!EMPTY($_POST['timezone'])) {
+            $data['clock']['timezone'] = $_POST['timezone'];
         }
         $newJsonString = json_encode($data);
-        file_put_contents('../database/1.json', $newJsonString);
+        file_put_contents('../database/'.$_SESSION['uid'].'.json', $newJsonString);
         ?>
     </div>
 </div>

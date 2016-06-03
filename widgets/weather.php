@@ -6,6 +6,8 @@
 
     $city = $data['weather']['location'];
     $degree = $data['weather']['degree'];
+
+    $timezone = $data['clock']['timezone'];
 ?>
 
 <script>
@@ -13,7 +15,9 @@
         var city = "<?php echo $city; ?>";
         var degree = "<?php echo $degree; ?>";
         initWeather(city,degree);
-        initTime();
+
+        var timezone = "<?php echo $timezone; ?>";
+        initTime(timezone);
         var $draggable = $('.draggable').draggabilly({
             // options...
         })
