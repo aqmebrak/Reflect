@@ -24,3 +24,7 @@ body {
 .thumbnail {
     background-color: black;
 }
+
+.thumb {
+    padding: 0 2% 0 0;
+}

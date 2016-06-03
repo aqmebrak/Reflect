@@ -14,6 +14,7 @@ if (isset($_SESSION['uid']))
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">
+    <link href="css/hover.css" rel="stylesheet">
 </head>
 <body>
 

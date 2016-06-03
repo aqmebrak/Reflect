@@ -5,7 +5,7 @@ function printUsers(){
             var fct="openMirror("+val.id+")";
             //s +="<button onclick='"+fct+"' class='btn btn-primary btn-lg' role='button'>" + val.firstname + "</button><br/><br/>";
             s += "<div class='col-md-3 thumb' onclick='"+fct+"'>";
-            s += "<div class='thumbnail'>";
+            s += "<div class='thumbnail hvr-glow'>";
             s += "<img src='images/user.png'>";
             s += "<div class='caption'>";
             s += "<h3>"+val.firstname+"</h3>";
