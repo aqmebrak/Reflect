@@ -2,6 +2,10 @@ html, a {
     cursor: url(../images/cursor.cur), pointer;
 }
 
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
 .grabbable:active:hover {
     cursor: url(../images/grab.cur), pointer;
 }
@@ -29,7 +33,6 @@ ul {
     margin: 0;
     padding: 0;
 
-    background-color: white;
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 
@@ -37,7 +40,6 @@ ul li {
     border-radius: 7px;
     border: medium solid white;
     display: block;
-    background-color: black;
     padding: 20% 0 20% 0;
     text-decoration: none;
     text-align: center;

@@ -1,36 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <title>Weather layer</title>
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.simpleWeather/3.1.0/jquery.simpleWeather.min.js"></script>
-    <script src="js/weather.js"></script>
-    <script src="lib/draggable.min.js"></script>
-    <script src="js/index.js"></script>
+    <meta charset="utf-8">
+    <meta content="stuff, to, help, search, engines, not" name="keywords">
+    <meta content="What this page is about." name="description">
+    <meta content="Display Webcam Stream" name="title">
+    <title>Display Webcam Stream</title>
 
-    <script>
-        window.setInterval(function () {
-            if (localStorage.getItem("reload")) {
-                location.reload();
-                localStorage.removeItem("reload");
-            }
-        }, 5000);
-       window.onload = function() {
-            initWeather();
-            var $draggable = $('.draggable').draggabilly({
-                // options...
-            })
-        };
-    </script>
-    <link rel="stylesheet" type="text/css" href="css/weather.css">
-
+    <style>
+        video#videoElement {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+        }
+    </style>
 </head>
 
-
 <body>
-<div id="weather" class="draggable"></div>
+<div id="container">
+    sdpiogfdpgosk
+    <video autoplay="true" id="videoElement"></video>
+    qdsqsdkdfpok
+</div>
+<script>
+    var video = document.querySelector("#videoElement");
 
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+    if (navigator.getUserMedia) {
+        navigator.getUserMedia({video: true}, handleVideo, videoError);
+    }
+
+    function handleVideo(stream) {
+        video.src = window.URL.createObjectURL(stream);
+    }
+
+    function videoError(e) {
+        // do something
+    }
+</script>
 </body>
 </html>

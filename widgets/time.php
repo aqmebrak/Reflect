@@ -1,17 +1,11 @@
-<div id="time" class="draggable grabbable widget">
+<div id="time" class="draggable grabbable widget"></div>
 
-</div>
 <?php
-$jsonString = file_get_contents('database/'.$_POST['uid'].'.json');
-$data = json_decode($jsonString, true);
-
-?>
-
-
-
+$jsonString = file_get_contents('database/' . $_POST['uid'] . '.json');
+$data = json_decode($jsonString, true); ?>
 
 <script>
-    window.onload = function() {
+    window.onload = function () {
         initTime();
         var $draggable = $('.draggable').draggabilly({
             // options...

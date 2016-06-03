@@ -25,7 +25,6 @@ if (!isset($_SESSION['uid']))
     <link rel="stylesheet" type="text/css" href="css/weather.css">
     <script src="lib/draggable.min.js"></script>
     <script src="js/video.js"></script>
-    <link rel="stylesheet" type="text/css" href="css/meteo.css">
 
     <script>
         window.setInterval(function () {
@@ -38,12 +37,34 @@ if (!isset($_SESSION['uid']))
             }
         }, 5000);
     </script>
+    <style>
+        video#videoElement {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: -100;
+            -ms-transform: translateX(-50%) translateY(-50%);
+            -moz-transform: translateX(-50%) translateY(-50%);
+            -webkit-transform: translateX(-50%) translateY(-50%);
+            transform: translateX(-50%) translateY(-50%);
+            background-size: cover;
+        }
+    </style>
 </head>
 <body>
 
 <?php include_once('./widgets/clock.php'); ?>
 
 <?php include_once('./widgets/weather.php'); ?>
+<body>
+<div id="container">
+    
+    <video autoplay="true" id="videoElement"></video>
+</div>
 
 <div id="video" class="widget grabbable draggable">
     <span style="color:white; font-size: 2.2em;"><a onclick="closeFrame()">&#10006;</a></span>
@@ -72,6 +93,24 @@ if (!isset($_SESSION['uid']))
         </a>
     </ul>
 </div>
+
+<script>
+    var video = document.querySelector("#videoElement");
+
+    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+    if (navigator.getUserMedia) {
+        navigator.getUserMedia({video: true}, handleVideo, videoError);
+    }
+
+    function handleVideo(stream) {
+        video.src = window.URL.createObjectURL(stream);
+    }
+
+    function videoError(e) {
+        // do something
+    }
+</script>
 
 </body>
 
