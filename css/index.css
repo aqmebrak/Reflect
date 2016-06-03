@@ -1,3 +1,7 @@
+html, a, .row button {
+    cursor: url(../images/cursor.cur), pointer;
+}
+
 body {
     background-color: black;
 }
