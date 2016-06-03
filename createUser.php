@@ -14,6 +14,8 @@
             alert("Please fill all inputs");
             return false;
         }
+
+
     }
 </script>
 <body>
@@ -25,6 +27,13 @@
         <input type="radio" name="sex" value="m" id="sex_m" class="register-switch-input">
         <label for="sex_m" class="register-switch-label">Male</label>
     </div>
+    <?php
+    if(isset($_GET['error'])){
+        echo '<div class="warning">
+        Please choose another first name
+    </div>';
+    }
+    ?>
     <input type="text" name="firstname" class="register-input" placeholder="First name">
     <input type="text" name="lastname" class="register-input" placeholder="Last name">
     <input type="submit" value="Create my profile" class="register-button">
