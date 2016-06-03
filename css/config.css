@@ -32,3 +32,8 @@ li a:hover {
 .active {
     background-color: #8C4646;
 }
+
+.radio{
+    width:8em;
+    height:8em;
+}

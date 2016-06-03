@@ -25,19 +25,19 @@ session_start();
     <div id="weather">
 
         <form role="form" method="post" action="weather-config.php">
-            <label><?php echo $_SESSION['uid'] ?></label>
+            <!--<label><?php echo $_SESSION['uid'] ?></label>-->
             <div class="radio-inline">
-                <label><input value="c" type="radio" name="temp-config">Celsius</label>
-            </div>
+                <label>Celsius</label><input value="c" type="radio" name="temp-config" class="radio">
+            </div><br/><br/><br/><br/><br/><br/><br/>
             <div class="radio-inline">
-                <label><input value="f" type="radio" name="temp-config">Fahrenheit</label>
+                <label>Fahrenheit</label><input value="f" type="radio" name="temp-config" class="radio">
             </div>
-
+            <br/><br/><br/><br/><br/><br/><br/>
             <label>
                 Enter your city
                 <input type="text" name="city">
             </label>
-            <button type="submit" class="btn btn-primary">Save</button>
+            <button type="submit" class="btn btn-primary btn-lg">Save</button>
 
         </form>
 
