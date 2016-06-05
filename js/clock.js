@@ -1,8 +1,8 @@
-function initTime() {
+function initTime(timezone) {
     var data =
     {
         title: 'Paris, FR',
-        offset: '+1',
+        offset: timezone,
         dst: true,
         digital: true,
         analog: false,

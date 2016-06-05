@@ -7,7 +7,7 @@ if (isset($_SESSION['uid']))
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Welcome</title>
+    <title>Reflect</title>
     <script src="lib/jquery-2.2.4.min.js"></script>
     <script src="js/index.js"></script>
     <script src="lib/bootstrap.min.js"></script>

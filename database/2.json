@@ -1,1 +1,8 @@
-{"lastname":"El Koubi","firstname":"Ugo","weather":{"degree":"f","location":"Paris"},"time":{"isAM":false}}
+{
+  "lastname":"El Koubi",
+  "firstname":"Ugo",
+  "weather":
+  {"degree":"f",
+    "location":"Paris"},
+  "clock":{"timezone":"+4"}
+}
