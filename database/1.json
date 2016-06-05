@@ -1,6 +1,1 @@
-{"lastname":"Melchor",
-  "firstname":"J\u00e9r\u00e9my",
-  "weather":
-  {"degree":"c","location":"London"},
-  "clock":{"timezone":"+1"}
-}
+{"lastname":"Melchor","firstname":"J\u00e9r\u00e9my","weather":{"degree":"f","location":"London"},"clock":{"timezone":"+1"}}

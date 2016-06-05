@@ -10,7 +10,7 @@ table, caption, tbody, tfoot, thead, tr, th, td,
 article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+time, mark, img, audio, video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -54,23 +54,11 @@ body {
 }
 
 .register-title {
-    width: 270px;
-    line-height: 43px;
-    margin: 50px auto 20px;
-    font-size: 19px;
-    font-weight: 500;
-    color: white;
-    color: rgba(255, 255, 255, 0.95);
-    text-align: center;
-    text-shadow: 0 1px rgba(0, 0, 0, 0.3);
-    background: #d7604b;
-    border-radius: 3px;
-    background-image: -webkit-linear-gradient(top, #dc745e, #d45742);
-    background-image: -moz-linear-gradient(top, #dc745e, #d45742);
-    background-image: -o-linear-gradient(top, #dc745e, #d45742);
-    background-image: linear-gradient(to bottom, #dc745e, #d45742);
-    -webkit-box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
-    box-shadow: inset 0 1px rgba(255, 255, 255, 0.1), inset 0 0 0 1px rgba(255, 255, 255, 0.05), 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    display:block;
+    width: 400px;
+    padding-top:40px;
+    padding-bottom:40px;
+    margin:auto
 }
 
 .register {
