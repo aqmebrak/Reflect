@@ -17,10 +17,13 @@ if (isset($_SESSION['uid']))
     <link href="css/hover.css" rel="stylesheet">
 </head>
 <body>
-
+<img
+    class="logo"
+    src="images/logo.png"/>
 <div class="row">
 
 </div>
+<button onclick="location.href = 'createUser.php';" class="create-button">Create new profile</button>
 
 
 <script>

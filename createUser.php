@@ -21,7 +21,7 @@
 <body>
 <img
     class="register-title"
-    src="images/logo.svg"/>
+    src="images/logo.png"/>
 <form class="register" name="reg" method="post" action="validateNewUser.php" onsubmit="return validateForm()">
     <div class="register-switch">
         <input type="radio" name="sex" value="f" id="sex_f" class="register-switch-input" checked>
@@ -36,7 +36,7 @@
     </div>';
     }
     ?>
-    <   input type="text" name="firstname" class="register-input" placeholder="First name">
+    <input type="text" name="firstname" class="register-input" placeholder="First name">
     <input type="text" name="lastname" class="register-input" placeholder="Last name">
     <input type="submit" value="Create my profile" class="register-button">
 </form>
