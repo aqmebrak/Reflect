@@ -15,7 +15,7 @@ function searchVideosByQuery(query) {
                
                 var request = gapi.client.youtube.search.list({
                         part: 'snippet',
-						maxResults: 6,
+						maxResults: 8,
                         q : query
                 });
                 request.execute(function(response) {
@@ -40,6 +40,7 @@ function displayVideosListInHtml(jsonList) {
 		var img = document.createElement("img");
 		
 		img.setAttribute("src",jsonList[i].snippet.thumbnails.medium.url);
+		img.setAttribute("height","100%");
 		//video.innerHTML = "lol";
 		var description = document.createElement("div");
 		description.innerHTML = "<span>"+jsonList[i].snippet.title+"</span>";
