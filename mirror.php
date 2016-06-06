@@ -20,10 +20,10 @@ if (!isset($_SESSION['uid']))
     <script src="js/clock.js"></script>
     <script src="lib/jClocksGMT.js"></script>
     <script src="lib/draggable.min.js"></script>
-	<script src="lib/VideoClient.js?" type="text/javascript"></script>
+    <script src="lib/VideoClient.js?" type="text/javascript"></script>
     <script src="js/video.js"></script>
-	<script src="js/video_search.js"></script>
-	
+    <script src="js/video_search.js"></script>
+
     <!-- - - - - - - - - - - - - - - - - - - - - - - -->
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjTonWpMnclazoTL22ibJOdAPyb4CmaA"
             type="text/javascript"></script>-->
@@ -39,6 +39,7 @@ if (!isset($_SESSION['uid']))
 <body>
 
 <?php include_once('./widgets/clock.php'); ?>
+<?php include_once('./widgets/rightPanel.php'); ?>
 
 <?php include_once('./widgets/weather.php'); ?>
 <body>
@@ -55,31 +56,22 @@ if (!isset($_SESSION['uid']))
 <div id="VideosList"></div>
 
 
-<div id="rightPanel">
-    <ul>
-        <li onclick="searchMaquillageVideos()">
-            <div id="maquillageIcon" class="widgetIcon">
-                <div>
-        </li>
-        <li><a>Lorem</a></li>
-        <a href="config/weather-config.php">
-            <li>
-                <div id="ecrouIcon" class="widgetIcon">
-                    <div>
-            </li>
-        </a>
-        <a href="index.php">
-            <li>
-                <div id="exitIcon" class="widgetIcon">
-                    <div>
-            </li>
-        </a>
-    </ul>
-</div>
-
 <div id="bottomPanel">
 </div>
 
+<script>
+    $("#bottomPanel").on("mousedown mouseover", function (e) {
+        if (e.buttons == 1 || e.buttons == 3) {
+            $(this).css({
+                backgroundColor: "red"
+            });
+        }
+    }).on("mouseup mouseout", function (e) {
+        $(this).css({
+            backgroundColor: ""
+        });
+    });
+</script>
 
 <script>
     var video = document.querySelector("#videoElement");
