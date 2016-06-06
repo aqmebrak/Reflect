@@ -15,5 +15,5 @@ function initClock(timezone) {
         skin: 1,
         imgpath: ''
     }
-    $('#clock_hou').jClocksGMT(data);
+    $('#clock').jClocksGMT(data);
 }   

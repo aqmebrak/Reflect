@@ -8,7 +8,7 @@ $city = $data['weather']['location'];
 $degree = $data['weather']['degree'];
 
 $timezone = $data['clock']['timezone'];
-echo $_SESSION['currentWidget'];
+
 ?>
 <script>
     window.onload = function () {
@@ -21,7 +21,7 @@ echo $_SESSION['currentWidget'];
 
         var timezone = "<?php echo $timezone; ?>";
         initClock(timezone);
-        $("#clock").mousedown(function () {
+        $("#clock_hou").mousedown(function () {
             <?php $_SESSION['currentWidget']='clock' ?>;
         });
 

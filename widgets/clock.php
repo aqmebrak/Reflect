@@ -1,4 +1,4 @@
-<div id="clock_hou" class="grabbable widget draggable"></div>
+<div id="clock" class="grabbable widget draggable"></div>
 
 <?php
 $jsonString = file_get_contents('database/' . $_SESSION['uid'] . '.json');
