@@ -24,7 +24,7 @@ function initWeather(city, degree) {
             $("#weather").html('<p>' + error + '</p>');
         }
     })
-}   
+}
 
 
 function getCondition(code) {
@@ -36,4 +36,3 @@ function getCondition(code) {
         return 'entypo-water';
 
 }
-

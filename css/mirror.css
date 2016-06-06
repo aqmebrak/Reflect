@@ -2,6 +2,11 @@ html, a {
     cursor: url(../images/cursor.cur), pointer;
 }
 
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
 body {
     font-family: 'Open Sans', sans-serif;
 }
@@ -20,15 +25,19 @@ body {
 }
 
 #bottomPanel {
-    border-radius: 7px;
-    border: medium solid white;
-    margin-top: 20%;
-    width: 40%;
-    position: fixed;
+    overflow: hidden;
+    background-color: transparent;
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 90%;
+    left: 0px;
 }
 
-.iconGarbage{
-    width: 100%;
+#bottomPanel:hover {
+    width: auto;
+    background-color: red;
+    height: 100%
 }
 
 .widget {
@@ -37,10 +46,6 @@ body {
 
 #rightPanel:hover {
     margin-left: 80%;
-}
-
-#bottomPanel:hover {
-    margin-top: 80%;
 }
 
 ul {
@@ -121,12 +126,13 @@ ul li:hover {
     border: medium solid white;
 }
 
-#video span{
+#video span {
     position: absolute;
     top: 0px;
     right: 0px;
     width: 50px;
 }
+
 video#videoElement {
     position: fixed;
     top: 50%;

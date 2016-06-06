@@ -1,4 +1,4 @@
-function initTime(timezone) {
+function initClock(timezone) {
     var data =
     {
         title: 'Paris, FR',

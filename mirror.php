@@ -15,8 +15,9 @@ if (!isset($_SESSION['uid']))
     <script src="lib/jquery.rotate.js"></script>
     <script src="lib/jquery.simpleWeather.min.js"></script>
     <script src="js/weather.js"></script>
-    <script src="lib/Kinect-1.8.0.js"></script>
-    <script src="js/KinectSensor.js"></script>
+    <script src="js/mirror.js"></script>
+    <!--<script src="lib/Kinect-1.8.0.js"></script>
+    <script src="js/KinectSensor.js"></script>-->
     <script src="lib/bootstrap.min.js"></script>
     <script src="js/clock.js"></script>
     <script src="lib/jClocksGMT.js"></script>
@@ -72,8 +73,19 @@ if (!isset($_SESSION['uid']))
 </div>
 
 <div id="bottomPanel">
-    <img src="images/garbage.png" class="iconGarbage" />
 </div>
+
+<script>$("#bottomPanel").on("mousedown mouseover", function (e) {
+        if (e.buttons == 1 || e.buttons == 3) {
+            $(this).css({
+                backgroundColor: "red"
+            });
+        }
+    }).on("mouseup mouseout", function (e) {
+        $(this).css({
+            backgroundColor: ""
+        });
+    });</script>
 
 <script>
     var video = document.querySelector("#videoElement");
