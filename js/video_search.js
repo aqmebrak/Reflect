@@ -5,14 +5,14 @@ function searchMaquillageVideos(){
                 gapi.client.setApiKey('AIzaSyARvwirFktEIi_BTaKcCi9Ja-m3IEJYIRk');
                 gapi.client.load('youtube', 'v3', function() {
                        
-					   searchVideosByQuery();
+					   searchVideosByQuery('maquillage');
                 });
 }
 
 
 		
-function searchVideosByQuery() {
-                var query = 'maquillage';
+function searchVideosByQuery(query) {
+               
                 var request = gapi.client.youtube.search.list({
                         part: 'snippet',
 						maxResults: 6,
@@ -21,21 +21,22 @@ function searchVideosByQuery() {
                 request.execute(function(response) {
                         // var str = JSON.stringify(response.result);
 						displayVideosListInHtml(response.items);
+						displayReturnBackButton();
                 });
 }
 		
-		
+/* Quand on clique sur l'icone maquillage */
 function displayVideosListInHtml(jsonList) {
-	// console.log(jsonList);
-	
+
 	var videoList = document.getElementById("VideosList");
-	console.log(videoList);
+	videoList.style.display = "block";
+	
 	var list = document.createElement("ul");
 	
 	
 	for (var i = 0; i<jsonList.length; i++) {
 		var li = document.createElement("li");
-		var a = document.createElement("a");
+		
 		var img = document.createElement("img");
 		
 		img.setAttribute("src",jsonList[i].snippet.thumbnails.medium.url);
@@ -54,13 +55,48 @@ function displayVideosListInHtml(jsonList) {
 		list.appendChild(li);
 	}
 	videoList.appendChild(list);
+	
+	createReturnBackButton();
+	document.getElementById("rightPanel").style.display = "none";
 }	
 
+/*Quand on clique sur une des videos de la liste */
 function selectVideoFromList(videoId) {
 	videoID = videoId;
-	console.log(videoID);
-	//En profiter pour cacher la liste
+	if (player) {
+		player.loadVideoById(videoId);
+	}
 	launchVideo();
+	document.getElementById("VideosList").style.display = "none";
+	document.getElementById("rightPanel").style.display = "block";
+	
 	
 }
-		
+	
+/*Cree un bouton de retour qui ferme la liste de videos et reouvre le menu a droite */	
+function createReturnBackButton() {
+	
+	var videoList = document.getElementById("VideosList");
+	var div = document.createElement("div");
+	
+	div.setAttribute("id","returnBackButton");
+	
+	div.setAttribute("onclick","showRightPanelAndHideReturnBackButton()");
+	
+	videoList.appendChild(div);
+}
+
+function showRightPanelAndHideReturnBackButton() {
+	var rightPanel = document.getElementById("rightPanel");
+	rightPanel.style.display = "block";
+	
+	var returnBackButton = document.getElementById("returnBackButton");
+	returnBackButton.style.display = "none";
+	
+	document.getElementById("VideosList").style.display = "none";
+	
+}
+
+
+
+
