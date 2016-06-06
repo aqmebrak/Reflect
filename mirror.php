@@ -21,7 +21,10 @@ if (!isset($_SESSION['uid']))
     <script src="js/clock.js"></script>
     <script src="lib/jClocksGMT.js"></script>
     <script src="lib/draggable.min.js"></script>
+	<script src="lib/VideoClient.js?" type="text/javascript"></script>
     <script src="js/video.js"></script>
+	<script src="js/video_search.js"></script>
+	
     <!-- - - - - - - - - - - - - - - - - - - - - - - -->
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjTonWpMnclazoTL22ibJOdAPyb4CmaA"
             type="text/javascript"></script>-->
@@ -49,9 +52,12 @@ if (!isset($_SESSION['uid']))
     <div id="player"></div>
 </div>
 
+<div id="VideosList"></div>
+
+
 <div id="rightPanel">
     <ul>
-        <li onclick="launchVideo()">
+        <li onclick="searchMaquillageVideos()">
             <div id="maquillageIcon" class="widgetIcon">
                 <div>
         </li>

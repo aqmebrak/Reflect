@@ -1,14 +1,1 @@
-{
-  "user": [
-    {
-      "id": 1,
-      "lastname": "Melchor",
-      "firstname": "J\u00e9r\u00e9my"
-    },
-    {
-      "id": 2,
-      "lastname": "El Koubi",
-      "firstname": "Ugo"
-    }
-  ]
-}
+{"user":[{"id":1,"lastname":"Melchor","firstname":"J\u00e9r\u00e9my"},{"id":2,"lastname":"El Koubi","firstname":"Ugo"},{"id":3,"lastname":"fdp","firstname":"<script> alert(\"a\") <\/script>"}]}
