@@ -1,0 +1,74 @@
+
+#video {
+    /*position: relative;*/
+    display: inline-block;
+    border-radius: 7px;
+    border: medium solid white;
+}
+
+#video span {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 50px;
+}
+
+video#videoElement {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    -ms-transform: translateX(-50%) translateY(-50%);
+    -moz-transform: translateX(-50%) translateY(-50%);
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+    background-size: cover;
+}
+
+
+/* css pour la liste de vidéos */
+#VideosList ul {
+	margin-top:-0.2%;
+	padding-top:2%;
+	width:80%;
+	padding-left:0;
+	background-color:white;
+	position:fixed;
+	z-index:10;
+	list-style-type: none;
+	
+}
+
+#VideosList ul li {
+	width : 30%;
+	float:left;
+	color:black;
+	height:30%;
+	margin:1em;
+	/*padding-left:1%;*/
+	padding-bottom:1%;
+}
+
+#VideosList ul li span{
+	display:block;
+}
+
+#returnBackButton {
+	border-radius: 7px;
+    border: medium solid white;
+	position:fixed;
+	width:16%;
+	margin-left:81%;
+	z-index:10;
+	height:93%;
+	background-image: url(../images/previous.png);
+	background-repeat: no-repeat;
+    background-position: center center;
+	background-size: 50% 20%;
+}
+
+

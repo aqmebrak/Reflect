@@ -31,6 +31,7 @@ if (!isset($_SESSION['uid']))
     <link href="css/mirror.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jClocksGMT.css">
     <link rel="stylesheet" type="text/css" href="css/weather.css">
+	<link rel="stylesheet" type="text/css" href="css/video.css">
 
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 
