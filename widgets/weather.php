@@ -8,28 +8,28 @@ $city = $data['weather']['location'];
 $degree = $data['weather']['degree'];
 
 $timezone = $data['clock']['timezone'];
-
 ?>
 <script>
     window.onload = function () {
         var city = "<?php echo $city; ?>";
         var degree = "<?php echo $degree; ?>";
         initWeather(city, degree);
-        $("#weather").mousedown(function () {
-            <?php $_SESSION['currentWidget']='weather' ?>;
-        });
-
         var timezone = "<?php echo $timezone; ?>";
         initClock(timezone);
-        $("#clock_hou").mousedown(function () {
-            <?php $_SESSION['currentWidget']='clock' ?>;
-        });
-
 
         var $draggable = $('.draggable').draggabilly({
             // options...
         });
 
+
+        $("#clock").mousedown(function () {
+            document.cookie = "currentWidget=clock";
+
+        });
+
+        $("#weather").mousedown(function () {
+            document.cookie = "currentWidget=weather";
+        });
     }
 </script>
 

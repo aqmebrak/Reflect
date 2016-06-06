@@ -8,7 +8,9 @@ $data = json_decode($jsonString, true); ?>
     window.onload = function () {
         var $draggable = $('.draggable').draggabilly({
             // options...
-        })
+        });
     }
+    
+
 </script>
 

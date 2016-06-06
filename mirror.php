@@ -38,7 +38,6 @@ if (!isset($_SESSION['uid']))
 
 </head>
 <body>
-
 <?php include_once('./widgets/clock.php'); ?>
 
 <?php include_once('./widgets/weather.php'); ?>
@@ -81,16 +80,19 @@ if (!isset($_SESSION['uid']))
 <div id="bottomPanel">
 </div>
 
-<script>$("#bottomPanel").on("mousedown mouseover", function (e) {
+<script>
+    $("#bottomPanel").on("mousedown mouseover", function (e) {
         if (e.buttons == 1 || e.buttons == 3) {
-            $(this).css({
+            $("#"+getCookie("currentWidget")).css({
                 backgroundColor: "red"
             });
         }
     }).on("mouseup mouseout", function (e) {
-        $(this).css({
-            backgroundColor: ""
-        });
+        $("#"+getCookie("currentWidget")).css({
+            "background-color": "",
+            "display": "none"
+            }
+        );
     });</script>
 
 <script>
