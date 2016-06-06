@@ -62,16 +62,17 @@ if (!isset($_SESSION['uid']))
 <script>
     $("#bottomPanel").on("mousedown mouseover", function (e) {
         if (e.buttons == 1 || e.buttons == 3) {
-            $(this).css({
+            $("#"+getCookie("currentWidget")).css({
                 backgroundColor: "red"
             });
         }
     }).on("mouseup mouseout", function (e) {
-        $(this).css({
-            backgroundColor: ""
-        });
-    });
-</script>
+        $("#"+getCookie("currentWidget")).css({
+            "background-color": "",
+            "display": "none"
+            }
+        );
+    });</script>
 
 <script>
     var video = document.querySelector("#videoElement");

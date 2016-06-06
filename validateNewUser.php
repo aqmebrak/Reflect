@@ -36,7 +36,7 @@ if (isset($_POST['firstname'])) {
         $txt=json_encode($arr);
         fwrite($newUserFile, $txt);
         fclose($newUserFile);
-        header('Location: index.php');
+        //header('Location: index.php');
     }
 
 }
