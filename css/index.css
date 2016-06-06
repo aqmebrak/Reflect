@@ -25,6 +25,10 @@ body {
     background-color: black;
 }
 
+.temp{
+    width:100%;
+}
+
 .thumbnail {
     display: inline-block;
     background-color: black;
@@ -39,7 +43,7 @@ body {
 
 .logo{
     display:block;
-    width: 400px;
+    width: 30%;
     padding-top:2%;
     padding-bottom:2%;
     margin:auto

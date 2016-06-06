@@ -6,7 +6,7 @@ $data = json_decode($jsonString, true); ?>
 
 <script>
     window.onload = function () {
-        initTime();
+        initClock();
         var $draggable = $('.draggable').draggabilly({
             // options...
         })
