@@ -71,6 +71,10 @@ if (!isset($_SESSION['uid']))
     </ul>
 </div>
 
+<div id="bottomPanel">
+    <img src="images/garbage.png" class="iconGarbage" />
+</div>
+
 <script>
     var video = document.querySelector("#videoElement");
 
