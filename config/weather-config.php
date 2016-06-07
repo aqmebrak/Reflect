@@ -20,6 +20,7 @@ if (isset($_POST['uid']))
     <li class="active"><a href="weather-config.php">Weather</a></li>
     <li><a href="clock-config.php">Clock</a></li>
     <li><a href="news-config.php">News</a></li>
+    <li><a href="traffic-config.php">Traffic</a></li>
     <li><a href="../mirror.php">Mirror</a></li>
 </ul>
 
