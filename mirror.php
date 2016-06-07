@@ -67,6 +67,7 @@ if (!isset($_SESSION['uid']))
             });
         }
     }).on("mouseup mouseout", function (e) {
+        $.ajax({ url: 'hideWidget.php?currentWidget='+getCookie("currentWidget") });
         $("#"+getCookie("currentWidget")).css({
             "background-color": "",
             "display": "none"
