@@ -2,6 +2,7 @@
 @import "http://fonts.googleapis.com/css?family=Open+Sans:400,300,700";
 @import "http://weloveiconfonts.com/api/?family=entypo";
 @import url(http://weloveiconfonts.com/api/?family=fontawesome);
+
 /* entypo */
 [class*="entypo-"]:before {
     font-family: 'entypo', sans-serif;
@@ -14,17 +15,15 @@
     color: white;
 }
 
-/* Colors declarations */
-/* General styles */
-.wrapper {
-    width: 100px;
-    height: 250px;
-    margin: 10% auto;
-    border-radius: 7px;
+/* fontawesome */
+[class*="wi-"]:before {
+    color: white;
+    font-size: 120%;
 }
 
+
 #weather-ul nav {
-    width: 120px;
+    width: 120%;
     height: 100%;
     float: left;
     background-color: #373B46;
@@ -62,20 +61,17 @@
 }
 
 section {
-    height: 100%;
     box-sizing: border-box;
-    padding: 10px 40px;
-    float: left;
-    /*position: relative;*/
+    padding: 1% 5%;
     border-radius: 7px;
     border: medium solid white;
 }
 
 section h1 {
-    width: 250px;
     position: relative;
     font-size: 1.5em;
     border-bottom: 2px solid white;
+    margin: auto;
 }
 
 section h1 a.add {
@@ -99,9 +95,7 @@ section h1 a.add:hover {
 }
 
 section .temperature {
-    color: #3D414C;
     font-size: 2em;
-    transition: color 0.5s ease;
 }
 
 section .temperature h2 {
