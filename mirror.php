@@ -11,7 +11,12 @@ if (!isset($_SESSION['uid']))
     <meta charset="UTF-8">
     <title>Mirror</title>
 
-    <!-- SCRIPTS -  - - -- - - -- - - - --  -- - - - -->
+    <!-- SCRIPTS  LIB-  - - -- - - -- - - - --  -- - - - -->
+    <script src="js/clock.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/video_search.js"></script>
+    <script src="js/weather.js"></script>
+    <!-- SCRIPTS  LIB-  - - -- - - -- - - - --  -- - - - -->
     <script src="lib/jquery-2.2.4.min.js"></script>
     <script src="lib/jquery.rotate.js"></script>
     <script src="lib/jquery.simpleWeather.min.js"></script>
@@ -21,14 +26,13 @@ if (!isset($_SESSION['uid']))
     <script src="lib/jClocksGMT.js"></script>
     <script src="lib/draggable.min.js"></script>
     <script src="lib/VideoClient.js?" type="text/javascript"></script>
-    <script src="js/video.js"></script>
-    <script src="js/video_search.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
 
-    <!-- - - - - - - - - - - - - - - - - - - - - - - -->
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjTonWpMnclazoTL22ibJOdAPyb4CmaA"
             type="text/javascript"></script>-->
     <!-- CSS - - - - - - - - - -- - - - - - - - - - - - -->
     <link href="css/mirror.css" rel="stylesheet">
+    <link href="css/traffic.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jClocksGMT.css">
     <link rel="stylesheet" type="text/css" href="css/weather.css">
 	<link rel="stylesheet" type="text/css" href="css/video.css">
@@ -42,6 +46,7 @@ if (!isset($_SESSION['uid']))
 
 <?php include_once('./widgets/clock.php'); ?>
 <?php include_once('./widgets/rightPanel.php'); ?>
+<?php include_once('./widgets/traffic.php'); ?>
 <?php include_once('./widgets/leftPanel.php'); ?>
 <?php include_once('./widgets/weather.php'); ?>
 <?php include_once('./widgets/news.php'); ?>

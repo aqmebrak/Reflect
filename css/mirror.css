@@ -103,22 +103,6 @@ body {
     /*width:200px;*/
 }
 
-#leftPanel ul li div {
-    padding-top: 0px;
-    margin-left: 29%;
-    width: 100px;
-    height: 100px;
-}
-
-#leftPanel ul li a {
-    margin-top: 10%;
-    display: block;
-}
-
-#leftPanel ul li div a {
-    margin-top: 0;
-}
-
 /* Change the link color on hover */
 ul li:hover {
     background-color: #D96459;
@@ -167,4 +151,9 @@ ul li:hover {
     height: 100%;
     color: white;
     background-color: black;
+}
+
+.smallIcon {
+    padding-left:70%;
+   width:20%;
 }

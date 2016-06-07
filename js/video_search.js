@@ -1,6 +1,3 @@
-
-
-
 function searchMaquillageVideos(){
                 gapi.client.setApiKey('AIzaSyARvwirFktEIi_BTaKcCi9Ja-m3IEJYIRk');
                 gapi.client.load('youtube', 'v3', function() {
@@ -21,7 +18,7 @@ function searchVideosByQuery(query) {
                 request.execute(function(response) {
                         // var str = JSON.stringify(response.result);
 						displayVideosListInHtml(response.items);
-						displayReturnBackButton();
+						createReturnBackButton();
                 });
 }
 		
@@ -32,6 +29,7 @@ function displayVideosListInHtml(jsonList) {
 	videoList.style.display = "block";
 	
 	var list = document.createElement("ul");
+	list.className = "videoPanel";
 	
 	
 	for (var i = 0; i<jsonList.length; i++) {
