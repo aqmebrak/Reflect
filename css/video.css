@@ -40,6 +40,7 @@ video#videoElement {
 	position:fixed;
 	z-index:10;
 	list-style-type: none;
+	height:90%
 	
 }
 
@@ -51,10 +52,20 @@ video#videoElement {
 	margin:1em;
 	/*padding-left:1%;*/
 	padding-bottom:1%;
+	margin-bottom:1em;
+	width: 320px; /*taille des vignettes youtube*/
+	margin-bottom : 10%;
+}
+
+
+#VideosList ul li:hover  div{
+	background-color: #D96459;
 }
 
 #VideosList ul li span{
 	display:block;
+	width:100%
+	
 }
 
 #returnBackButton {
