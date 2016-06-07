@@ -7,12 +7,12 @@
         <li>
             <a>Lorem</a>
         </li>
-        <a href="config/weather-config.php">
-            <li>
+        
+            <li onclick="redirectConfig()">
                 <div id="ecrouIcon" class="widgetIcon">
                 </div>
             </li>
-        </a>
+        
         <li>
             <a href="index.php">
                 <div id="exitIcon" class="widgetIcon">

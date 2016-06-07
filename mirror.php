@@ -26,6 +26,8 @@ if (!isset($_SESSION['uid']))
     <script src="lib/draggable.min.js"></script>
     <script src="lib/VideoClient.js?" type="text/javascript"></script>
     <script src="lib/bootstrap.min.js"></script>
+	
+	<script src="js/cursor.js"></script>
 
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjTonWpMnclazoTL22ibJOdAPyb4CmaA"
             type="text/javascript"></script>-->
@@ -46,7 +48,7 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/traffic.php'); ?>
 <?php include_once('./widgets/leftPanel.php'); ?>
 <?php include_once('./widgets/weather.php'); ?>
-<?php include_once('./widgets/news.php'); ?>
+<?php include_once('./widgets/news.php'); ?> 
 
 <div id="container">
     <video autoplay="true" id="videoElement"></video>
@@ -64,7 +66,22 @@ if (!isset($_SESSION['uid']))
 </div>
 
 <script src="js/bottomPanel.js"></script>
-<script src="js/getVideo.js"></script>
+<script>
+var video = document.querySelector("#videoElement");
+
+navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
+
+if (navigator.getUserMedia) {
+    navigator.getUserMedia({video: true}, handleVideo, videoError);
+}
+
+function handleVideo(stream) {
+    video.src = window.URL.createObjectURL(stream);
+}
+
+function videoError(e) {
+    // do something
+}</script>
 
 </body>
 </html>

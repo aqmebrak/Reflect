@@ -1,5 +1,9 @@
 html, a {
-    cursor: url(../images/cursor.cur), pointer;
+    cursor: url(../images/curs/clicker.cur), pointer;
+}
+
+#rightPanel ul a:active{
+	cursor: url(../images/curs/clicker5.png), pointer !important;
 }
 
 html {
@@ -12,7 +16,7 @@ body {
 }
 
 .grabbable:active:hover {
-    cursor: url(../images/grab.cur), pointer;
+    cursor: url(../images/curs/grab.cur), pointer;
 }
 
 .widget {

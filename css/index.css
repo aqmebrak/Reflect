@@ -1,5 +1,5 @@
 html, a, .row button {
-    cursor: url(../images/cursor.cur), pointer;
+    cursor: url(../images/curs/clicker.cur), pointer;
 }
 
 body {
