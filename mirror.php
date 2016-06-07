@@ -61,19 +61,26 @@ if (!isset($_SESSION['uid']))
 
 <script>
     $("#bottomPanel").on("mousedown mouseover", function (e) {
-        if (e.buttons == 1 || e.buttons == 3) {
-            $("#"+getCookie("currentWidget")).css({
-                backgroundColor: "red"
+        if (e.buttons == 1) {
+            $(getBorder(getCookie("currentWidget"))).css({
+                "border-color": "red"
             });
         }
-    }).on("mouseup mouseout", function (e) {
+    }).on("mouseup", function (e) {
         $.ajax({ url: 'hideWidget.php?currentWidget='+getCookie("currentWidget") });
-        $("#"+getCookie("currentWidget")).css({
-            "background-color": "",
+        $(getBorder(getCookie("currentWidget"))).css({
             "display": "none"
             }
         );
-    });</script>
+    }).on(" mouseout", function (e) {
+        $(getBorder(getCookie("currentWidget"))).css({
+            "border-color": "white"
+            }
+        );
+    })
+    ;
+
+</script>
 
 <script>
     var video = document.querySelector("#videoElement");

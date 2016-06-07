@@ -1,13 +1,1 @@
-{
-  "lastname": "El Koubi",
-  "firstname": "Ugo",
-  "weather": {
-    "display":true,
-    "degree": "f",
-    "location": "Nice"
-  },
-  "clock": {
-    "display":true,
-    "timezone": "+1"
-  }
-}
+{"lastname":"El Koubi","firstname":"Ugo","weather":{"display":false,"degree":"f","location":"London"},"clock":{"display":false,"timezone":"+1"}}

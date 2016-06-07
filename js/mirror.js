@@ -12,3 +12,12 @@ function getCookie(cname) {
     }
     return "";
 }
+
+function getBorder(currentWidget){
+    var div="";
+    if(currentWidget=="weather")
+        div="section";
+    else if (currentWidget=="clock")
+        div=".jcgmt-digital";
+    return div;
+}
