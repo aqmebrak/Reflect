@@ -35,7 +35,7 @@ if (!isset($_SESSION['uid']))
     <link href="css/traffic.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jClocksGMT.css">
     <link rel="stylesheet" type="text/css" href="css/weather.css">
-	<link rel="stylesheet" type="text/css" href="css/video.css">
+    <link rel="stylesheet" type="text/css" href="css/video.css">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 
@@ -43,16 +43,23 @@ if (!isset($_SESSION['uid']))
 <body>
 
 <?php include_once('./widgets/loadingScreen.php'); ?>
+<?php include_once('./widgets/rightPanel.php'); ?>
+<?php include_once('./widgets/leftPanel.php'); ?>
 
 <?php include_once('./widgets/clock.php'); ?>
-<?php include_once('./widgets/rightPanel.php'); ?>
 <?php include_once('./widgets/traffic.php'); ?>
-<?php include_once('./widgets/leftPanel.php'); ?>
 <?php include_once('./widgets/weather.php'); ?>
 <?php include_once('./widgets/news.php'); ?>
 <?php include_once('./widgets/informationsDisplayer.php'); ?>
 
 <script>
+    $.ajax({
+        url: "checkWidgets.php",
+        data:"test=lol"
+    })
+        .done(function (data) {
+            console.log(data)
+        });
 </script>
 
 <div id="container">
