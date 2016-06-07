@@ -2,14 +2,16 @@
   "lastname": "El Koubi",
   "firstname": "Ugo",
   "weather": {
+    "display": false,
     "degree": "f",
-    "location": "Nice"
-  },
-  "clock": {
-    "timezone": "+1"
+    "location": "London"
   },
   "traffic": {
     "from": "Route des cretes 06560",
     "to": "Biot, France"
+  },
+  "clock": {
+    "display": false,
+    "timezone": "+1"
   }
 }

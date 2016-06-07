@@ -32,11 +32,12 @@ if (isset($_POST['firstname'])) {
         $newUserFile = fopen("database/" . $id . ".json", "w");
         $weather = array('degree' => 'c', 'location' => 'London');
         $clock = array('timezone' => '+1');
-        $arr = array('lastname' => $_POST['lastname'],'firstname' => $_POST['firstname'],'weather' => $weather,'clock' => $clock);
+        $news = array('url' => 'url');
+        $arr = array('lastname' => $_POST['lastname'],'firstname' => $_POST['firstname'],'weather' => $weather,'clock' => $clock, 'news' => $news);
         $txt=json_encode($arr);
         fwrite($newUserFile, $txt);
         fclose($newUserFile);
-        //header('Location: index.php');
+        header("Refresh:0; url=index.php");
     }
 
 }

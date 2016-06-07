@@ -1,0 +1,19 @@
+{
+  "providers": [
+    {
+      "provider": "BFM",
+      "url": {
+        "Toutes les actualités": "http://www.bfmtv.com/rss/info/flux-rss/flux-toutes-les-actualites/",
+        "Politique": "http://www.bfmtv.com/rss/politique/",
+        "Société": "http://www.bfmtv.com/rss/societe/",
+        "Internet": "http://hightech.bfmtv.com/rss/internet/"
+      }
+    },
+    {
+      "provider": "iTELE",
+      "url": {
+
+      }
+    }
+  ]
+}
