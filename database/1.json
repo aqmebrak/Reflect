@@ -9,5 +9,9 @@
   "clock": {
     "display": false,
     "timezone": "+1"
+  },
+  "traffic": {
+    "from": "Route des Crêtes, Valbonne, France",
+    "to": "Biot, France"
   }
 }

@@ -8,6 +8,10 @@
     "degree": "f",
     "location": "London"
   },
+  "traffic": {
+    "from": "Route des cretes 06560",
+    "to": "Biot, France"
+  },
   "clock": {
     "display": true,
     "left": "420px",
