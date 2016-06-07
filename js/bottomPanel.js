@@ -1,3 +1,22 @@
+$("#bottomPanel").on("mousedown mouseover", function (e) {
+    if (e.buttons == 1) {
+        $(getBorder(getCookie("currentWidget"))).css({
+            "border-color": "red"
+        });
+    }
+}).on("mouseup", function (e) {
+    $.ajax({ url: 'hideWidget.php?currentWidget='+getCookie("currentWidget") });
+    $(getBorder(getCookie("currentWidget"))).css({
+            "display": "none"
+        }
+    );
+}).on(" mouseout", function (e) {
+    $(getBorder(getCookie("currentWidget"))).css({
+            "border-color": "white"
+        }
+    );
+});
+
 function getCookie(cname) {
     var name = cname + "=";
     var ca = document.cookie.split(';');

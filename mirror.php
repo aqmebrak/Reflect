@@ -15,7 +15,6 @@ if (!isset($_SESSION['uid']))
     <script src="lib/jquery.rotate.js"></script>
     <script src="lib/jquery.simpleWeather.min.js"></script>
     <script src="js/weather.js"></script>
-    <script src="js/mirror.js"></script>
     <script src="lib/bootstrap.min.js"></script>
     <script src="js/clock.js"></script>
     <script src="lib/jClocksGMT.js"></script>
@@ -55,50 +54,11 @@ if (!isset($_SESSION['uid']))
 
 <div id="VideosList"></div>
 
-
 <div id="bottomPanel">
 </div>
 
-<script>
-    $("#bottomPanel").on("mousedown mouseover", function (e) {
-        if (e.buttons == 1) {
-            $(getBorder(getCookie("currentWidget"))).css({
-                "border-color": "red"
-            });
-        }
-    }).on("mouseup", function (e) {
-        $.ajax({ url: 'hideWidget.php?currentWidget='+getCookie("currentWidget") });
-        $(getBorder(getCookie("currentWidget"))).css({
-            "display": "none"
-            }
-        );
-    }).on(" mouseout", function (e) {
-        $(getBorder(getCookie("currentWidget"))).css({
-            "border-color": "white"
-            }
-        );
-    })
-    ;
-
-</script>
-
-<script>
-    var video = document.querySelector("#videoElement");
-
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
-
-    if (navigator.getUserMedia) {
-        navigator.getUserMedia({video: true}, handleVideo, videoError);
-    }
-
-    function handleVideo(stream) {
-        video.src = window.URL.createObjectURL(stream);
-    }
-
-    function videoError(e) {
-        // do something
-    }
-</script>
+<script src="js/bottomPanel.js"></script>
+<script src="js/getVideo.js"></script>
 
 </body>
 </html>
