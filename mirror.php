@@ -53,14 +53,27 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/informationsDisplayer.php'); ?>
 
 <script>
+
     $.ajax({
-        url: "checkWidgets.php",
-        data:"test=lol"
+        url: "checkWidgets.php"
     })
-        .done(function (data) {
-            console.log(data)
+        .done(function (uid) {
+            $.getJSON("database/" + uid + ".json", function (data) {
+                $.each(data, function (key, val) {
+                    if(!val['display']){
+                        console.log(key);
+                        $("#"+key).css({
+                                "display": "none"
+                            }
+                        );
+                    }
+
+                });
+            });
         });
+
 </script>
+
 
 <div id="container">
     <video autoplay="true" id="videoElement"></video>
