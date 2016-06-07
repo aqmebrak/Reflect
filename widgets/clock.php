@@ -2,15 +2,21 @@
 
 <?php
 $jsonString = file_get_contents('database/' . $_SESSION['uid'] . '.json');
-$data = json_decode($jsonString, true); ?>
+$data = json_decode($jsonString, true);
+
+$timezone = $data['clock']['timezone'];
+?>
 
 <script>
-    window.onload = function () {
-        var $draggable = $('.draggable').draggabilly({
-            // options...
-        });
-    }
-    
+    var timezone = "<?php echo $timezone; ?>";
+    initClock(timezone);
 
+    var $draggable = $('.draggable').draggabilly({
+        // options...
+    });
+
+    $("#clock").mousedown(function () {
+        document.cookie = "currentWidget=clock";
+    });
 </script>
 

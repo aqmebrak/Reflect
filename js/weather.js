@@ -23,7 +23,7 @@ function initWeather(city, degree) {
         error: function (error) {
             $("#weather").html('<p>' + error + '</p>');
         }
-    })
+    });
 }
 
 
