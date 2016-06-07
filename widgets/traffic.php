@@ -70,7 +70,11 @@ $to = $data['traffic']['to']; ?>
                         geocoder.geocode({'address': destinationList[j]},
                             showGeocodedAddressOnMap(true));
                         outputDiv.innerHTML += originList[i] + ' to ' + destinationList[j] +
-                            ': ' + ' in ' + results[j].duration.text + '<br>';
+                            ': ' + ' in ';
+							
+						if(results[j].duration){
+							outputDiv.innerHTML += results[j].duration.text + '<br>';
+						}
                     }
                 }
             }
