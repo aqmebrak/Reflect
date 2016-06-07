@@ -8,8 +8,8 @@
 
 #video span {
     position: absolute;
-    top: 0px;
-    right: 0px;
+    top: 0;
+    right: 0;
     width: 50px;
 }
 
@@ -29,59 +29,54 @@ video#videoElement {
     background-size: cover;
 }
 
-
-/* css pour la liste de vidéos */
+/* css pour la liste de vidï¿½os */
 #VideosList ul {
-	margin-top:-0.2%;
-	padding-top:2%;
-	width:80%;
-	padding-left:0;
-	background-color:white;
-	position:fixed;
-	z-index:10;
-	list-style-type: none;
-	height:90%
-	
+    margin-top: -0.2%;
+    padding-top: 2%;
+    width: 80%;
+    padding-left: 0;
+    background-color: white;
+    position: fixed;
+    z-index: 10;
+    list-style-type: none;
+    height: 90%;
+    border-radius: 7px;
+    border: medium solid white;
 }
 
 #VideosList ul li {
-	width : 30%;
-	float:left;
-	color:black;
-	height:30%;
-	margin:1em;
-	/*padding-left:1%;*/
-	padding-bottom:1%;
-	margin-bottom:1em;
-	width: 320px; /*taille des vignettes youtube*/
-	margin-bottom : 10%;
+    float: left;
+    color: black;
+    height: 30%;
+    /*padding-left:1%;*/
+    padding-bottom: 1%;
+    width: 320px; /*taille des vignettes youtube*/
+    margin: 1em 1em 10%;
 }
 
-
-#VideosList ul li:hover  div{
-	background-color: #D96459;
+#VideosList ul li:hover div {
+    background-color: #D96459;
 }
 
-#VideosList ul li span{
-	display:block;
-	width:100%
-	
+#VideosList ul li span {
+    display: block;
+    width: 100%
+
 }
 
 #returnBackButton {
-	border-radius: 7px;
+    border-radius: 7px;
     border: medium solid white;
-	position:fixed;
-	width:16%;
-	margin-left:81%;
-	z-index:10;
-	height:93%;
-	background-image: url(../images/previous.png);
-	background-repeat: no-repeat;
-    background-position: center center;
-	background-size: 50% 20%;
-	
+    position: fixed;
+    width: 16%;
+    margin-left: 81%;
+    z-index: 10;
+    height: 93%;
+    background: url(../images/previous.png) no-repeat center center;
+    background-size: 50% 20%;
+
 }
+
 #returnBackButton:hover {
-	background-color: #D96459;
+    background-color: #D96459;
 }
