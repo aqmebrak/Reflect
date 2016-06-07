@@ -3,6 +3,7 @@ session_start();
 if (!isset($_SESSION['uid']))
     $_SESSION['uid'] = $_POST['uid'];
 ?>
+<script>var listInformationsDisplayer = [];</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -31,18 +32,21 @@ if (!isset($_SESSION['uid']))
     <link rel="stylesheet" href="css/jClocksGMT.css">
     <link rel="stylesheet" type="text/css" href="css/weather.css">
 	<link rel="stylesheet" type="text/css" href="css/video.css">
-
+    <link rel="stylesheet" type="text/css" href="css/animate.css">
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 </head>
 <body>
 
+<?php include_once('./widgets/loadingScreen.php'); ?>
+
 <?php include_once('./widgets/clock.php'); ?>
 <?php include_once('./widgets/rightPanel.php'); ?>
 <?php include_once('./widgets/leftPanel.php'); ?>
 <?php include_once('./widgets/weather.php'); ?>
-<?php include_once ('./widgets/news.php'); ?>
-<body>
+<?php include_once('./widgets/news.php'); ?>
+<?php include_once('./widgets/informationsDisplayer.php'); ?>
+
 <div id="container">
     <video autoplay="true" id="videoElement"></video>
 </div>
