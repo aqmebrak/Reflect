@@ -14,6 +14,6 @@ function initClock(timezone) {
         angleHour: 0,
         skin: 1,
         imgpath: ''
-    }
+    };
     $('#clock').jClocksGMT(data);
 }   

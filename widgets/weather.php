@@ -6,30 +6,18 @@ $data = json_decode($jsonString, true);
 
 $city = $data['weather']['location'];
 $degree = $data['weather']['degree'];
-
-$timezone = $data['clock']['timezone'];
 ?>
 <script>
-    window.onload = function () {
-        var city = "<?php echo $city; ?>";
-        var degree = "<?php echo $degree; ?>";
-        initWeather(city, degree);
-        var timezone = "<?php echo $timezone; ?>";
-        initClock(timezone);
+    var city = "<?php echo $city; ?>";
+    var degree = "<?php echo $degree; ?>";
+    initWeather(city, degree);
 
-        var $draggable = $('.draggable').draggabilly({
-            // options...
-        });
+    var $draggable = $('.draggable').draggabilly({
+        // options...
+    });
 
-
-        $("#clock").mousedown(function () {
-            document.cookie = "currentWidget=clock";
-
-        });
-
-        $("#weather").mousedown(function () {
-            document.cookie = "currentWidget=weather";
-        });
-    }
+    $("#weather").mousedown(function () {
+        document.cookie = "currentWidget=weather";
+    });
 </script>
 
