@@ -10,7 +10,8 @@
         width: 40%;
         height: 5%;
         color: white;
-        font-size: larger;
+        font-size: x-large;
+        font-weight: bold;
     }
 </style>
 
@@ -43,7 +44,7 @@ $url = $data['news']['url'];
                     var number = 1 + Math.floor(Math.random() * length);
                     $('#news').find("marquee").text(listNews[number]);
                 },
-                10000); // every 10 second
+                15000); // every 10 second
         });
     }
 </script>
