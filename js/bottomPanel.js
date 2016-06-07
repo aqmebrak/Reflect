@@ -5,7 +5,7 @@ $("#bottomPanel").on("mousedown mouseover", function (e) {
         });
     }
 }).on("mouseup", function (e) {
-    $.ajax({ url: 'hideWidget.php?currentWidget='+getCookie("currentWidget") });
+    $.ajax({ url: 'dispWidget.php?currentWidget='+getCookie("currentWidget")+'&disp=false' });
     $(getBorder(getCookie("currentWidget"))).css({
             "display": "none"
         }
@@ -38,5 +38,7 @@ function getBorder(currentWidget){
         div="section";
     else if (currentWidget=="clock")
         div=".jcgmt-digital";
+    else if (currentWidget=="news")
+        div="#news";
     return div;
 }
