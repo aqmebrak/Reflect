@@ -42,6 +42,7 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/rightPanel.php'); ?>
 
 <?php include_once('./widgets/weather.php'); ?>
+<?php include_once ('./widgets/news.php'); ?>
 <body>
 <div id="container">
     <video autoplay="true" id="videoElement"></video>
