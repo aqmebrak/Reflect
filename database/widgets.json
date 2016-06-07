@@ -1,29 +1,29 @@
 {
-  "weather": {
-    "display": true,
-    "left": "75px",
-    "top": "0px",
-    "degree": "f",
-    "location": "London"
-  },
-  "clock": {
-    "display": true,
-    "left": "420px",
-    "top": "0px",
-    "timezone": "+1"
-  },
-  "news": {
-    "display": true,
-    "left": "75px",
-    "top": "550px",
-    "news": "url",
-    "url": "http:\/\/hightech.bfmtv.com\/rss\/internet\/"
-  },
-  "traffic": {
-    "display": true,
-    "left": "70px",
-    "top": "200px",
-    "from": "Route des cretes 06560",
-    "to": "Biot, France"
-  }
+    "weather": {
+      "display": true,
+      "left": "75px",
+      "top": "0px",
+      "degree": "f",
+      "location": "London"
+    },
+    "clock": {
+      "display": true,
+      "left": "420px",
+      "top": "0px",
+      "timezone": "+1"
+    },
+    "news": {
+      "display": true,
+      "left": "75px",
+      "top": "550px",
+      "news": "url",
+      "url": "http:\/\/hightech.bfmtv.com\/rss\/internet\/"
+    },
+    "traffic": {
+      "display": true,
+      "left": "70px",
+      "top": "200px",
+      "from": "Route des cretes 06560",
+      "to": "Biot, France"
+    }
 }
