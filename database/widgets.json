@@ -18,5 +18,12 @@
     "top": "550px",
     "news": "url",
     "url": "http:\/\/hightech.bfmtv.com\/rss\/internet\/"
+  },
+  "traffic": {
+    "display": true,
+    "left": "70px",
+    "top": "200px",
+    "from": "Route des cretes 06560",
+    "to": "Biot, France"
   }
 }
