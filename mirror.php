@@ -10,25 +10,32 @@ if (!isset($_SESSION['uid']))
     <meta charset="UTF-8">
     <title>Mirror</title>
 
-    <!-- SCRIPTS -  - - -- - - -- - - - --  -- - - - -->
+    <!-- SCRIPTS  LIB-  - - -- - - -- - - - --  -- - - - -->
+    <script src="js/clock.js"></script>
+    <script src="js/video.js"></script>
+    <script src="js/video_search.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/mirror.js"></script>
+    <!-- SCRIPTS  LIB-  - - -- - - -- - - - --  -- - - - -->
     <script src="lib/jquery-2.2.4.min.js"></script>
     <script src="lib/jquery.rotate.js"></script>
     <script src="lib/jquery.simpleWeather.min.js"></script>
+<<<<<<< HEAD
+=======
     <script src="js/weather.js"></script>
-    <script src="js/mirror.js"></script>
     <script src="lib/bootstrap.min.js"></script>
     <script src="js/clock.js"></script>
+>>>>>>> dff2a029c791be101841eeaaed933b96a34ab35a
     <script src="lib/jClocksGMT.js"></script>
     <script src="lib/draggable.min.js"></script>
     <script src="lib/VideoClient.js?" type="text/javascript"></script>
-    <script src="js/video.js"></script>
-    <script src="js/video_search.js"></script>
+    <script src="lib/bootstrap.min.js"></script>
 
-    <!-- - - - - - - - - - - - - - - - - - - - - - - -->
     <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjTonWpMnclazoTL22ibJOdAPyb4CmaA"
             type="text/javascript"></script>-->
     <!-- CSS - - - - - - - - - -- - - - - - - - - - - - -->
     <link href="css/mirror.css" rel="stylesheet">
+    <link href="css/traffic.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jClocksGMT.css">
     <link rel="stylesheet" type="text/css" href="css/weather.css">
 	<link rel="stylesheet" type="text/css" href="css/video.css">
@@ -40,9 +47,11 @@ if (!isset($_SESSION['uid']))
 
 <?php include_once('./widgets/clock.php'); ?>
 <?php include_once('./widgets/rightPanel.php'); ?>
-
+<?php include_once('./widgets/traffic.php'); ?>
+<?php include_once('./widgets/leftPanel.php'); ?>
 <?php include_once('./widgets/weather.php'); ?>
-<body>
+<?php include_once ('./widgets/news.php'); ?>
+
 <div id="container">
     <video autoplay="true" id="videoElement"></video>
 </div>
@@ -55,42 +64,11 @@ if (!isset($_SESSION['uid']))
 
 <div id="VideosList"></div>
 
-
 <div id="bottomPanel">
 </div>
 
-<script>
-    $("#bottomPanel").on("mousedown mouseover", function (e) {
-        if (e.buttons == 1 || e.buttons == 3) {
-            $("#"+getCookie("currentWidget")).css({
-                backgroundColor: "red"
-            });
-        }
-    }).on("mouseup mouseout", function (e) {
-        $("#"+getCookie("currentWidget")).css({
-            "background-color": "",
-            "display": "none"
-            }
-        );
-    });</script>
-
-<script>
-    var video = document.querySelector("#videoElement");
-
-    navigator.getUserMedia = navigator.getUserMedia || navigator.webkitGetUserMedia || navigator.mozGetUserMedia || navigator.msGetUserMedia || navigator.oGetUserMedia;
-
-    if (navigator.getUserMedia) {
-        navigator.getUserMedia({video: true}, handleVideo, videoError);
-    }
-
-    function handleVideo(stream) {
-        video.src = window.URL.createObjectURL(stream);
-    }
-
-    function videoError(e) {
-        // do something
-    }
-</script>
+<script src="js/bottomPanel.js"></script>
+<script src="js/getVideo.js"></script>
 
 </body>
 </html>
