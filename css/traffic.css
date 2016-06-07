@@ -1,0 +1,12 @@
+@import url(http://weloveiconfonts.com/api/?family=fontawesome);
+#traffic {
+    box-sizing: border-box;
+    padding: 1px 4px;
+    float: left;
+    /*position: relative;*/
+    border-radius: 7px;
+    border: medium solid white;
+    font-size: 18px;
+    font-family: 'FontAwesome', sans-serif;
+    color: white
+}
