@@ -1,7 +1,7 @@
 
 <div id="leftPanel">
     <ul>
-        <li onclick="searchMaquillageVideos()">
+        <li>
             <div id="maquillageIcon" class="widgetIcon">
                 <div>
         </li>

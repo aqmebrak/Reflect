@@ -1,21 +1,20 @@
-
 <div id="rightPanel">
     <ul>
         <li onclick="searchMaquillageVideos()">
             <div id="maquillageIcon" class="widgetIcon">
-                <div>
+                </div>
         </li>
         <li><a>Lorem</a></li>
         <a href="../config/weather-config.php">
             <li>
                 <div id="ecrouIcon" class="widgetIcon">
-                    <div>
+                    </div>
             </li>
         </a>
         <a href="../index.php">
             <li>
                 <div id="exitIcon" class="widgetIcon">
-                    <div>
+                    </div>
             </li>
         </a>
     </ul>
