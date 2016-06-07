@@ -78,14 +78,13 @@ body {
 }
 
 #leftPanel:hover {
-    margin-left:-5%;
+    margin-left:-15%;
 }
 
 #leftPanel ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-    overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 
 #leftPanel ul li {
@@ -100,22 +99,6 @@ body {
     padding-bottom: 10%;
     height: 10%;
     /*width:200px;*/
-}
-
-#leftPanel ul li div {
-    padding-top: 0px;
-    margin-left: 29%;
-    width: 100px;
-    height: 100px;
-}
-
-#leftPanel ul li a {
-    margin-top: 10%;
-    display: block;
-}
-
-#leftPanel ul li div a {
-    margin-top: 0;
 }
 
 /* Change the link color on hover */
@@ -159,4 +142,9 @@ ul li:hover {
 
 #closeIcon {
     background-image: url(../images/close.png);
+}
+
+.smallIcon {
+    padding-left:70%;
+   width:20%;
 }

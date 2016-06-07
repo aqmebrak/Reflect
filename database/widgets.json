@@ -1,6 +1,4 @@
 {
-  "lastname": "El Koubi",
-  "firstname": "Ugo",
   "weather": {
     "display": true,
     "left": "75px",
@@ -16,8 +14,8 @@
   },
   "news": {
     "display": true,
-    "left": 50,
-    "top": 30,
+    "left": "75px",
+    "top": "550px",
     "news": "url",
     "url": "http:\/\/hightech.bfmtv.com\/rss\/internet\/"
   }
