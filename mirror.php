@@ -15,17 +15,13 @@ if (!isset($_SESSION['uid']))
     <script src="js/video.js"></script>
     <script src="js/video_search.js"></script>
     <script src="js/weather.js"></script>
-    <script src="js/mirror.js"></script>
     <!-- SCRIPTS  LIB-  - - -- - - -- - - - --  -- - - - -->
     <script src="lib/jquery-2.2.4.min.js"></script>
     <script src="lib/jquery.rotate.js"></script>
     <script src="lib/jquery.simpleWeather.min.js"></script>
-<<<<<<< HEAD
-=======
     <script src="js/weather.js"></script>
     <script src="lib/bootstrap.min.js"></script>
     <script src="js/clock.js"></script>
->>>>>>> dff2a029c791be101841eeaaed933b96a34ab35a
     <script src="lib/jClocksGMT.js"></script>
     <script src="lib/draggable.min.js"></script>
     <script src="lib/VideoClient.js?" type="text/javascript"></script>
@@ -50,7 +46,7 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/traffic.php'); ?>
 <?php include_once('./widgets/leftPanel.php'); ?>
 <?php include_once('./widgets/weather.php'); ?>
-<?php include_once ('./widgets/news.php'); ?>
+<?php include_once('./widgets/news.php'); ?>
 
 <div id="container">
     <video autoplay="true" id="videoElement"></video>

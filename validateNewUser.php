@@ -33,8 +33,12 @@ if (isset($_POST['firstname'])) {
         $weather = array('degree' => 'c', 'location' => 'London');
         $clock = array('timezone' => '+1');
         $news = array('url' => 'url');
-        $arr = array('lastname' => $_POST['lastname'],'firstname' => $_POST['firstname'],'weather' => $weather,'clock' => $clock, 'news' => $news);
-        $txt=json_encode($arr);
+
+        //traffic
+        $traffic = array('from' => '', 'to' => '');
+        $arr = array('lastname' => $_POST['lastname'], 'firstname' => $_POST['firstname'],
+            'weather' => $weather, 'clock' => $clock, 'news' => $news, 'traffic' => $traffic);
+        $txt = json_encode($arr);
         fwrite($newUserFile, $txt);
         fclose($newUserFile);
         header("Refresh:0; url=index.php");

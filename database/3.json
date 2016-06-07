@@ -1,6 +1,0 @@
-{"lastname":"fdp",
-  "firstname":"<script> alert("a") </script>",
-  "weather":
-  {"degree":"c","location":"London"},
-  "clock":{"timezone":"+1"}
-}
