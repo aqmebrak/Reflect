@@ -11,6 +11,7 @@ session_start();
     <script src="lib/jquery-2.2.4.min.js"></script>
     <script src="js/index.js"></script>
     <script src="lib/bootstrap.min.js"></script>
+	<script src="js/cursor.js"></script>
 
     <link href="css/bootstrap.min.css" rel="stylesheet">
     <link href="css/index.css" rel="stylesheet">

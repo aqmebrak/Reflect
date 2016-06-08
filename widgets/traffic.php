@@ -5,8 +5,8 @@ $data = json_decode($jsonString, true);
 $from = $data['traffic']['from'];
 $to = $data['traffic']['to']; ?>
 
-<div class="draggable grabbable widget" style="left:150px; top=300px;" id="traffic">
-    <strong>Traffic</strong>
+<div class="draggable grabbable widget" id="traffic">
+    <strong style="font-size: 1.5em;">Traffic</strong>
     <div id="output"></div>
 </div>
 <div id="map" style="display:none;"></div>
@@ -69,12 +69,10 @@ $to = $data['traffic']['to']; ?>
                     for (var j = 0; j < results.length; j++) {
                         geocoder.geocode({'address': destinationList[j]},
                             showGeocodedAddressOnMap(true));
-                        outputDiv.innerHTML += originList[i] + ' to ' + destinationList[j] +
-                            ': ' + ' in ';
-							
-						if(results[j].duration){
-							outputDiv.innerHTML += results[j].duration.text + '<br>';
-						}
+                        if (results[j].duration) {
+                            outputDiv.innerHTML += 'Temps requis: ' +
+                                results[j].duration.text + '<br>';
+                        }
                     }
                 }
             }
@@ -93,6 +91,11 @@ $to = $data['traffic']['to']; ?>
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjTonWpMnclazoTL22ibJOdAPyb4CmaA&signed_in=true&callback=initMap"
     async defer>
 
+</script>
+<script>
+    $("#traffic").mousedown(function () {
+        document.cookie = "currentWidget=traffic";
+    });
 </script>
 
 

@@ -1,33 +1,34 @@
 <script>
     function displayWidget(name) {
         //update user's file
-        $.ajax({url: 'dispWidget.php?currentWidget=' + name + '&disp=true'});
+        $.ajax({
+            url: 'dispWidget.php?currentWidget=' + name + '&disp=true'
+        })
+            .done(function () {
+                //set proper location
+                $.getJSON("database/widgets.json", function (data) {
+                    var left = "";
+                    var top = "";
+                    //retreive original top & left values
+                    $.each(data, function (key, val) {
+                        if (key == name) {
+                            left = val['left'];
+                            top = val['top'];
+                        }
+                    });
+                    //set them for the widget
+                    $("#" + name).css({
+                            "left": left,
+                            "top": top
+                        }
+                    );
+                });
 
-        //set proper location
-        $.getJSON( "database/widgets.json", function(data) {
-            var left="";
-            var top="";
-            //retreive original top & left values
-            $.each(data, function (key, val) {
-                if(key==name){
-                    left=val['left'];
-                    top=val['top'];
-                }
+                //display the widget
+                $("#" + name).css({
+                    "display": "block"
+                });
             });
-            //set them for the widget
-            $("#"+name).css({
-                    "left": left,
-                    "top": top
-                }
-            );
-        });
-
-        //display the widget
-        $(getBorder(name)).css({
-                "display": "block"
-            }
-        );
-
     }
 </script>
 

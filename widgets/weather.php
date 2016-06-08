@@ -1,4 +1,4 @@
-<div id="weather" class="draggable grabbable widget" style="left:300px;"></div>
+<div id="weather" class="draggable grabbable widget"></div>
 
 <?php
 $jsonString = file_get_contents('database/' . $_SESSION['uid'] . '.json');
