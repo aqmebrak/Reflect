@@ -10,7 +10,7 @@ $("#bottomPanel").on("mousedown mouseover", function (e) {
             "display": "none"
         }
     );
-}).on(" mouseout", function (e) {
+}).on("mouseout", function (e) {
     $(getBorder(getCookie("currentWidget"))).css({
             "border-color": "white"
         }
@@ -42,5 +42,7 @@ function getBorder(currentWidget){
         div="#news";
     else if (currentWidget=="traffic")
         div="#traffic";
+    else if (currentWidget=="video")
+        div="#video";
     return div;
 }

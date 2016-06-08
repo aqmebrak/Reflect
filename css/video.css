@@ -4,6 +4,7 @@
     display: inline-block;
     border-radius: 7px;
     border: medium solid white;
+    padding-top: 5%;
 }
 
 #video span {
