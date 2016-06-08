@@ -89,7 +89,7 @@ body {
 }
 
 #leftPanel:hover {
-    margin-left:-5%;
+    margin-left:-13%;
 }
 
 #leftPanel ul {
@@ -103,12 +103,11 @@ body {
     border-radius: 7px;
     border: medium solid white;
     display: block;
-    padding: 20% 0 20% 0;
     text-decoration: none;
     text-align: center;
     color: white;
-    padding-top: 10%;
-    padding-bottom: 10%;
+    padding-top: 9%;
+    padding-bottom: 9%;
     height: 10%;
     /*width:200px;*/
 }

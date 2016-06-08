@@ -93,9 +93,24 @@ $to = $data['traffic']['to']; ?>
 
 </script>
 <script>
-    $("#traffic").mousedown(function () {
-        document.cookie = "currentWidget=traffic";
-    });
+    //first set the cookie when the widget is selected
+    //then ask to a php to change the position of the widget
+    var traffic = "traffic";
+    $("#" + traffic)
+        .mousedown(function () {
+            document.cookie = "currentWidget=" + traffic;
+        })
+        .mouseup(function () {
+            setTimeout(function(){
+                var left = $("#" + traffic).css("left");
+                var top = $("#" + traffic).css("top");
+                $.ajax({
+                    url: 'setWidgetPosition.php',
+                    data: {currentWidget: traffic, left: left, top: top}
+                });
+            }, 100);
+
+        });
 </script>
 
 

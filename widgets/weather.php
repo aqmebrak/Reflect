@@ -16,13 +16,23 @@ $degree = $data['weather']['degree'];
         // options...
     });
 
-    var widget = "weather";
-    //set the cookie
-    $("#"+widget).mousedown(function () {
-        document.cookie = "currentWidget="+widget;
-    });
-    //ask to the php to set new left & top values
-    //var left = $("#"+widget)).css("left");
-    //var top = $("#"+widget)).css("top");
+    //first set the cookie when the widget is selected
+    //then ask to a php to change the position of the widget
+    var weather = "weather";
+    $("#" + weather)
+        .mousedown(function () {
+            document.cookie = "currentWidget=" + weather;
+        })
+        .mouseup(function () {
+            setTimeout(function(){
+                var left = $("#" + weather).css("left");
+                var top = $("#" + weather).css("top");
+                $.ajax({
+                    url: 'setWidgetPosition.php',
+                    data: {currentWidget: weather, left: left, top: top}
+                });
+            }, 100);
+
+        });
 </script>
 

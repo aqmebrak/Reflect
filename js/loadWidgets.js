@@ -5,7 +5,6 @@ $.ajax({
         $.getJSON("database/" + uid + ".json", function (data) {
             $.each(data, function (key, val) {
                 if (!val['display']) {
-                    console.log(key);
                     $("#" + key).css({
                             "display": "none"
                         }

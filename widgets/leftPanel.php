@@ -41,5 +41,8 @@
         <li onclick="displayWidget('weather')">
             <img class="smallIcon" src="images/weather.png">
         </li>
+        <li onclick="displayWidget('traffic')">
+            <img class="smallIcon" src="images/traffic.png">
+        </li>
     </ul>
 </div>

@@ -1,7 +1,7 @@
 {
   "weather": {
     "display": true,
-    "left": "75px",
+    "left": "150px",
     "top": "10px",
     "degree": "f",
     "location": "London"
@@ -21,8 +21,8 @@
   },
   "traffic": {
     "display": true,
-    "left": "70px",
-    "top": "200px",
+    "left": "150px",
+    "top": "400px",
     "from": "Route des cretes 06560",
     "to": "Biot, France"
   }

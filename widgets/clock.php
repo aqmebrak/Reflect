@@ -15,18 +15,23 @@ $timezone = $data['clock']['timezone'];
         // options...
     });
 
-    var widget = "clock";
-    var left = $("#" + widget).css("left");
-    var top = $("#" + widget).css("top");
-    $("#" + widget)
+    //first set the cookie when the widget is selected
+    //then ask to a php to change the position of the widget
+    var clock = "clock";
+    $("#" + clock)
         .mousedown(function () {
-            document.cookie = "currentWidget=" + widget;
+            document.cookie = "currentWidget=" + clock;
+        })
+        .mouseup(function () {
+            setTimeout(function(){
+                var left = $("#" + clock).css("left");
+                var top = $("#" + clock).css("top");
+                $.ajax({
+                    url: 'setWidgetPosition.php',
+                    data: {currentWidget: clock, left: left, top: top}
+                });
+            }, 100);
 
-            //$.ajax({
-              //  url: 'setWidgetPosition.php?currentWidget=' + widget + '&left=' + left + '&top='top
-            //})
         });
-
-
 </script>
 
