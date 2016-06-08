@@ -5,10 +5,13 @@
 <!-- Php to get the name from the user's config file -->
 <!----------------------------------------------------->
 <?php
-$jsonString = file_get_contents('database/' . $_SESSION['uid'] . '.json');
+$jsonString = file_get_contents('database/users.json');
 $data = json_decode($jsonString, true);
 
-$firstName = $data['firstname'];
+foreach($data['user'] as $elem) {
+    if($elem['id'] == $_SESSION['uid'])
+        $firstName = $elem['firstname'];
+}
 ?>
 
 <!---------------------------------------------------->
