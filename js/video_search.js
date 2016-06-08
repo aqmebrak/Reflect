@@ -61,7 +61,7 @@ function displayVideosListInHtml(jsonList) {
 function displayVideo() {
     //update user's file
     $.ajax({
-        url: 'getUid.php'
+        url: 'widgetsPosition/getUid.php'
     })
         .done(function (uid) {
             //set proper location
@@ -89,7 +89,7 @@ function displayVideo() {
             });
         });
     $.ajax({
-        url: 'dispVideo.php'
+        url: 'widgetsPosition/dispVideo.php'
     });
 }
 

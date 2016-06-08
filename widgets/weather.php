@@ -28,7 +28,7 @@ $degree = $data['weather']['degree'];
                 var left = $("#" + weather).css("left");
                 var top = $("#" + weather).css("top");
                 $.ajax({
-                    url: 'setWidgetPosition.php',
+                    url: 'widgetsPosition/setWidgetPosition.php',
                     data: {currentWidget: weather, left: left, top: top}
                 });
             }, 100);

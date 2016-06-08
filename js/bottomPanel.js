@@ -8,7 +8,7 @@ $("#bottomPanel").on("mousedown mouseover", function (e) {
     if(getCookie("currentWidget")=='video'){
         player.pauseVideo();
     }
-    $.ajax({ url: 'dispWidget.php?currentWidget='+getCookie("currentWidget")+'&disp=false' });
+    $.ajax({ url: 'widgetsPosition/dispWidget.php?currentWidget='+getCookie("currentWidget")+'&disp=false' });
     $("#"+getCookie("currentWidget")).css({
             "display": "none"
         }

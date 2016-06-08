@@ -72,7 +72,7 @@ $final = json_encode($news);
                 var left = $("#" + news).css("left");
                 var top = $("#" + news).css("top");
                 $.ajax({
-                    url: 'setWidgetPosition.php',
+                    url: 'widgetsPosition/setWidgetPosition.php',
                     data: {currentWidget: news, left: left, top: top}
                 });
             }, 100);

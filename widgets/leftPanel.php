@@ -2,7 +2,7 @@
     function displayWidget(name) {
         //update user's file
         $.ajax({
-            url: 'dispWidget.php?currentWidget=' + name + '&disp=true'
+            url: 'widgetsPosition/dispWidget.php?currentWidget=' + name + '&disp=true'
         })
             .done(function () {
                 //set proper location

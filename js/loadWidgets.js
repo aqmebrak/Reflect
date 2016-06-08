@@ -1,5 +1,5 @@
 $.ajax({
-    url: "getUid.php"
+    url: "widgetsPosition/getUid.php"
 })
     .done(function (uid) {
         $.getJSON("database/" + uid + ".json", function (data) {

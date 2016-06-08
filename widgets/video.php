@@ -19,7 +19,7 @@
                 var left = $("#" + video2).css("left");
                 var top = $("#" + video2).css("top");
                 $.ajax({
-                    url: 'setWidgetPosition.php',
+                    url: 'widgetsPosition/setWidgetPosition.php',
                     data: {currentWidget: video2, left: left, top: top}
                 });
             }, 100);

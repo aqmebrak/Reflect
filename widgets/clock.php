@@ -27,7 +27,7 @@ $timezone = $data['clock']['timezone'];
                 var left = $("#" + clock).css("left");
                 var top = $("#" + clock).css("top");
                 $.ajax({
-                    url: 'setWidgetPosition.php',
+                    url: 'widgetsPosition/setWidgetPosition.php',
                     data: {currentWidget: clock, left: left, top: top}
                 });
             }, 100);
