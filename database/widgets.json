@@ -2,14 +2,14 @@
   "weather": {
     "display": true,
     "left": "75px",
-    "top": "0px",
+    "top": "10px",
     "degree": "f",
     "location": "London"
   },
   "clock": {
     "display": true,
     "left": "420px",
-    "top": "0px",
+    "top": "10px",
     "timezone": "+1"
   },
   "news": {

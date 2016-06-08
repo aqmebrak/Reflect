@@ -16,8 +16,13 @@ $degree = $data['weather']['degree'];
         // options...
     });
 
-    $("#weather").mousedown(function () {
-        document.cookie = "currentWidget=weather";
+    var widget = "weather";
+    //set the cookie
+    $("#"+widget).mousedown(function () {
+        document.cookie = "currentWidget="+widget;
     });
+    //ask to the php to set new left & top values
+    //var left = $("#"+widget)).css("left");
+    //var top = $("#"+widget)).css("top");
 </script>
 

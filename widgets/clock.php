@@ -15,8 +15,18 @@ $timezone = $data['clock']['timezone'];
         // options...
     });
 
-    $("#clock").mousedown(function () {
-        document.cookie = "currentWidget=clock";
-    });
+    var widget = "clock";
+    var left = $("#" + widget).css("left");
+    var top = $("#" + widget).css("top");
+    $("#" + widget)
+        .mousedown(function () {
+            document.cookie = "currentWidget=" + widget;
+
+            //$.ajax({
+              //  url: 'setWidgetPosition.php?currentWidget=' + widget + '&left=' + left + '&top='top
+            //})
+        });
+
+
 </script>
 
