@@ -8,7 +8,7 @@ if (!EMPTY($_GET['currentWidget']) && !EMPTY($_GET['left']) && !EMPTY($_GET['top
     $data[$_GET['currentWidget']]['top'] = $_GET['top'];
 }
 
-//write into user"s file
+//write into user's file
 $newJsonString = json_encode($data);
 file_put_contents('database/' . $_SESSION['uid'] . '.json', $newJsonString);
 ?>

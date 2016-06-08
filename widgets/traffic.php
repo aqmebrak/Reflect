@@ -6,8 +6,8 @@ $from = $data['traffic']['from'];
 $to = $data['traffic']['to']; ?>
 
 <div class="draggable grabbable widget" id="traffic">
-    <strong style="font-size: 1.5em;">Traffic</strong>
-    <div id="output"></div>
+    <div id="output">    <i class="fa fa-car" aria-hidden="true"></i>
+    </div>
 </div>
 <div id="map" style="display:none;"></div>
 <script>
@@ -43,7 +43,6 @@ $to = $data['traffic']['to']; ?>
                 var originList = response.originAddresses;
                 var destinationList = response.destinationAddresses;
                 var outputDiv = document.getElementById('output');
-                outputDiv.innerHTML = '';
                 deleteMarkers(markersArray);
 
                 var showGeocodedAddressOnMap = function (asDestination) {
@@ -70,7 +69,7 @@ $to = $data['traffic']['to']; ?>
                         geocoder.geocode({'address': destinationList[j]},
                             showGeocodedAddressOnMap(true));
                         if (results[j].duration) {
-                            outputDiv.innerHTML += 'Temps requis: ' +
+                            outputDiv.innerHTML += 'Needed time: ' +
                                 results[j].duration.text + '<br>';
                         }
                     }
@@ -105,7 +104,7 @@ $to = $data['traffic']['to']; ?>
                 var left = $("#" + traffic).css("left");
                 var top = $("#" + traffic).css("top");
                 $.ajax({
-                    url: 'setWidgetPosition.php',
+                    url: 'widgetsPosition/setWidgetPosition.php',
                     data: {currentWidget: traffic, left: left, top: top}
                 });
             }, 100);

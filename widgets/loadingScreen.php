@@ -33,7 +33,7 @@ foreach($data['user'] as $elem) {
 <script>
     setTimeout(function(){
         $('#loadingScreen').hide('slow', function(){ $('#loadingScreen').remove(); });
-    }  , 5000 );
+    }  , 3000 );
 </script>
 
 
@@ -46,6 +46,7 @@ foreach($data['user'] as $elem) {
         height: 100%;
         background-color: black;
         position: relative;
+        z-index:1;
     }
 
     #name {

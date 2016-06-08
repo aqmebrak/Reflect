@@ -39,6 +39,7 @@ if (!isset($_SESSION['uid']))
     <link href="css/weather-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" href="css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 </head>
@@ -54,15 +55,10 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/weather.php'); ?>
 <?php include_once('./widgets/news.php'); ?>
 <?php include_once('./widgets/informationsDisplayer.php'); ?>
+<?php include_once('./widgets/video.php'); ?>
 
 <div id="container">
     <video autoplay="true" id="videoElement"></video>
-</div>
-
-<div id="video" class="widget grabbable draggable">
-    <span style="color:white; font-size: 2.2em;"><a onclick="closeFrame()">&#10006;</a></span>
-    <br/>
-    <div id="player"></div>
 </div>
 
 <div id="VideosList"></div>
@@ -71,7 +67,7 @@ if (!isset($_SESSION['uid']))
 </div>
 
 <script src="js/bottomPanel.js"></script>
-<script src="js/getVideo.js"></script>
+<script src="js/getWebcam.js"></script>
 <script src="js/loadWidgets.js"></script>
 
 </body>
