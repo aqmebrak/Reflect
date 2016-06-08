@@ -1,3 +1,11 @@
+html, a , html body input[type=submit]{
+    cursor: url(../images/curs/clicker.cur), pointer;
+}
+
+a:active {
+	cursor: url(../images/curs/clicker5.png), pointer !important;
+}
+
 body {
     background-color: black;
 }

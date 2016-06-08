@@ -4,12 +4,3 @@ $(document).ready(function() {
     })
 });
 
-
-
-function redirectConfig() {
-	var millisecondsToWait = 200;
-	setTimeout(function() {
-		document.location.href='config/weather-config.php
-	}, millisecondsToWait);
-	
-}
