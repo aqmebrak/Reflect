@@ -5,7 +5,7 @@ function initWeather(city, degree) {
         unit: degree,
         success: function (weather) {
             var html = '';
-            html += '<div class="wrapper"><section>';
+            html += '<div class="wrapper"><section id="insideWeather">';
 
             html += '<h1 id="city">' + weather.city + '</h1>'
                 + '<div class="temperature"><i class="wi wi-yahoo-' + weather.code + '"></i>'

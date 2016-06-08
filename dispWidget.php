@@ -6,6 +6,7 @@ $data = json_decode($s, true);
 //display a widget
 if($_GET['disp']=='true'){
     if (!EMPTY($_GET['currentWidget']) && !$data[$_GET['currentWidget']]['display']) {
+        print_r($_SESSION['uid']);
         //set display to true
         $data[$_GET['currentWidget']]['display'] = true;
 

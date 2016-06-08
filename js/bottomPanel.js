@@ -6,7 +6,7 @@ $("#bottomPanel").on("mousedown mouseover", function (e) {
     }
 }).on("mouseup", function (e) {
     $.ajax({ url: 'dispWidget.php?currentWidget='+getCookie("currentWidget")+'&disp=false' });
-    $(getBorder(getCookie("currentWidget"))).css({
+    $("#"+getCookie("currentWidget")).css({
             "display": "none"
         }
     );
@@ -35,10 +35,12 @@ function getCookie(cname) {
 function getBorder(currentWidget){
     var div="";
     if(currentWidget=="weather")
-        div="section";
+        div="#insideWeather";
     else if (currentWidget=="clock")
         div=".jcgmt-digital";
     else if (currentWidget=="news")
         div="#news";
+    else if (currentWidget=="traffic")
+        div="#traffic";
     return div;
 }
