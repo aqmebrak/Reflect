@@ -8,6 +8,7 @@ session_start();
     <title>Configuration</title>
     <script src="../lib/jquery-2.2.4.min.js"></script>
     <script src="../lib/bootstrap.min.js"></script>
+	<script src="../js/cursor.js"></script>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/config.css" rel="stylesheet">
     <link href="../css/hover.css" rel="stylesheet">
