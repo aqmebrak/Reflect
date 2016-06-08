@@ -25,5 +25,10 @@
     "top": "400px",
     "from": "Route des cretes 06560",
     "to": "Biot, France"
+  },
+  "video": {
+    "display": false,
+    "left": "150px",
+    "top": "400px"
   }
 }
