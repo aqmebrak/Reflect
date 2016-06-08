@@ -15,7 +15,7 @@
     color: white;
 }
 
-/* fontawesome */
+/* weather */
 [class*="wi-"]:before {
     color: white;
     font-size: 120%;
@@ -100,7 +100,7 @@ section .temperature {
 
 section .temperature h2 {
     display: inline;
-    color: #eee;
+    color: white;
     font-weight: 300;
 }
 
