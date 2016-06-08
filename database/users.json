@@ -1,1 +1,9 @@
-{"user":[{"id":1,"lastname":"Capp\u00e9","firstname":"Christophe"}]}
+{
+  "user": [
+    {
+      "id": 1,
+      "lastname": "Capp\u00e9",
+      "firstname": "Christophe"
+    }
+  ]
+}
