@@ -59,6 +59,25 @@ $final = json_encode($news);
     var $draggable = $('.draggable').draggabilly({
         // options...
     });
+
+    //first set the cookie when the widget is selected
+    //then ask to a php to change the position of the widget
+    var news = "news";
+    $("#" + news)
+        .mousedown(function () {
+            document.cookie = "currentWidget=" + news;
+        })
+        .mouseup(function () {
+            setTimeout(function(){
+                var left = $("#" + news).css("left");
+                var top = $("#" + news).css("top");
+                $.ajax({
+                    url: 'setWidgetPosition.php',
+                    data: {currentWidget: news, left: left, top: top}
+                });
+            }, 100);
+
+        });
 </script>
 
 

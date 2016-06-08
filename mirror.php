@@ -35,6 +35,7 @@ if (!isset($_SESSION['uid']))
     <link href="css/weather-icons.min.css" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" href="css/weather-icons-wind.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 </head>
