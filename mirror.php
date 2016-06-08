@@ -39,7 +39,7 @@ if (!isset($_SESSION['uid']))
 </head>
 <body>
 
-<?php include_once('./widgets/loadingScreen.php')
+<?php include_once('./widgets/loadingScreen.php'); ?>
 
 <?php include_once('./widgets/rightPanel.php'); ?>
 <?php include_once('./widgets/leftPanel.php'); ?>
@@ -67,33 +67,7 @@ if (!isset($_SESSION['uid']))
 
 <script src="js/bottomPanel.js"></script>
 <script src="js/getVideo.js"></script>
-<script>
-    $.ajax({
-        url: "checkWidgets.php"
-    })
-        .done(function (uid) {
-            $.getJSON("database/" + uid + ".json", function (data) {
-                $.each(data, function (key, val) {
-                    if (!val['display']) {
-                        console.log(key);
-                        $("#" + key).css({
-                                "display": "none"
-                            }
-                        );
-                    }
-                    else {
-                        $("#" + key).css({
-                                "left": val["left"],
-                                "top": val["top"]
-                            }
-                        );
-                    }
-
-                });
-            });
-        });
-
-</script>
+<script src="js/loadWidgets.js"></script>
 
 </body>
 </html>
