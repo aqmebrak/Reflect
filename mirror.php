@@ -16,6 +16,7 @@ if (!isset($_SESSION['uid']))
     <script src="js/video.js"></script>
     <script src="js/video_search.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/cursor.js"></script>
     <!-- SCRIPTS  LIB-  - - -- - - -- - - - --  -- - - - -->
     <script src="lib/jquery-2.2.4.min.js"></script>
     <script src="lib/jquery.rotate.js"></script>
@@ -38,6 +39,8 @@ if (!isset($_SESSION['uid']))
 </head>
 <body>
 
+<?php include_once('./widgets/loadingScreen.php')
+
 <?php include_once('./widgets/rightPanel.php'); ?>
 <?php include_once('./widgets/leftPanel.php'); ?>
 
@@ -46,8 +49,6 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/weather.php'); ?>
 <?php include_once('./widgets/news.php'); ?>
 <?php include_once('./widgets/informationsDisplayer.php'); ?>
-
-
 
 <div id="container">
     <video autoplay="true" id="videoElement"></video>
@@ -63,7 +64,6 @@ if (!isset($_SESSION['uid']))
 
 <div id="bottomPanel">
 </div>
-
 
 <script src="js/bottomPanel.js"></script>
 <script src="js/getVideo.js"></script>
