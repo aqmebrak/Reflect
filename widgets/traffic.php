@@ -13,7 +13,7 @@ $to = $data['traffic']['to']; ?>
 <div id="map" style="display:none;"></div>
 <style>
     #traffic{
-        padding: 1em;
+        padding: 0.5em;
     }
 </style>
 <script>
