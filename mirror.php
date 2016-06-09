@@ -51,6 +51,7 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/weather.php'); ?>
 <?php include_once('./widgets/news.php'); ?>
 <?php include_once('./widgets/informationsDisplayer.php'); ?>
+<?php include_once('./widgets/music.php'); ?>
 <?php include_once('./widgets/video.php'); ?>
 
 <div id="container">
