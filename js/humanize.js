@@ -1,20 +1,20 @@
 
 ALL_SENTENCES_HUMANIZE_TAB = [];
 
-/*
+
 $( window ).load(function() {
+	$( "#effect" ).hide(); //cacher la popup
     loopHumanize();
 });
-*/
+
 
 var ALL_SENTENCES_HUMANIZE_TAB;
 
 
 
 function loopHumanize() {
-	
 	getSentenceForRainAndTemperature();
-	setInterval(displayHumanizeData,3000);
+	setInterval(displayHumanizeData,6000);
 	
 }
 
@@ -23,7 +23,9 @@ function displayHumanizeData() {
 	
 	displayHumanizeData.count = (++displayHumanizeData.count)%ALL_SENTENCES_HUMANIZE_TAB.length || 0; //0 au debut quand ce n'est pas initialise
 	
-	console.log(ALL_SENTENCES_HUMANIZE_TAB[displayHumanizeData.count]);
+	//console.log(ALL_SENTENCES_HUMANIZE_TAB[displayHumanizeData.count]);
+	$( "#effect" ).text(ALL_SENTENCES_HUMANIZE_TAB[displayHumanizeData.count]);
+	displayPopup(); //defini dans popup.php
 }
 
 
