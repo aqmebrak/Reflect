@@ -25,6 +25,9 @@ if (!isset($_SESSION['uid']))
     <script src="lib/jClocksGMT.js"></script>
     <script src="lib/draggable.min.js"></script>
     <script src="lib/VideoClient.js?" type="text/javascript"></script>
+	
+	 <script src="lib/jquery-ui.js"></script>
+	  <script src="js/humanize.js"></script>
 
     <!-- CSS - - - - - - - - - -- - - - - - - - - - - - -->
     <link href="css/mirror.css" rel="stylesheet">
@@ -54,6 +57,9 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/music.php'); ?>
 <?php include_once('./widgets/video.php'); ?>
 
+<?php include_once('./widgets/popup.php'); ?>
+
+
 <div id="container">
     <video autoplay="true" id="videoElement"></video>
 </div>
@@ -68,4 +74,4 @@ if (!isset($_SESSION['uid']))
 <script src="js/loadWidgets.js"></script>
 
 </body>
-</html>
+</html>	
