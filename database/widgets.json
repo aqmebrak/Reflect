@@ -14,7 +14,7 @@
   },
   "news": {
     "display": true,
-    "left": "100px",
+    "left": "150px",
     "top": "600px",
     "news": "url",
     "url": "http:\/\/www.bfmtv.com\/rss\/societe\/"
