@@ -14,6 +14,9 @@ $("#bottomPanel").on("mousedown mouseover", function (e) {
     if(getCookie("currentWidget")=='video'){
         player.pauseVideo();
     }
+    if(getCookie("currentWidget")=='countdown'){
+        $("#countdown").countdown360().stop();
+    }
     $.ajax({ url: 'widgetsPosition/dispWidget.php?currentWidget='+getCookie("currentWidget")+'&disp=false' });
     $("#"+getCookie("currentWidget")).css({
             "display": "none"
@@ -24,6 +27,11 @@ $("#bottomPanel").on("mousedown mouseover", function (e) {
             "border-color": "white"
         }
     );
+    if(getCookie("currentWidget")=='countdown'){
+        $(getBorder(getCookie("currentWidget"))).css({
+            "border": "none"
+        });
+    }
 });
 
 function getCookie(cname) {

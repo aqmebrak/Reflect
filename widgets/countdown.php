@@ -10,10 +10,15 @@
         fontSize    : 70,
         fontColor   : '#FFFFFF',
         autostart: false,
-        onComplete  : function () { }
+        onComplete  : function () {
+            //sayPopup("popupCountdown","Well done! Your tooth are perfectly brushed.");
+            $("#countdown").css({
+                "display": "none"
+            });
+        }
     }).start();
 
-    $("#countdown").countdown360().stop();
+    //$("#countdown").countdown360().stop();
 
     var $draggable = $('.draggable').draggabilly({
         // options...

@@ -7,6 +7,7 @@
             .done(function () {
                 //set proper location
                 $.getJSON("database/widgets.json", function (data) {
+
                     var left = "";
                     var top = "";
                     //retreive original top & left values
@@ -24,10 +25,20 @@
                     );
                 });
 
+                if(name=='countdown'){
+                    $("#countdown").countdown360().start();
+                    setTimeout(function(){
+                        $("#" + name).css({
+                            "display": "block"
+                        });
+                    }, 450);
+                }
                 //display the widget
-                $("#" + name).css({
-                    "display": "block"
-                });
+                else{
+                    $("#" + name).css({
+                        "display": "block"
+                    });
+                }
             });
     }
 </script>
