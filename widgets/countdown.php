@@ -3,7 +3,7 @@
 
     $("#countdown").countdown360({
         radius      : 90,
-        seconds     : 120,
+        seconds     : 10,
         strokeWidth : 4,
         fillStyle   : 'transparent',
         strokeStyle : 'white',
@@ -11,7 +11,7 @@
         fontColor   : '#FFFFFF',
         autostart: false,
         onComplete  : function () {
-            //sayPopup("popupCountdown","Well done! Your tooth are perfectly brushed.");
+            sayPopup("popupCountdown","Well done! Your tooth are perfectly brushed.");
             $("#countdown").css({
                 "display": "none"
             });

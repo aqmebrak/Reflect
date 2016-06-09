@@ -23,7 +23,7 @@ if (isset($_POST['firstname'])) {
         $id++;
 
         //fill the users.json file
-        $newUser = array('id' => $id, 'lastname' => $_POST['lastname'], 'firstname' => $_POST['firstname']);
+        $newUser = array('id' => $id, 'lastname' => $_POST['lastname'], 'firstname' => $_POST['firstname'], 'patternLock' => '');
         array_push($data['user'], $newUser);
         $newJsonString = json_encode($data);
         file_put_contents('database/users.json', $newJsonString);
