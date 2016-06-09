@@ -24,6 +24,7 @@ $degree = $data['weather']['degree'];
             document.cookie = "currentWidget=" + weather;
         })
         .mouseup(function () {
+            document.cookie = "currentWidget=";
             setTimeout(function(){
                 var left = $("#" + weather).css("left");
                 var top = $("#" + weather).css("top");

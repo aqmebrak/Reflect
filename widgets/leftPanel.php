@@ -7,6 +7,7 @@
             .done(function () {
                 //set proper location
                 $.getJSON("database/widgets.json", function (data) {
+
                     var left = "";
                     var top = "";
                     //retreive original top & left values
@@ -24,10 +25,20 @@
                     );
                 });
 
+                if(name=='countdown'){
+                    $("#countdown").countdown360().start();
+                    setTimeout(function(){
+                        $("#" + name).css({
+                            "display": "block"
+                        });
+                    }, 450);
+                }
                 //display the widget
-                $("#" + name).css({
-                    "display": "block"
-                });
+                else{
+                    $("#" + name).css({
+                        "display": "block"
+                    });
+                }
             });
     }
 </script>
@@ -35,16 +46,22 @@
 <div id="leftPanel">
     <ul>
         <li onclick="displayWidget('clock')">
-            <img class="smallIcon" src="images/clock.svg">
+            <img class="smallIconLeft" src="images/clock.svg">
         </li>
         <li onclick="displayWidget('weather')">
-            <img class="smallIcon" src="images/weather.svg">
+            <img class="smallIconLeft" src="images/weather.svg">
         </li>
         <li onclick="displayWidget('traffic')">
-            <img class="smallIcon" src="images/traffic.svg">
+            <img class="smallIconLeft" src="images/traffic.svg">
         </li>
         <li onclick="displayWidget('news')">
-            <img class="smallIcon" src="images/news.svg">
+            <img class="smallIconLeft" src="images/news.svg">
+        </li>
+        <li onclick="displayWidget('countdown')">
+            <img class="smallIconLeft" src="images/countdown.svg">
+        </li>
+        <li onclick="displayWidget('music')">
+            <img class="smallIconLeft" src="images/music.svg">
         </li>
     </ul>
 </div>
