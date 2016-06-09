@@ -1,0 +1,168 @@
+html, a {
+    cursor: url(../images/curs/clicker.cur), pointer;
+}
+
+#rightPanel ul a:active{
+	cursor: url(../images/curs/clicker5.png), pointer !important;
+}
+
+html {
+    overflow-y: hidden;
+    overflow-x: hidden;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -khtml-user-select: none;    /* Konqueror */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
+    user-select: none;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+}
+
+.grabbable:active:hover {
+    cursor: url(../images/curs/grab.cur), pointer;
+}
+
+.widget {
+    position: absolute;
+}
+
+#rightPanel {
+    float: right;
+    margin-left: 95%;
+    width: 22%;
+    position: fixed;
+    margin-top: 0%;
+}
+
+#rightPanel:hover {
+    margin-left: 80%;
+}
+
+#rightPanel ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+#rightPanel ul li {
+    border-radius: 7px;
+    border: medium solid white;
+    display: block;
+    padding: 20% 0 20% 0;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding-top: 10%;
+    padding-bottom: 10%;
+    height: 100px;
+    /*width:200px;*/
+}
+
+#rightPanel ul li div {
+    padding-top: 0px;
+    margin-left: 29%;
+    width: 100px;
+    height: 100px;
+}
+
+#rightPanel ul li a {
+    margin-top: 10%;
+    display: block;
+}
+
+#rightPanel ul li div a {
+    margin-top: 0;
+}
+
+#leftPanel {
+    float: left;
+    margin-left: -20%;
+    width: 22%;
+    position: fixed;
+    margin-top: 0%;
+}
+
+#leftPanel:hover {
+    margin-left:-13%;
+}
+
+#leftPanel ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: auto; /* Enable scrolling if the sidenav has too much content */
+}
+
+#leftPanel ul li {
+    border-radius: 7px;
+    border: medium solid white;
+    display: block;
+    text-decoration: none;
+    text-align: center;
+    color: white;
+    padding-top: 9%;
+    padding-bottom: 9%;
+    height: 10%;
+    /*width:200px;*/
+}
+
+/* Change the link color on hover */
+ul li:hover {
+    background-color: #D96459;
+    color: white;
+    text-decoration: none;
+}
+
+.active {
+    background-color: #8C4646;
+}
+
+
+#bottomPanel {
+    overflow: hidden;
+    background-color: transparent;
+    width: 100%;
+    height: 5%;
+    position: absolute;
+    top: 95%;
+    left: 0px;
+}
+.widgetIcon {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100% 100%;
+}
+
+#maquillageIcon {
+    background-image: url(../images/maquillage.png);
+}
+
+#ecrouIcon {
+    background-image: url(../images/ecrou.png);
+}
+
+#exitIcon {
+    background-image: url(../images/exit.png);
+}
+
+#closeIcon {
+    background-image: url(../images/close.png);
+}
+
+#loadingScreen {
+    width: 100%;
+    height: 100%;
+    color: white;
+    background-color: black;
+}
+
+.smallIcon {
+    padding-left:70%;
+   width:20%;
+}
