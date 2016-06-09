@@ -24,6 +24,11 @@
 
 <script>
     var lock= new PatternLock('#patternContainer',{radius:35,margin:35});
+    lock.checkForPattern('14789',function(){
+        alert("You unlocked your app");
+    },function(){
+        alert("Pattern is not correct");
+    });
 </script>
 </body>
 </html>
