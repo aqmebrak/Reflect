@@ -23,7 +23,7 @@
 </div>
 
 <script>
-    var lock= new PatternLock('#patternContainer',{radius:25,margin:43});
+    var lock= new PatternLock('#patternContainer',{radius:35,margin:35});
 </script>
 </body>
 </html>
