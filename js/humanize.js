@@ -3,8 +3,8 @@ ALL_SENTENCES_HUMANIZE_TAB = [];
 
 
 $( window ).load(function() {
-	$( "#effect" ).hide(); //cacher la popup
-    loopHumanize();
+	$( ".popup" ).hide();
+	loopHumanize();
 });
 
 
@@ -14,7 +14,7 @@ var ALL_SENTENCES_HUMANIZE_TAB;
 
 function loopHumanize() {
 	getSentenceForRainAndTemperature();
-	setInterval(displayHumanizeData,10000);
+	//setInterval(displayHumanizeData,3000);
 	
 }
 
@@ -24,8 +24,7 @@ function displayHumanizeData() {
 	displayHumanizeData.count = (++displayHumanizeData.count)%ALL_SENTENCES_HUMANIZE_TAB.length || 0; //0 au debut quand ce n'est pas initialise
 	
 	//console.log(ALL_SENTENCES_HUMANIZE_TAB[displayHumanizeData.count]);
-	$( "#effect" ).text(ALL_SENTENCES_HUMANIZE_TAB[displayHumanizeData.count]);
-	displayPopup(); //defini dans popup.php
+	sayPopup("popupHumanize",ALL_SENTENCES_HUMANIZE_TAB[displayHumanizeData.count]);
 }
 
 
@@ -107,4 +106,10 @@ function getCurrentTown() {
 function getDegreType() {
 	var str = $('#weather').find("div").filter(".temperature").children("h2").text();
 	return str[str.length-1];
+}
+
+
+function sayPopup(popupId,sentence) {
+	$( "#"+popupId ).children("div").text(sentence);
+	displayPopup(popupId); //defini dans popup.php
 }

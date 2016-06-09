@@ -1,4 +1,4 @@
-<div id="news" class="draggable grabbable">
+<div id="news" class="draggable grabbable widget">
     <marquee scrollamount="10"></marquee>
 </div>
 

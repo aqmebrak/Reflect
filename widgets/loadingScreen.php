@@ -46,7 +46,7 @@ foreach($data['user'] as $elem) {
         height: 100%;
         background-color: black;
         position: relative;
-        z-index:1;
+        z-index:15;
     }
 
     #name {
