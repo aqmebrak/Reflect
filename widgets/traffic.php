@@ -6,9 +6,10 @@ $from = $data['traffic']['from'];
 $to = $data['traffic']['to']; ?>
 
 <div class="draggable grabbable widget" id="traffic">
-    <div id="output">
-        <i class="fa fa-car" aria-hidden="true"></i>
-    </div>
+    <i class="fa fa-car" aria-hidden="true"></i>
+    <span id="output">
+
+    </span>
 </div>
 <div id="map" style="display:none;"></div>
 <style>
@@ -17,6 +18,9 @@ $to = $data['traffic']['to']; ?>
     }
 </style>
 <script>
+    window.setInterval(function () {
+        initMap();
+    }, (60000*3));
     function initMap() {
         var bounds = new google.maps.LatLngBounds;
         var markersArray = [];
@@ -49,6 +53,7 @@ $to = $data['traffic']['to']; ?>
                 var originList = response.originAddresses;
                 var destinationList = response.destinationAddresses;
                 var outputDiv = document.getElementById('output');
+                outputDiv.innerHTML = '';
                 deleteMarkers(markersArray);
 
                 var showGeocodedAddressOnMap = function (asDestination) {
