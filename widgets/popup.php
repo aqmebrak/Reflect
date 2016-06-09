@@ -1,7 +1,12 @@
 
 <script>
+
+	
+
     // run the currently selected effect
-    function displayPopup() {
+    function displayPopup(popupId) {
+		
+		
       // get effect type from
       //var selectedEffect = $( "#effectTypes" ).val();
 	  var effect = "drop";
@@ -11,42 +16,69 @@
       
  
       // run the effect
-      $( "#effect" ).show( effect, options, 220, callbackPopup );
+      $( "#"+popupId ).show( effect, options, 220, callbackPopup(popupId) );
     }
  
     //callback function to bring a hidden box back
-    function callbackPopup() {
+    function callbackPopup(popupId) {
       setTimeout(function() {
-        $( "#effect:visible" ).removeAttr( "style" ).fadeOut();
-      }, 5000 );
+		  
+        $( "#"+popupId+":visible" ).removeAttr( "style" ).fadeOut();
+      }, 200000 );
     }
  </script>
 
 <style>
 
- #effect {
-	margin-left:55%;
-    width:30%;
-	
-    border-radius: 7px;
+.popup {
+	left:55%;
+	border-radius: 7px;
     border: medium solid white;
-    display: block;
-   
 	z-index:5;
 	position:fixed;
-	padding:0.5%;
+	
 	font-weight:bold;
-	background:url(./images/avatar.svg) no-repeat;
+	
+	max-width:34vw;
+	
+	
+	
+	/*background:url(./images/avatar.svg) no-repeat;*/
 	background-color: white;
 	
-	padding-left:4.5%;
+}
+
+.popup span  {
+	width:20%;
+}
+
+.popup * {
+	float:left;
+	display:inline;
+}
+
+.popup div {
+	width:60%;
+	margin-left:2vw;
+}
+
+ #popupHumanize {
+	top:9%;
+}
 	
-	}
+#popupCountdown {
+	top:38%;
+}
 
 </style>
 
 
 
-<div id="effect" class="ui-widget-content ui-corner-all">
-	bla
+<div id="popupHumanize" class="ui-widget-content ui-corner-all popup">
+	<span><img src="./images/avatar.svg"  /></span><div></div>
 </div>
+
+<div id="popupCountdown" class="ui-widget-content ui-corner-all popup">
+<img src="./images/avatar.svg" width="100" /><div></div>
+</div>
+
