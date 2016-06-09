@@ -15,22 +15,17 @@ session_start();
 </head>
 <body>
 
-<div id="navbar">
-    <ul>
-        <li><a href="weather-config.php">Weather</a></li>
-        <li><a href="clock-config.php">Clock</a></li>
-        <li class="active"><a href="news-config.php">News</a></li>
-        <li><a href="traffic-config.php">Traffic</a></li>
-        <li><a href="../mirror.php">Mirror</a></li>
-    </ul>
-</div>
-
 <div id="content">
 
     <div id="news"></div>
 
-
 </div>
+
+<div class="nav">
+    <a class="back hvr-glow" href="config.php"></a>
+    <a class="exit hvr-glow" href="../mirror.php"></a>
+</div>
+
 </body>
 
 <!-- Script which will build the elements according to the newsfeed.json -->
