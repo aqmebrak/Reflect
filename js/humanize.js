@@ -1,10 +1,11 @@
 
 ALL_SENTENCES_HUMANIZE_TAB = [];
 
+/*
 $( window ).load(function() {
     loopHumanize();
 });
-
+*/
 
 var ALL_SENTENCES_HUMANIZE_TAB;
 
