@@ -13,8 +13,8 @@ $to = $data['traffic']['to']; ?>
 </div>
 <div id="map" style="display:none;"></div>
 <style>
-    #traffic {
-        padding: 1em;
+    #traffic{
+        padding: 0.5em;
     }
 </style>
 <script>
@@ -111,7 +111,8 @@ $to = $data['traffic']['to']; ?>
             document.cookie = "currentWidget=" + traffic;
         })
         .mouseup(function () {
-            setTimeout(function () {
+            document.cookie = "currentWidget=";
+            setTimeout(function(){
                 var left = $("#" + traffic).css("left");
                 var top = $("#" + traffic).css("top");
                 $.ajax({

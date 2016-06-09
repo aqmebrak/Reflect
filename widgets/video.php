@@ -15,6 +15,7 @@
             document.cookie = "currentWidget=" + video2;
         })
         .mouseup(function () {
+            document.cookie = "currentWidget=";
             setTimeout(function () {
                 var left = $("#" + video2).css("left");
                 var top = $("#" + video2).css("top");

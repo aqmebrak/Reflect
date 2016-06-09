@@ -11,7 +11,7 @@ if (!isset($_SESSION['uid']))
     <meta charset="UTF-8">
     <title>Mirror</title>
 
-    <!-- SCRIPTS  LIB-  - - -- - - -- - - - --  -- - - - -->
+    <!-- SCRIPTS  JS-  - - -- - - -- - - - --  -- - - - -->
     <script src="js/clock.js"></script>
     <script src="js/video.js"></script>
     <script src="js/video_search.js"></script>
@@ -56,7 +56,7 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/informationsDisplayer.php'); ?>
 <?php include_once('./widgets/music.php'); ?>
 <?php include_once('./widgets/video.php'); ?>
-
+<?php include_once('./widgets/countdown.php'); ?>
 <?php include_once('./widgets/popup.php'); ?>
 
 
@@ -74,4 +74,4 @@ if (!isset($_SESSION['uid']))
 <script src="js/loadWidgets.js"></script>
 
 </body>
-</html>	
+</html>

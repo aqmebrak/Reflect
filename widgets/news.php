@@ -68,6 +68,7 @@ $final = json_encode($news);
             document.cookie = "currentWidget=" + news;
         })
         .mouseup(function () {
+            document.cookie = "currentWidget=";
             setTimeout(function(){
                 var left = $("#" + news).css("left");
                 var top = $("#" + news).css("top");
