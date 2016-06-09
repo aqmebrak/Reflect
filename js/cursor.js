@@ -36,7 +36,7 @@ function checkAndChangeCursorImage() {
 function redirectConfig() {
 	var millisecondsToWait = 200;
 	setTimeout(function() {
-		document.location.href='http://localhost:8080/reflect/config/weather-config.php';
+		document.location.href='http://localhost:8080/reflect/config/config.php';
 	}, millisecondsToWait);
 	
 }
