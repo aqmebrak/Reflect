@@ -18,24 +18,28 @@
     function callbackPopup() {
       setTimeout(function() {
         $( "#effect:visible" ).removeAttr( "style" ).fadeOut();
-      }, 4000 );
+      }, 5000 );
     }
  </script>
 
 <style>
 
  #effect {
-	margin-left:60%;
+	margin-left:55%;
     width:30%;
 	
     border-radius: 7px;
     border: medium solid white;
     display: block;
-    background-color:white;
+   
 	z-index:5;
 	position:fixed;
 	padding:0.5%;
+	font-weight:bold;
+	background:url(./images/avatar.svg) no-repeat;
+	background-color: white;
 	
+	padding-left:4.5%;
 	
 	}
 

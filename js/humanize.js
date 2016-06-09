@@ -14,7 +14,7 @@ var ALL_SENTENCES_HUMANIZE_TAB;
 
 function loopHumanize() {
 	getSentenceForRainAndTemperature();
-	setInterval(displayHumanizeData,6000);
+	setInterval(displayHumanizeData,10000);
 	
 }
 
@@ -45,7 +45,7 @@ function getSentenceForTemperature() {
 		else if (degre < 12) {
 			stringToDisplay+= "Don't forget your coat if you go outside !";
 		}
-		else if (degre < 25) {
+		else if (degre < 20) {
 			stringToDisplay+= "You should take a light jacket with you if you go outside!";
 		}
 		else {
@@ -60,7 +60,7 @@ function getSentenceForTemperature() {
 		else if (degre < 53) {
 			stringToDisplay+= "Don't forget your coat if you go outside !";
 		}
-		else if (degre < 77) {
+		else if (degre < 72) {
 			stringToDisplay+="You should take a light jacket with you if you go outside!";
 		}
 		else {
