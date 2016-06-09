@@ -14,16 +14,9 @@ if (isset($_POST['uid']))
 	<script src="../js/cursor.js"></script>
     <link href="../css/bootstrap.min.css" rel="stylesheet">
     <link href="../css/config.css" rel="stylesheet">
+    <link href="../css/hover.css" rel="stylesheet">
 </head>
 <body>
-
-<ul>
-    <li class="active"><a href="weather-config.php">Weather</a></li>
-    <li><a href="clock-config.php">Clock</a></li>
-    <li><a href="news-config.php">News</a></li>
-    <li><a href="traffic-config.php">Traffic</a></li>
-    <li><a href="../mirror.php">Mirror</a></li>
-</ul>
 
 <div id="content">
     <?php
@@ -39,6 +32,7 @@ if (isset($_POST['uid']))
 
     $city=$data['weather']['location'];
     ?>
+
     <form class="weather" role="form" method="post" action="validateWeatherConfig.php">
         <div class="weather-switch">
             <input type="radio" name="temp-config" value="c" id="temp_c"
@@ -53,6 +47,11 @@ if (isset($_POST['uid']))
 
     </form>
 
+</div>
+
+<div class="nav">
+    <a class="back hvr-glow" href="config.php"></a>
+    <a class="exit hvr-glow" href="../mirror.php"></a>
 </div>
 
 </body>
