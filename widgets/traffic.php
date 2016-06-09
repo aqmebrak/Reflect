@@ -6,10 +6,16 @@ $from = $data['traffic']['from'];
 $to = $data['traffic']['to']; ?>
 
 <div class="draggable grabbable widget" id="traffic">
-    <div id="output">    <i class="fa fa-car" aria-hidden="true"></i>
+    <div id="output">
+        <i class="fa fa-car" aria-hidden="true"></i>
     </div>
 </div>
 <div id="map" style="display:none;"></div>
+<style>
+    #traffic{
+        padding: 1em;
+    }
+</style>
 <script>
     function initMap() {
         var bounds = new google.maps.LatLngBounds;
@@ -100,7 +106,7 @@ $to = $data['traffic']['to']; ?>
             document.cookie = "currentWidget=" + traffic;
         })
         .mouseup(function () {
-            setTimeout(function(){
+            setTimeout(function () {
                 var left = $("#" + traffic).css("left");
                 var top = $("#" + traffic).css("top");
                 $.ajax({
