@@ -5,12 +5,15 @@ $("#bottomPanel").on("mousedown mouseover", function (e) {
         });
     }
 }).on("mouseup", function (e) {
-    $.ajax({ url: 'dispWidget.php?currentWidget='+getCookie("currentWidget")+'&disp=false' });
+    if(getCookie("currentWidget")=='video'){
+        player.pauseVideo();
+    }
+    $.ajax({ url: 'widgetsPosition/dispWidget.php?currentWidget='+getCookie("currentWidget")+'&disp=false' });
     $("#"+getCookie("currentWidget")).css({
             "display": "none"
         }
     );
-}).on(" mouseout", function (e) {
+}).on("mouseout", function (e) {
     $(getBorder(getCookie("currentWidget"))).css({
             "border-color": "white"
         }
@@ -42,5 +45,7 @@ function getBorder(currentWidget){
         div="#news";
     else if (currentWidget=="traffic")
         div="#traffic";
+    else if (currentWidget=="video")
+        div="#video";
     return div;
 }

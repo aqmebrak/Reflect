@@ -39,9 +39,3 @@ function onPlayerStateChange(event) {
         done = true;
     }
 }
-
-//ferme le bloc vidéo
-function closeFrame() {
-    var element = document.getElementById("player");
-    element.parentNode.removeChild(element);
-}

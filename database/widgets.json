@@ -14,8 +14,8 @@
   },
   "news": {
     "display": true,
-    "left": "75px",
-    "top": "550px",
+    "left": "30px",
+    "top": "585px",
     "news": "url",
     "url": "http:\/\/www.bfmtv.com\/rss\/societe\/"
   },
@@ -25,5 +25,10 @@
     "top": "400px",
     "from": "Route des cretes 06560",
     "to": "Biot, France"
+  },
+  "video": {
+    "display": false,
+    "left": "411px",
+    "top": "101px"
   }
 }

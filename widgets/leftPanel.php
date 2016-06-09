@@ -2,7 +2,7 @@
     function displayWidget(name) {
         //update user's file
         $.ajax({
-            url: 'dispWidget.php?currentWidget=' + name + '&disp=true'
+            url: 'widgetsPosition/dispWidget.php?currentWidget=' + name + '&disp=true'
         })
             .done(function () {
                 //set proper location
@@ -35,14 +35,16 @@
 <div id="leftPanel">
     <ul>
         <li onclick="displayWidget('clock')">
-            <img class="smallIcon" src="images/clock.png">
-
+            <img class="smallIcon" src="images/clock.svg">
         </li>
         <li onclick="displayWidget('weather')">
-            <img class="smallIcon" src="images/weather.png">
+            <img class="smallIcon" src="images/weather.svg">
         </li>
         <li onclick="displayWidget('traffic')">
-            <img class="smallIcon" src="images/traffic.png">
+            <img class="smallIcon" src="images/traffic.svg">
+        </li>
+        <li onclick="displayWidget('news')">
+            <img class="smallIcon" src="images/news.svg">
         </li>
     </ul>
 </div>

@@ -1,10 +1,10 @@
 $.ajax({
-    url: "checkWidgets.php"
+    url: "widgetsPosition/getUid.php"
 })
     .done(function (uid) {
         $.getJSON("database/" + uid + ".json", function (data) {
             $.each(data, function (key, val) {
-                if (!val['display']) {
+                if ((!val['display']) || key=='video') {
                     $("#" + key).css({
                             "display": "none"
                         }

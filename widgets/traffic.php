@@ -104,7 +104,7 @@ $to = $data['traffic']['to']; ?>
                 var left = $("#" + traffic).css("left");
                 var top = $("#" + traffic).css("top");
                 $.ajax({
-                    url: 'setWidgetPosition.php',
+                    url: 'widgetsPosition/setWidgetPosition.php',
                     data: {currentWidget: traffic, left: left, top: top}
                 });
             }, 100);
