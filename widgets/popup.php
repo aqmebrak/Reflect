@@ -24,7 +24,7 @@
       setTimeout(function() {
 		  
         $( "#"+popupId+":visible" ).removeAttr( "style" ).fadeOut();
-      }, 200000 );
+      }, 7000 );
     }
  </script>
 
@@ -41,9 +41,6 @@
 	
 	max-width:34vw;
 	
-	
-	
-	/*background:url(./images/avatar.svg) no-repeat;*/
 	background-color: white;
 	
 }
@@ -79,6 +76,6 @@
 </div>
 
 <div id="popupCountdown" class="ui-widget-content ui-corner-all popup">
-<img src="./images/avatar.svg" width="100" /><div></div>
+<span><img src="./images/avatar.svg"  /></span><div></div>
 </div>
 

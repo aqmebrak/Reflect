@@ -14,7 +14,7 @@ var ALL_SENTENCES_HUMANIZE_TAB;
 
 function loopHumanize() {
 	getSentenceForRainAndTemperature();
-	//setInterval(displayHumanizeData,3000);
+	setInterval(displayHumanizeData,50000);
 	
 }
 
