@@ -23,6 +23,7 @@ $timezone = $data['clock']['timezone'];
             document.cookie = "currentWidget=" + clock;
         })
         .mouseup(function () {
+            document.cookie = "currentWidget=";
             setTimeout(function(){
                 var left = $("#" + clock).css("left");
                 var top = $("#" + clock).css("top");

@@ -3,6 +3,12 @@ $("#bottomPanel").on("mousedown mouseover", function (e) {
         $(getBorder(getCookie("currentWidget"))).css({
             "border-color": "red"
         });
+        if(getCookie("currentWidget")=='countdown'){
+            $(getBorder(getCookie("currentWidget"))).css({
+                "border": "medium solid red",
+                "border-radius": "7px"
+            });
+        }
     }
 }).on("mouseup", function (e) {
     if(getCookie("currentWidget")=='video'){
@@ -47,5 +53,7 @@ function getBorder(currentWidget){
         div="#traffic";
     else if (currentWidget=="video")
         div="#video";
+    else if (currentWidget=="countdown")
+        div="#countdown";
     return div;
 }

@@ -46,5 +46,8 @@
         <li onclick="displayWidget('news')">
             <img class="smallIcon" src="images/news.svg">
         </li>
+        <li onclick="displayWidget('countdown')">
+            <img class="smallIcon" src="images/countdown.svg">
+        </li>
     </ul>
 </div>

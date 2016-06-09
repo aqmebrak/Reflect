@@ -11,12 +11,13 @@ if (!isset($_SESSION['uid']))
     <meta charset="UTF-8">
     <title>Mirror</title>
 
-    <!-- SCRIPTS  LIB-  - - -- - - -- - - - --  -- - - - -->
+    <!-- SCRIPTS  JS-  - - -- - - -- - - - --  -- - - - -->
     <script src="js/clock.js"></script>
     <script src="js/video.js"></script>
     <script src="js/video_search.js"></script>
     <script src="js/weather.js"></script>
     <script src="js/cursor.js"></script>
+
     <!-- SCRIPTS  LIB-  - - -- - - -- - - - --  -- - - - -->
     <script src="lib/jquery-2.2.4.min.js"></script>
     <script src="lib/jquery.rotate.js"></script>
@@ -25,6 +26,7 @@ if (!isset($_SESSION['uid']))
     <script src="lib/jClocksGMT.js"></script>
     <script src="lib/draggable.min.js"></script>
     <script src="lib/VideoClient.js?" type="text/javascript"></script>
+    <script src="lib/jquery.countdown360.js"></script>
 
     <!-- CSS - - - - - - - - - -- - - - - - - - - - - - -->
     <link href="css/mirror.css" rel="stylesheet">
@@ -52,6 +54,7 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/news.php'); ?>
 <?php include_once('./widgets/informationsDisplayer.php'); ?>
 <?php include_once('./widgets/video.php'); ?>
+<?php include_once('./widgets/countdown.php'); ?>
 
 <div id="container">
     <video autoplay="true" id="videoElement"></video>

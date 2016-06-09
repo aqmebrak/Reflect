@@ -100,6 +100,7 @@ $to = $data['traffic']['to']; ?>
             document.cookie = "currentWidget=" + traffic;
         })
         .mouseup(function () {
+            document.cookie = "currentWidget=";
             setTimeout(function(){
                 var left = $("#" + traffic).css("left");
                 var top = $("#" + traffic).css("top");
