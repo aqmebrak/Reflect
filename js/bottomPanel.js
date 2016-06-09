@@ -63,5 +63,7 @@ function getBorder(currentWidget){
         div="#video";
     else if (currentWidget=="countdown")
         div="#countdown";
+    else if (currentWidget=="music")
+        div="#music";
     return div;
 }

@@ -6,9 +6,6 @@ $data = json_decode($jsonString, true);
 
 
 <div id="music" class="draggable grabbable widget">
-    <span style="font-size: 1.5em;color:white;">Music</span>
-    <br/>
-    <br/>
     <iframe src="https://embed.spotify.com/?uri=spotify:user:spotify_france:playlist:1c1NyazFiQPonWzNtxWd5M&theme=white"
             width="250" height="300" frameborder="0" allowtransparency="true"></iframe>
 </div>
@@ -17,7 +14,7 @@ $data = json_decode($jsonString, true);
     #music {
         border: medium solid white;
         border-radius: 7px;
-        padding-top: 7px;
+        padding-top:2.5em;
         text-align:center;
     }
     iframe{
@@ -25,3 +22,25 @@ $data = json_decode($jsonString, true);
     }
 
 </style>
+
+<script>
+    //first set the cookie when the widget is selected
+    //then ask to a php to change the position of the widget
+    var music = "music";
+    $("#" + music)
+        .mousedown(function () {
+            document.cookie = "currentWidget=" + music;
+        })
+        .mouseup(function () {
+            document.cookie = "currentWidget=";
+            setTimeout(function(){
+                var left = $("#" + music).css("left");
+                var top = $("#" + music).css("top");
+                $.ajax({
+                    url: 'widgetsPosition/setWidgetPosition.php',
+                    data: {currentWidget: music, left: left, top: top}
+                });
+            }, 100);
+
+        });
+</script>
