@@ -46,22 +46,22 @@
 <div id="leftPanel">
     <ul>
         <li onclick="displayWidget('clock')">
-            <img class="smallIcon" src="images/clock.svg">
+            <img class="smallIconLeft" src="images/clock.svg">
         </li>
         <li onclick="displayWidget('weather')">
-            <img class="smallIcon" src="images/weather.svg">
+            <img class="smallIconLeft" src="images/weather.svg">
         </li>
         <li onclick="displayWidget('traffic')">
-            <img class="smallIcon" src="images/traffic.svg">
+            <img class="smallIconLeft" src="images/traffic.svg">
         </li>
         <li onclick="displayWidget('news')">
-            <img class="smallIcon" src="images/news.svg">
+            <img class="smallIconLeft" src="images/news.svg">
         </li>
         <li onclick="displayWidget('countdown')">
-            <img class="smallIcon" src="images/countdown.svg">
+            <img class="smallIconLeft" src="images/countdown.svg">
         </li>
         <li onclick="displayWidget('music')">
-            <img class="smallIcon" src="images/music.svg">
+            <img class="smallIconLeft" src="images/music.svg">
         </li>
     </ul>
 </div>
