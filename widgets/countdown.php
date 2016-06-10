@@ -12,6 +12,7 @@
         autostart: false,
         onComplete  : function () {
             sayPopup("popupCountdown","Well done! Your teeth are perfectly brushed.");
+            $.ajax({ url: 'widgetsPosition/dispWidget.php?currentWidget=countdown&disp=false' });
             $("#countdown").css({
                 "display": "none"
             });
