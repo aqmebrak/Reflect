@@ -144,8 +144,8 @@ ul li:hover {
         -o-transform: scaleX(-1) !important;
         -webkit-transform: scaleX(-1) !important;
         transform: scaleX(-1) !important;
-        /*filter: FlipH !important;
-        -ms-filter: "FlipH" !important;*/
+        filter: FlipH !important;
+        -ms-filter: "FlipH" !important;
 		margin-left:-50%;
-		margin-top:-50%;
+		margin-top:-40%;
 }
