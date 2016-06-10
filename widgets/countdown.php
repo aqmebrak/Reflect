@@ -11,14 +11,14 @@
         fontColor   : '#FFFFFF',
         autostart: false,
         onComplete  : function () {
-            sayPopup("popupCountdown","Well done! Your tooth are perfectly brushed.");
+            sayPopup("popupCountdown","Well done! Your teeth are perfectly brushed.");
             $("#countdown").css({
                 "display": "none"
             });
         }
     }).start();
 
-    //$("#countdown").countdown360().stop();
+    $("#countdown").countdown360().stop();
 
     var $draggable = $('.draggable').draggabilly({
         // options...

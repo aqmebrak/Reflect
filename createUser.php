@@ -23,7 +23,7 @@
 <body>
 <img
     class="register-title"
-    src="images/logo.png"/>
+    src="images/logo.svg"/>
 <form class="register" name="reg" method="post" action="validateNewUser.php" onsubmit="return validateForm()">
     <div class="register-switch">
         <input type="radio" name="sex" value="f" id="sex_f" class="register-switch-input" checked>

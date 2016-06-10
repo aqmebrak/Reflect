@@ -23,7 +23,7 @@ if (isset($_SESSION['uid'])) {
 
 <img
     class="logo"
-    src="images/logo.png"/>
+    src="images/logo.svg"/>
 <div class="row">
 
 </div>
