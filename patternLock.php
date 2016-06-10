@@ -16,7 +16,7 @@
 
 <img
     class="logo"
-    src="images/logo.png"/>
+    src="images/logo.svg"/>
 
 <div id="patternLock">
     <div id="patternContainer"></div>
