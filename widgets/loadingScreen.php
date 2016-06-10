@@ -22,7 +22,7 @@ foreach($data['user'] as $elem) {
         <span></span>
     </div>
     <div id="name" class="fadeIn animated">
-        Bonjour <?php echo $firstName ?>
+        Hi <?php echo $firstName ?>
     </div>
 </div>
 
