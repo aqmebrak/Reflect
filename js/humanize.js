@@ -84,7 +84,7 @@ function getSentenceForRainAndTemperature(){
         unit: getDegreType(),
         success: function (weather) {
 			
-			if (weather.rising==2) {
+			if (weather.rising=="2") {
 				ALL_SENTENCES_HUMANIZE_TAB.push( sentence+ " And be sure to take your umbrella!");
 			}
 			else {
