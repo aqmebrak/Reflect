@@ -9,17 +9,17 @@
         strokeStyle : 'white',
         fontSize    : 70,
         fontColor   : '#FFFFFF',
+        smooth      : true,
         autostart: false,
         onComplete  : function () {
             sayPopup("popupCountdown","Well done! Your teeth are perfectly brushed.");
             $.ajax({ url: 'widgetsPosition/dispWidget.php?currentWidget=countdown&disp=false' });
+            $("#countdown").countdown360().stop();
             $("#countdown").css({
                 "display": "none"
             });
         }
-    }).start();
-
-    $("#countdown").countdown360().stop();
+    }).stop();
 
     var $draggable = $('.draggable').draggabilly({
         // options...

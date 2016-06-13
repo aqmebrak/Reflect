@@ -25,20 +25,15 @@
                     );
                 });
 
-                if(name=='countdown'){
+                if (name == 'countdown') {
+                    $("#countdown").countdown360().stop();
                     $("#countdown").countdown360().start();
-                    setTimeout(function(){
-                        $("#" + name).css({
-                            "display": "block"
-                        });
-                    }, 450);
                 }
                 //display the widget
-                else{
-                    $("#" + name).css({
-                        "display": "block"
-                    });
-                }
+                $("#" + name).css({
+                    "display": "block"
+                });
+                
             });
     }
 </script>
