@@ -1,1 +1,17 @@
-{"user":[{"id":1,"lastname":"jdbs","firstname":"Jea"}]}
+{
+  "1": {
+    "lastname": "loll",
+    "firstname": "LOL",
+    "patternLock": ""
+  },
+  "2": {
+    "lastname": "Demo",
+    "firstname": "Test",
+    "patternLock": ""
+  },
+  "3": {
+    "lastname": "le fdp",
+    "firstname": "FDP",
+    "patternLock": "123456789"
+  }
+}
