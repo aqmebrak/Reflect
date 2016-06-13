@@ -13,6 +13,7 @@
         color: white;
         font-size: x-large;
         font-weight: bold;
+        padding: 0.5%;
     }
 </style>
 

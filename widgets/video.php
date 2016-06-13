@@ -1,4 +1,4 @@
-<div id="video" class="widget grabbable draggable">
+<div id="video" class="widget grabbable draggable hvr-glow">
     <div id="player"></div>
 </div>
 
