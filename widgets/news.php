@@ -1,4 +1,4 @@
-<div id="news" class="draggable grabbable widget">
+<div id="news" class="draggable grabbable widget hvr-glow">
     <marquee scrollamount="10"></marquee>
 </div>
 

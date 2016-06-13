@@ -54,7 +54,7 @@ function getBorder(currentWidget){
     if(currentWidget=="weather")
         div="#insideWeather";
     else if (currentWidget=="clock")
-        div=".jcgmt-digital";
+        div="#clock";
     else if (currentWidget=="news")
         div="#news";
     else if (currentWidget=="traffic")
