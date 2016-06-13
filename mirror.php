@@ -3,7 +3,6 @@ session_start();
 if (!isset($_SESSION['uid']))
     $_SESSION['uid'] = $_POST['uid'];
 ?>
-<script>var listInformationsDisplayer = [];</script>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -20,6 +19,7 @@ if (!isset($_SESSION['uid']))
     <script src="lib/VideoClient.js?"></script>
     <script src="lib/jquery-ui.js"></script>
     <script src="lib/jquery.countdown360.js"></script>
+    <script src="lib/dragscroll.js"></script>
     <!-- SCRIPTS  JS-  - - -- - - -- - - - --  -- - - - -->
     <script src="js/clock.js"></script>
     <script src="js/video.js"></script>
@@ -39,6 +39,7 @@ if (!isset($_SESSION['uid']))
     <link rel="stylesheet" type="text/css" href="css/animate.css">
     <link rel="stylesheet" href="css/weather-icons-wind.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/hover.css">
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 </head>
@@ -53,8 +54,6 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/traffic.php'); ?>
 <?php include_once('./widgets/weather.php'); ?>
 <?php include_once('./widgets/news.php'); ?>
-<?php include_once('./widgets/informationsDisplayer.php'); ?>
-<?php include_once('./widgets/music.php'); ?>
 <?php include_once('./widgets/video.php'); ?>
 <?php include_once('./widgets/countdown.php'); ?>
 <?php include_once('./widgets/popup.php'); ?>
@@ -64,7 +63,12 @@ if (!isset($_SESSION['uid']))
     <video autoplay="true" id="videoElement"></video>
 </div>
 
-<div id="VideosList"></div>
+<!-- VIDEOS LIST PART -->
+<div id="youtube" class="dragscroll grabbable" style="display: none">
+    <div id="videosList"></div>
+</div>
+<div id="exit" style="display: none"></div>
+
 
 <div id="bottomPanel">
 </div>
