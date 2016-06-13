@@ -96,6 +96,8 @@ $to = $data['traffic']['to']; ?>
         markersArray = [];
     }
 
+    
+    
 </script>
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjTonWpMnclazoTL22ibJOdAPyb4CmaA&signed_in=true&callback=initMap"
