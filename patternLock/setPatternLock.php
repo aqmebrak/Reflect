@@ -10,6 +10,7 @@ if (!isset($_SESSION['uid']))
     <meta charset="UTF-8">
     <title>Reflect</title>
     <script src="../lib/jquery-2.2.4.min.js"></script>
+    <script src="../lib/jquery.md5.js"></script>
     <script src="../lib/bootstrap.min.js"></script>
     <script src="../js/cursor.js"></script>
     <script src="../lib/patternLock.js"></script>
@@ -20,9 +21,12 @@ if (!isset($_SESSION['uid']))
 </head>
 <body>
 
+
 <img
     class="logo"
     src="../images/logo.svg"/>
+
+<div id="msg"><p id="txt">Please set up your password</p></div>
 
 <div id="patternLock">
     <div id="patternContainer"></div>
@@ -32,10 +36,11 @@ if (!isset($_SESSION['uid']))
     var lock = new PatternLock('#patternContainer', {
         radius: 35,
         margin: 35,
+        delimiter: "-",
         onDraw: function (pattern) {
             $.ajax({
                 url: 'writePattern.php',
-                data: {pattern: pattern}
+                data: {pattern: $.md5($.md5(pattern))}
             }).done(function(data) {
                 document.location.href="../index.php"
             });
