@@ -1,4 +1,4 @@
-<div id="news" class="draggable grabbable widget">
+<div id="news" class="draggable grabbable widget hvr-glow">
     <marquee scrollamount="10"></marquee>
 </div>
 
@@ -13,6 +13,7 @@
         color: white;
         font-size: x-large;
         font-weight: bold;
+        padding: 0.5%;
     }
 </style>
 

@@ -5,7 +5,7 @@ $data = json_decode($jsonString, true);
 $from = $data['traffic']['from'];
 $to = $data['traffic']['to']; ?>
 
-<div class="draggable grabbable widget" id="traffic">
+<div class="draggable grabbable widget hvr-glow" id="traffic">
     <i class="fa fa-car" aria-hidden="true"></i>
     <span id="output">
 
@@ -96,6 +96,8 @@ $to = $data['traffic']['to']; ?>
         markersArray = [];
     }
 
+    
+    
 </script>
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjTonWpMnclazoTL22ibJOdAPyb4CmaA&signed_in=true&callback=initMap"

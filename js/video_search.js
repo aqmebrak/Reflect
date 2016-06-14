@@ -17,45 +17,28 @@ function searchVideosByQuery(query) {
     request.execute(function (response) {
         // var str = JSON.stringify(response.result);
         displayVideosListInHtml(response.items);
-        createReturnBackButton();
+        //createReturnBackButton();
     });
 }
 
 /* Quand on clique sur l'icone maquillage */
 function displayVideosListInHtml(jsonList) {
-
-    var videoList = document.getElementById("VideosList");
-    videoList.style.display = "block";
-
-    var list = document.createElement("ul");
-    list.className = "videoPanel";
-
-
+    
+    var elem ="";
     for (var i = 0; i < jsonList.length; i++) {
-        var li = document.createElement("li");
-
-        var img = document.createElement("img");
-
-        img.setAttribute("src", jsonList[i].snippet.thumbnails.medium.url);
-        img.setAttribute("height", "100%");
-        //video.innerHTML = "lol";
-        var description = document.createElement("div");
-        description.innerHTML = "<span>" + jsonList[i].snippet.title + "</span>";
-        description.innerHTML += "<span>Author : " + jsonList[i].snippet.channelTitle + "</span>";
-
-
-        li.setAttribute("onclick", "selectVideoFromList('" + jsonList[i].id.videoId + "')");
-
-        li.appendChild(img);
-        li.appendChild(description);
-
-
-        list.appendChild(li);
+        var func = "selectVideoFromList('" + jsonList[i].id.videoId + "')";
+        elem += "<div onclick="+func+">";
+        elem += "<img src='"+jsonList[i].snippet.thumbnails.medium.url +"'>";
+        elem += "<p id='title'>" + jsonList[i].snippet.title + "</p>";
+        elem += "<p id='author'> By " + jsonList[i].snippet.channelTitle + "</p></div>";
     }
-    videoList.appendChild(list);
-
-    createReturnBackButton();
-    document.getElementById("rightPanel").style.display = "none";
+    $("#videosList").html(elem);
+    $("#youtube").css("display","block");
+    $("#exit").css("display","block");
+    $("#exit").click(function() {
+        $("#youtube").css("display","none");
+        $("#exit").css("display","none");
+    });
 }
 
 function displayVideo() {
@@ -101,36 +84,9 @@ function selectVideoFromList(videoId) {
     }
     displayVideo();
     launchVideo();
-    document.getElementById("VideosList").style.display = "none";
+    document.getElementById("youtube").style.display = "none";
+    document.getElementById("exit").style.display = "none";
     document.getElementById("rightPanel").style.display = "block";
-
-
 }
-
-/*Cree un bouton de retour qui ferme la liste de videos et reouvre le menu a droite */
-function createReturnBackButton() {
-
-    var videoList = document.getElementById("VideosList");
-    var div = document.createElement("div");
-
-    div.setAttribute("id", "returnBackButton");
-
-    div.setAttribute("onclick", "showRightPanelAndHideReturnBackButton()");
-
-    videoList.appendChild(div);
-}
-
-function showRightPanelAndHideReturnBackButton() {
-    var rightPanel = document.getElementById("rightPanel");
-    rightPanel.style.display = "block";
-
-    var returnBackButton = document.getElementById("returnBackButton");
-    returnBackButton.style.display = "none";
-
-    document.getElementById("VideosList").style.display = "none";
-
-}
-
-
 
 

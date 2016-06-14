@@ -31,7 +31,7 @@ video#videoElement {
 }
 
 /* css pour la liste de vid�os */
-#VideosList ul {
+/*#videosList ul {
     margin-top: -0.2%;
     padding-top: 2%;
     width: 80%;
@@ -43,41 +43,83 @@ video#videoElement {
     height: 90%;
     border-radius: 7px;
     border: medium solid white;
-}
+}*/
 
-#VideosList ul li {
+/*#videosList ul li {
     float: left;
     color: black;
     height: 30%;
-    /*padding-left:1%;*/
     padding-bottom: 1%;
-    width: 320px; /*taille des vignettes youtube*/
+    width: 320px;
     margin: 1em 1em 10%;
-}
+}*/
 
-#VideosList ul li:hover div {
+/*#videosList ul li:hover div {
     background-color: #D96459;
-}
+}*/
 
-#VideosList ul li span {
+/*#videosList ul li span {
     display: block;
     width: 100%
 
+}*/
+
+#youtube {
+    width: 90%;
+    height: 70%;
+    background-color: white;
+    margin-left: auto;
+    margin-right: auto;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%, -20%);
 }
 
-#returnBackButton {
-    border-radius: 7px;
-    border: medium solid white;
-    position: fixed;
-    width: 16%;
-    margin-left: 81%;
-    z-index: 10;
-    height: 93%;
-    background: url(../images/previous.png) no-repeat center center;
-    background-size: 50% 20%;
-
+#videosList {
+    position: relative;
+    white-space: nowrap;
 }
 
-#returnBackButton:hover {
-    background-color: #D96459;
+#videosList div {
+    margin: 5%;
+    vertical-align: top;
+    display: inline-block;
+    width: 320px;
+}
+
+#videosList div:hover {
+    background-color: tomato;
+}
+
+#videosList p {
+    margin: 0;
+    max-width: 320px;
+    white-space: normal;
+}
+
+#title {
+    font-weight: bold;
+}
+
+#author {
+    font-style: italic;
+}
+
+#exit {
+    display: block;
+    width: 90%;
+    height: 20%;
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    background: white url("../images/previous.svg") no-repeat center;
+    border-top: 2px black solid;
+}
+
+#exit:hover {
+    background-color: tomato;
 }

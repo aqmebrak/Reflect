@@ -3,6 +3,9 @@
         <li onclick="searchMaquillageVideos()">
             <img class="smallIconRight" src="images/makeup.svg">
         </li>
+        <li onclick="amazonShopping()">
+            <img class="smallIconRight" src="images/t-shirt-outline.svg">
+        </li>
         <li onclick="redirectConfig()">
             <img class="smallIconRight" src="images/config.svg">
         </li>

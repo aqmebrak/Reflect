@@ -227,8 +227,8 @@ input {
 
 .panel-left-item {
     border-radius: 10px;
-    width: 8vw;
-    height: 8vw;
+    width: 11vw;
+    height: 11vw;
     color: white;
     text-align: center;
     white-space: pre-wrap;
@@ -294,8 +294,8 @@ input {
     display: inline-block;
     color: white;
     padding: 20px 30px;
-    height: 10vw;
-    width: 10vw;
+    height: 11vw;
+    width: 11vw;
     position: absolute;
 }
 
