@@ -27,6 +27,7 @@ function onYouTubeIframeAPIReady() {
 
 // 4. The API will call this function when the video player is ready.
 function onPlayerReady(event) {
+    buildControls();
     event.target.playVideo();
 }
 
@@ -38,4 +39,38 @@ function onPlayerStateChange(event) {
     if (event.data == YT.PlayerState.PLAYING && !done) {
         done = true;
     }
+}
+
+
+function buildControls() {
+    var videoDuration = player.getDuration();
+    $('#time-controls').sGlide({
+        startAt	: 0,
+        pill	: true,
+        width	: 60,
+        colorShift	: ["#e52d27", "#b31217"],
+        showKnob: false,
+        totalRange: [0, videoDuration],
+        drag: changeVideoTime
+    });
+
+    $('#sound-controls').sGlide({
+        startAt	: 0,
+        pill	: true,
+        width	: 60,
+        colorShift	: ["#e52d27", "#b31217"],
+        showKnob: false,
+        totalRange: [0, 100],
+        drag: changeVideoSound
+    });
+}
+
+function changeVideoTime(o) {
+    var time = o.custom;
+    player.seekTo(time,true);
+}
+
+function changeVideoSound(o) {
+    var sound = o.custom;
+    player.setVolume(sound);
 }

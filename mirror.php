@@ -20,6 +20,7 @@ if (!isset($_SESSION['uid']))
     <script src="lib/jquery-ui.js"></script>
     <script src="lib/jquery.countdown360.js"></script>
     <script src="lib/sly.min.js"></script>
+    <script src="lib/jquery.sglide.2.1.2.min.js"></script>
     <!-- SCRIPTS  JS-  - - -- - - -- - - - --  -- - - - -->
     <script src="js/clock.js"></script>
     <script src="js/video.js"></script>
@@ -40,6 +41,7 @@ if (!isset($_SESSION['uid']))
     <link rel="stylesheet" href="css/weather-icons-wind.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/videoControls.css">
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 </head>
@@ -71,6 +73,7 @@ if (!isset($_SESSION['uid']))
     <ul class="clearfix"></ul>
 </div>
 <div id="exit" style="display: none"></div>
+
 
 <div id="shopping" class="widget draggable grabbable" style="display: none;">
     <img src="images/shirt.png" id="tshirt"/>

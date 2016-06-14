@@ -16,7 +16,6 @@
 
 #forcecentered {
     width: 90%;
-    background-color: white;
     margin-left: auto;
     margin-right: auto;
     position: absolute;
@@ -24,6 +23,7 @@
     left: 50%;
     transform: translate(-50%, -20%);
     z-index: 20;
+    background: rgba(255,255,255,0.9);
 }
 
 #forcecentered ul {
@@ -58,10 +58,10 @@
     width: 90%;
     height: 20%;
     position: absolute;
-    top: 70%;
+    top: 80%;
     left: 50%;
-    transform: translate(-50%, -70%);
-    background: white url("../images/previous.svg") no-repeat center;
+    transform: translate(-50%, -80%);
+    background: rgba(255,255,255,0.9) url("../images/previous.svg") no-repeat center;
     border-top: 2px black solid;
     z-index: 20;
 }
