@@ -144,12 +144,17 @@ ul li:hover {
 
 
 #videoElement {
-	    -moz-transform: scaleX(-1) !important;
-        -o-transform: scaleX(-1) !important;
-        -webkit-transform: scaleX(-1) !important;
-        transform: scaleX(-1) !important;
-        filter: FlipH !important;
-        -ms-filter: "FlipH" !important;
-		margin-left:-50%;
-		margin-top:-40%;
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+    transform: scale(-1, 1) !important;
+    -moz-transform: scale(-1, 1)!important;
+    -webkit-transform: scale(-1, 1)!important;
+    -o-transform: scale(-1, 1)!important;
+    -khtml-transform: scale(-1, 1)!important;
+    -ms-transform: scale(-1, 1)!important;
 }

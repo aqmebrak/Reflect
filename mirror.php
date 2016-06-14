@@ -62,7 +62,6 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/countdown.php'); ?>
 <?php include_once('./widgets/popup.php'); ?>
 
-
 <div id="container">
     <video autoplay="true" id="videoElement"></video>
 </div>
