@@ -19,7 +19,7 @@ if (!isset($_SESSION['uid']))
     <script src="lib/VideoClient.js?"></script>
     <script src="lib/jquery-ui.js"></script>
     <script src="lib/jquery.countdown360.js"></script>
-    <script src="lib/dragscroll.js"></script>
+    <script src="lib/sly.min.js"></script>
     <!-- SCRIPTS  JS-  - - -- - - -- - - - --  -- - - - -->
     <script src="js/clock.js"></script>
     <script src="js/video.js"></script>
@@ -62,14 +62,13 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/countdown.php'); ?>
 <?php include_once('./widgets/popup.php'); ?>
 
-
 <div id="container">
     <video autoplay="true" id="videoElement"></video>
 </div>
 
 <!-- VIDEOS LIST PART -->
-<div id="youtube" class="dragscroll grabbable" style="display: none">
-    <div id="videosList"></div>
+<div id="forcecentered" class="frame grabbable" style="display: none">
+    <ul class="clearfix"></ul>
 </div>
 <div id="exit" style="display: none"></div>
 
