@@ -4,7 +4,7 @@ if (isset($_POST['firstname'])) {
     $s = file_get_contents("database/users.json");
     $data = json_decode($s, true);
     $alreadyExists = false;
-    foreach ($data['user'] as $u) {
+    foreach ($data as $u) {
         if ($_POST['firstname'] == $u['firstname']) {
             $alreadyExists = true;
             break;
@@ -14,17 +14,16 @@ if (isset($_POST['firstname'])) {
         header('Location: createUser.php?error=true');
     } else {
         //find a new id to give to new user
-        $s = file_get_contents("database/users.json");
-        $data = json_decode($s, true);
         $id = 0;
-        foreach ($data['user'] as $u) {
-            $id = $u['id'];
+        foreach ($data as $key => $value) {
+            $id = $key;
         }
         $id++;
 
         //fill the users.json file
-        $newUser = array('id' => $id, 'lastname' => $_POST['lastname'], 'firstname' => $_POST['firstname'], 'patternLock' => '');
-        array_push($data['user'], $newUser);
+        $detail = array('lastname' => $_POST['lastname'], 'firstname' => $_POST['firstname'], 'patternLock' => '');
+        $newUser = array($id => $detail);
+        $data+=$newUser;
         $newJsonString = json_encode($data);
         file_put_contents('database/users.json', $newJsonString);
 

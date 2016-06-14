@@ -26,10 +26,28 @@ body {
 
 .logo {
     display: block;
-    width: 30%;
+    width:20%;
     padding-top: 2%;
     padding-bottom: 2%;
     margin: auto
+}
+
+#txt{
+    padding:1%;
+    font-size: 150%;
+    color: #404040;
+}
+
+#msg {
+    margin-left:auto;
+    margin-right:auto;;
+    text-align: center;
+    width: 25%;
+
+    background: #f4f4f4;
+    border-radius: 7px;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1px 1px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 #patternLock {

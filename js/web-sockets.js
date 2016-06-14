@@ -1,17 +1,12 @@
 ﻿window.onload = function () {
     var status = document.getElementById("status");
     var canvas = document.getElementById("canvas");
-    var buttonColor = document.getElementById("color");
-    var buttonDepth = document.getElementById("depth");
     var timer = 0;
 
-    var camera = new Image();
 
     if (!window.WebSocket) {
         return;
     }
-
-
     // Initialize a new web socket.
     var socket = new WebSocket("ws://localhost:8181");
 
@@ -43,7 +38,7 @@
                     else if (joint.name == "handleft") {
                         handLeft.coordX = joint.x;
                     }
-                    console.log("RX:" + handRight.coordX + " LX" + handLeft.coordX + "\n");
+                    //console.log("RX:" + handRight.coordX + " LX" + handLeft.coordX + "\n");
 
                     if (handLeft.coordX != 0 && handRight.coordX != 0) {
                         if (handLeft.coordX <= handRight.coordX + 30 && handLeft.coordX >= handRight.coordX - 30) {
@@ -53,6 +48,7 @@
                                 timer = 0;
                                 document.getElementsByTagName('audio')[0].play();
                                 console.log("===============================================");
+                                clearWidgets();
                             }
                         }
                     }
@@ -60,5 +56,23 @@
             }
         }
     };
-
 };
+
+function clearWidgets() {
+    $.getJSON("database/widgets.json", function (data) {
+
+        //retreive original top & left values
+        $.each(data, function (key, val) {
+            $.ajax({
+                url: 'widgetsPosition/dispWidget.php',
+                //je regarde le fichier widgets.json
+                //pour chaque widget, metre currentWidgett
+                data: {currentWidget: key, disp: false}
+            });
+            $("#" + key).css({
+                    "display": "none"
+                }
+            );
+        });
+    });
+}

@@ -1,2 +1,3 @@
 .idea
 /database/users.json
+/database/[0-9].json

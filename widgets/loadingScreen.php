@@ -8,10 +8,8 @@
 $jsonString = file_get_contents('database/users.json');
 $data = json_decode($jsonString, true);
 
-foreach($data['user'] as $elem) {
-    if($elem['id'] == $_SESSION['uid'])
-        $firstName = $elem['firstname'];
-}
+$firstName = $data[$_SESSION['uid']]['firstname'];
+
 ?>
 
 <!---------------------------------------------------->
