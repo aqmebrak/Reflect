@@ -73,6 +73,9 @@ if (!isset($_SESSION['uid']))
 </div>
 <div id="exit" style="display: none"></div>
 
+<div id="shopping" class="widget draggable grabbable" style="display: none;">
+    <img src="images/shirt.png" id="tshirt"/>
+</div>
 
 <div id="bottomPanel">
 </div>

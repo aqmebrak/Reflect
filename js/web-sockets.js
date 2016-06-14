@@ -22,8 +22,10 @@
     socket.onmessage = function (event) {
         if (typeof event.data === "string") {
             // SKELETON DATA
-            var handRight = {coordX: 0};
-            var handLeft = {coordX: 0};
+            var handRight = {X: 0};
+            var handLeft = {X: 0};
+            var shoulderLeft = {X: 0};
+            var shoulderRight = {X: 0};
 
             // Get the data in JSON format.
             var jsonObject = JSON.parse(event.data);
@@ -33,24 +35,46 @@
                 for (var j = 0; j < jsonObject.skeletons[i].joints.length; j++) {
                     var joint = jsonObject.skeletons[i].joints[j];
                     if (joint.name == "handright") {
-                        handRight.coordX = joint.x;
+                        handRight.X = joint.x;
                     }
                     else if (joint.name == "handleft") {
-                        handLeft.coordX = joint.x;
+                        handLeft.X = joint.x;
                     }
-                    //console.log("RX:" + handRight.coordX + " LX" + handLeft.coordX + "\n");
+                    else if (joint.name == "shoulderleft") {
+                        shoulderLeft.X = joint.x;
+                    }
+                    else if (joint.name == "shoulderright") {
+                        shoulderRight.X = joint.x;
+                    }
+                    //console.log("RX:" + handRight.X + " LX" + handLeft.X + "\n");
 
-                    if (handLeft.coordX != 0 && handRight.coordX != 0) {
-                        if (handLeft.coordX <= handRight.coordX + 30 && handLeft.coordX >= handRight.coordX - 30) {
+                    //////////////SUPPRIMER WIDGETS/////////////////////////
+                    if (handLeft.X != 0 && handRight.X != 0) {
+                        if (handLeft.X <= handRight.X + 30 && handLeft.X >= handRight.X - 30) {
                             timer++;
-                            console.log("\n" + timer);
-                            if (timer >= 300) {
+                            //console.log("\n" + timer);
+                            if (timer >= 500) {
                                 timer = 0;
                                 document.getElementsByTagName('audio')[0].play();
                                 console.log("===============================================");
                                 clearWidgets();
                             }
                         }
+                    }
+                    ///////////////VETEMENTS/////////////////////////
+                    if (shoulderRight.X != 0 && shoulderLeft.X != 0) {
+                        var diff = shoulderLeft.X - shoulderRight.X;
+                        //console.log(Math.abs(diff));
+                        diff = Math.abs(diff);
+                        var tshirt = document.getElementById('tshirt');
+                        var shopping = document.getElementById('shopping');
+
+                        var size = diff * 4;
+                        tshirt.style.width = '' + size + 'px';
+                        tshirt.style.height = '' + size + 'px';
+                        //console.log('width' + tshirt.width);
+                        shopping.style.left = '' + (shoulderLeft.X * 1.2) + 'px';
+                        console.log('LEFT' + shopping.style.left);
                     }
                 }
             }
@@ -75,4 +99,14 @@ function clearWidgets() {
             );
         });
     });
+}
+
+function amazonShopping() {
+    console.log("triggered");
+    if (document.getElementById('shopping').style.display == 'none') {
+        document.getElementById('shopping').style.display = 'block';
+    }
+    else {
+        document.getElementById('shopping').style.display = 'none';
+    }
 }

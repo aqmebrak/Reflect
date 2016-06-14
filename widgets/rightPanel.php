@@ -4,7 +4,7 @@
             <img class="smallIconRight" src="images/makeup.svg">
         </li>
         <li onclick="amazonShopping()">
-            <img class="smallIconRight" src="images/t-shirt-outline.svg">
+            <img class="smallIconRight" src="images/shirt.png">
         </li>
         <li onclick="redirectConfig()">
             <img class="smallIconRight" src="images/config.svg">
