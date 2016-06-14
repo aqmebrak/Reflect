@@ -30,83 +30,49 @@ video#videoElement {
     background-size: cover;
 }
 
-/* css pour la liste de vid�os */
-/*#videosList ul {
-    margin-top: -0.2%;
-    padding-top: 2%;
-    width: 80%;
-    padding-left: 0;
-    background-color: white;
-    position: fixed;
-    z-index: 10;
-    list-style-type: none;
-    height: 90%;
-    border-radius: 7px;
-    border: medium solid white;
-}*/
 
-/*#videosList ul li {
-    float: left;
-    color: black;
-    height: 30%;
-    padding-bottom: 1%;
-    width: 320px;
-    margin: 1em 1em 10%;
-}*/
 
-/*#videosList ul li:hover div {
-    background-color: #D96459;
-}*/
 
-/*#videosList ul li span {
-    display: block;
-    width: 100%
 
-}*/
 
-#youtube {
+#forcecentered {
     width: 90%;
-    height: 70%;
     background-color: white;
     margin-left: auto;
     margin-right: auto;
-    overflow-x: scroll;
-    overflow-y: hidden;
     position: absolute;
     top: 20%;
     left: 50%;
     transform: translate(-50%, -20%);
+    z-index: 20;
 }
 
-#videosList {
-    position: relative;
+#forcecentered ul {
     white-space: nowrap;
 }
 
-#videosList div {
-    margin: 5%;
-    vertical-align: top;
+#forcecentered ul li {
     display: inline-block;
-    width: 320px;
+    vertical-align: top;
+    margin: 1%;
 }
 
-#videosList div:hover {
-    background-color: tomato;
-}
-
-#videosList p {
+#forcecentered ul li p {
     margin: 0;
     max-width: 320px;
     white-space: normal;
 }
 
-#title {
+.title {
     font-weight: bold;
 }
 
-#author {
+.author {
     font-style: italic;
 }
+
+
+
 
 #exit {
     display: block;
@@ -115,11 +81,12 @@ video#videoElement {
     position: absolute;
     top: 70%;
     left: 50%;
-    transform: translate(-50%, -20%);
+    transform: translate(-50%, -70%);
     background: white url("../images/previous.svg") no-repeat center;
     border-top: 2px black solid;
+    z-index: 20;
 }
 
 #exit:hover {
-    background-color: tomato;
+    background-color: #a03232;
 }

@@ -100,13 +100,9 @@ body {
 
 /* Change the link color on hover */
 ul li:hover {
-    background-color: #D96459;
+    background-color: #a03232;
     color: white;
     text-decoration: none;
-}
-
-.active {
-    background-color: #8C4646;
 }
 
 
