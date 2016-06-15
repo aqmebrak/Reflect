@@ -11,7 +11,7 @@ function searchVideosByQuery(query) {
 
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        maxResults: 8,
+        maxResults: 50,
         q: query
     });
     request.execute(function (response) {
@@ -53,9 +53,9 @@ function displayVideosListInHtml(jsonList) {
             $frame.sly({
                 horizontal: 1,
                 itemNav: 'forceCentered',
-                smart: 1,
+                smart: 0,
                 activateMiddle: 0,
-                activateOn: 'click',
+                activateOn: 'mouseenter',
                 mouseDragging: 1,
                 touchDragging: 1,
                 releaseSwing: 1,
@@ -117,7 +117,6 @@ function selectVideoFromList(videoId) {
     launchVideo();
     document.getElementById("forcecentered").style.display = "none";
     document.getElementById("exit").style.display = "none";
-    document.getElementById("rightPanel").style.display = "block";
 }
 
 
