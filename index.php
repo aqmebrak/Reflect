@@ -29,7 +29,6 @@ if (isset($_SESSION['uid'])) {
 </div>
 <button onclick="location.href = 'createUser.php';" class="create-button">Create new profile</button>
 
-
 <script>
     printUsers();
 </script>

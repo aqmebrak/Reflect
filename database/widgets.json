@@ -40,5 +40,10 @@
     "display": false,
     "left": "1001px",
     "top": "275px"
+  },
+  "agenda": {
+    "display": false,
+    "left": "1001px",
+    "top": "275px"
   }
 }

@@ -20,11 +20,15 @@ if (!isset($_SESSION['uid']))
     <script src="lib/jquery-ui.js"></script>
     <script src="lib/jquery.countdown360.js"></script>
     <script src="lib/dragscroll.js"></script>
+    <script src="lib/jquery-dateFormat.js"></script>
+    <script src="lib/moment.js"></script>
+
     <!-- SCRIPTS  JS-  - - -- - - -- - - - --  -- - - - -->
     <script src="js/clock.js"></script>
     <script src="js/video.js"></script>
     <script src="js/video_search.js"></script>
     <script src="js/weather.js"></script>
+    <script src="js/agenda.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/humanize.js"></script>
     <script src="js/web-sockets.js"></script>
@@ -32,6 +36,7 @@ if (!isset($_SESSION['uid']))
     <!-- CSS - - - - - - - - - -- - - - - - - - - - - - -->
     <link href="css/mirror.css" rel="stylesheet">
     <link href="css/traffic.css" rel="stylesheet">
+    <link href="css/agenda.css" rel="stylesheet">
     <link rel="stylesheet" href="css/jClocksGMT.css">
     <link rel="stylesheet" href="css/weather.css">
     <link rel="stylesheet" href="css/video.css">
@@ -60,8 +65,9 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/news.php'); ?>
 <?php include_once('./widgets/video.php'); ?>
 <?php include_once('./widgets/countdown.php'); ?>
+<?php include_once('./widgets/agenda.php'); ?>
 <?php include_once('./widgets/popup.php'); ?>
-
+<script>console.log(moment().endOf('day').format());</script>
 <div id="container">
     <video autoplay="true" id="videoElement"></video>
 </div>

@@ -15,12 +15,12 @@
 
 </head>
 <body>
-
 <ul class="panel-left">
     <li class="panel-left-item cloud hvr-glow"><a href="weather-config.php"><span>Configure the weather</span></a></li>
     <li class="panel-left-item time hvr-glow"><a href="clock-config.php"><span>Configure the time</span></a></li>
     <li class="panel-left-item rss hvr-glow"><a href="news-config.php"><span>Configure the newsfeed</span></a></li>
     <li class="panel-left-item car hvr-glow"><a href="traffic-config.php"><span>Configure the traffic</span></a></li>
+    <li class="panel-left-item agenda hvr-glow"><a href="agenda-config.php"><span>Configure the agenda</span></a></li>
     <li class="panel-left-item exit hvr-glow"><a href="../mirror.php"><span>Exit</span></a></li>
 </ul>
 

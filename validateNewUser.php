@@ -21,7 +21,7 @@ if (isset($_POST['firstname'])) {
         $id++;
 
         //fill the users.json file
-        $detail = array('lastname' => $_POST['lastname'], 'firstname' => $_POST['firstname'], 'patternLock' => '');
+        $detail = array('lastname' => $_POST['lastname'], 'firstname' => $_POST['firstname'], 'patternLock' => '', 'token' => '');
         $newUser = array($id => $detail);
         $data+=$newUser;
         $newJsonString = json_encode($data);

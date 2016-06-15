@@ -99,7 +99,13 @@ body {
 }
 
 /* Change the link color on hover */
-ul li:hover {
+#leftPanel ul li:hover {
+    background-color: #D96459;
+    color: white;
+    text-decoration: none;
+}
+
+#rightPanel ul li:hover {
     background-color: #D96459;
     color: white;
     text-decoration: none;
@@ -141,7 +147,6 @@ ul li:hover {
     padding-right:70%;
     width:20%;
 }
-
 
 #videoElement {
     position: fixed;

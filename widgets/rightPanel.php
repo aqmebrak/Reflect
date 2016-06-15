@@ -6,6 +6,9 @@
         <li onclick="amazonShopping()">
             <img class="smallIconRight" src="images/t-shirt-outline.svg">
         </li>
+        <li onclick="displayWidget('agenda')">
+            <img class="smallIconRight" src="images/agenda.svg">
+        </li>
         <li onclick="redirectConfig()">
             <img class="smallIconRight" src="images/config.svg">
         </li>
