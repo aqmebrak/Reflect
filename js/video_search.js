@@ -1,8 +1,14 @@
-function searchMaquillageVideos() {
+function searchVideos() {
     gapi.client.setApiKey('AIzaSyARvwirFktEIi_BTaKcCi9Ja-m3IEJYIRk');
     gapi.client.load('youtube', 'v3', function () {
-
-        searchVideosByQuery('maquillage');
+        $.ajax({
+            url: "widgetsPosition/getUid.php"
+        })
+            .done(function (uid) {
+                $.getJSON("database/" + uid + ".json", function (data) {
+                    searchVideosByQuery(data.video.tag);
+                });
+            });
     });
 }
 
@@ -11,7 +17,7 @@ function searchVideosByQuery(query) {
 
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        maxResults: 50,
+        maxResults: 20,
         q: query
     });
     request.execute(function (response) {

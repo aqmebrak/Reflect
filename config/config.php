@@ -21,6 +21,7 @@
     <li class="panel-left-item time hvr-glow"><a href="clock-config.php"><span>Configure the time</span></a></li>
     <li class="panel-left-item rss hvr-glow"><a href="news-config.php"><span>Configure the newsfeed</span></a></li>
     <li class="panel-left-item car hvr-glow"><a href="traffic-config.php"><span>Configure the traffic</span></a></li>
+    <li class="panel-left-item video hvr-glow"><a href="video-config.php"><span>Configure the videos</span></a></li>
     <li class="panel-left-item exit hvr-glow"><a href="../mirror.php"><span>Exit</span></a></li>
 </ul>
 

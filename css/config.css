@@ -260,6 +260,11 @@ input {
     background-size: 100%;
 }
 
+.panel-left .video {
+    background: url("../images/config-icons/video.svg");
+    background-size: 100%;
+}
+
 .panel-left .exit {
     background: url("../images/config-icons/exit.svg");
     background-size: 100%;
