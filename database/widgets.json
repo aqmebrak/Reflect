@@ -29,13 +29,13 @@
   "video": {
     "display": false,
     "left": "411px",
-    "top": "101px"
+    "top": "101px",
+    "tag": "maquillage"
   },
   "countdown": {
     "display": false,
     "left": "600px",
-    "top": "220px",
-    "tag": "maquillage"
+    "top": "220px"
   },
   "music": {
     "display": false,
