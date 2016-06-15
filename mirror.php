@@ -21,6 +21,7 @@ if (!isset($_SESSION['uid']))
     <script src="lib/jquery.countdown360.js"></script>
     <script src="lib/sly.min.js"></script>
     <script src="lib/jquery.sglide.2.1.2.min.js"></script>
+    <script src="https://w.soundcloud.com/player/api.js"></script>
     <!-- SCRIPTS  JS-  - - -- - - -- - - - --  -- - - - -->
     <script src="js/clock.js"></script>
     <script src="js/video.js"></script>
@@ -57,6 +58,7 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/leftPanel.php'); ?>
 
 <?php include_once('./widgets/clock.php'); ?>
+<?php include_once('./widgets/music.php'); ?>
 <?php include_once('./widgets/traffic.php'); ?>
 <?php include_once('./widgets/weather.php'); ?>
 <?php include_once('./widgets/news.php'); ?>
