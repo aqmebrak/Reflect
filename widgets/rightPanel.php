@@ -1,10 +1,10 @@
 <div id="rightPanel">
     <ul>
-        <li onclick="searchMaquillageVideos()">
-            <img class="smallIconRight" src="images/makeup.svg">
+        <li onclick="searchVideos()">
+            <img class="smallIconRight" src="images/video.svg">
         </li>
         <li onclick="amazonShopping()">
-            <img class="smallIconRight" src="images/t-shirt-outline.svg">
+            <img class="smallIconRight" src="images/shirt_widget.png">
         </li>
         <li onclick="displayWidget('agenda')">
             <img class="smallIconRight" src="images/agenda.svg">

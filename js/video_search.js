@@ -1,8 +1,14 @@
-function searchMaquillageVideos() {
+function searchVideos() {
     gapi.client.setApiKey('AIzaSyARvwirFktEIi_BTaKcCi9Ja-m3IEJYIRk');
     gapi.client.load('youtube', 'v3', function () {
-
-        searchVideosByQuery('maquillage');
+        $.ajax({
+            url: "widgetsPosition/getUid.php"
+        })
+            .done(function (uid) {
+                $.getJSON("database/" + uid + ".json", function (data) {
+                    searchVideosByQuery(data.video.tag);
+                });
+            });
     });
 }
 
@@ -11,7 +17,7 @@ function searchVideosByQuery(query) {
 
     var request = gapi.client.youtube.search.list({
         part: 'snippet',
-        maxResults: 8,
+        maxResults: 20,
         q: query
     });
     request.execute(function (response) {
@@ -23,21 +29,52 @@ function searchVideosByQuery(query) {
 
 /* Quand on clique sur l'icone maquillage */
 function displayVideosListInHtml(jsonList) {
-    
+
     var elem ="";
     for (var i = 0; i < jsonList.length; i++) {
         var func = "selectVideoFromList('" + jsonList[i].id.videoId + "')";
-        elem += "<div onclick="+func+">";
+        elem += "<li onclick="+func+">";
         elem += "<img src='"+jsonList[i].snippet.thumbnails.medium.url +"'>";
-        elem += "<p id='title'>" + jsonList[i].snippet.title + "</p>";
-        elem += "<p id='author'> By " + jsonList[i].snippet.channelTitle + "</p></div>";
+        elem += "<p class='title'>" + jsonList[i].snippet.title + "</p>";
+        elem += "<p class='author'> By " + jsonList[i].snippet.channelTitle + "</p></li>";
     }
-    $("#videosList").html(elem);
-    $("#youtube").css("display","block");
+    $("#forcecentered").find("ul").html(elem);
+    $("#forcecentered").css("display","block");
     $("#exit").css("display","block");
     $("#exit").click(function() {
-        $("#youtube").css("display","none");
-        $("#exit").css("display","none");
+        $("#forcecentered").css("display", "none");
+        $("#exit").css("display", "none");
+    });
+
+    jQuery(function($) {
+        'use strict';
+
+        // -------------------------------------------------------------
+        //   Force Centered Navigation
+        // -------------------------------------------------------------
+        (function() {
+            var $frame = $('#forcecentered');
+
+            // Call Sly on frame
+            $frame.sly({
+                horizontal: 1,
+                itemNav: 'forceCentered',
+                smart: 0,
+                activateMiddle: 0,
+                activateOn: 'mouseenter',
+                mouseDragging: 1,
+                touchDragging: 1,
+                releaseSwing: 1,
+                startAt: 0,
+                scrollBy: 1,
+                speed: 300,
+                elasticBounds: 1,
+                easing: 'easeOutExpo',
+                dragHandle: 1,
+                dynamicHandle: 1,
+                clickBar: 1
+            });
+        }());
     });
 }
 
@@ -84,9 +121,8 @@ function selectVideoFromList(videoId) {
     }
     displayVideo();
     launchVideo();
-    document.getElementById("youtube").style.display = "none";
+    document.getElementById("forcecentered").style.display = "none";
     document.getElementById("exit").style.display = "none";
-    document.getElementById("rightPanel").style.display = "block";
 }
 
 

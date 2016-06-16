@@ -29,7 +29,8 @@
   "video": {
     "display": false,
     "left": "411px",
-    "top": "101px"
+    "top": "101px",
+    "tag": "maquillage"
   },
   "countdown": {
     "display": false,

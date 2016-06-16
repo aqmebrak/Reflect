@@ -1,5 +1,7 @@
 <div id="video" class="widget grabbable draggable hvr-glow">
     <div id="player"></div>
+    <div id="time-controls" class="grabbable"></div>
+    <div id="sound-controls" class="grabbable"></div>
 </div>
 
 <script>

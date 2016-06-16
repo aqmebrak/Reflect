@@ -2,8 +2,8 @@ html, a {
     cursor: url(../images/curs/clicker.cur), pointer;
 }
 
-#rightPanel ul a:active{
-	cursor: url(../images/curs/clicker5.png), pointer !important;
+#rightPanel ul a:active {
+    cursor: url(../images/curs/clicker5.png), pointer !important;
 }
 
 html {
@@ -11,10 +11,10 @@ html {
     overflow-y: hidden;
     overflow-x: hidden;
     -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none;   /* Chrome/Safari/Opera */
-    -khtml-user-select: none;    /* Konqueror */
-    -moz-user-select: none;      /* Firefox */
-    -ms-user-select: none;       /* Internet Explorer/Edge */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
 }
 
@@ -43,7 +43,7 @@ body {
 }
 
 #rightPanel:hover {
-    margin-left:91%;
+    margin-left: 91%;
 }
 
 #rightPanel ul {
@@ -75,7 +75,7 @@ body {
 }
 
 #leftPanel:hover {
-    margin-left:-13%;
+    margin-left: -13%;
 }
 
 #leftPanel ul {
@@ -100,13 +100,13 @@ body {
 
 /* Change the link color on hover */
 #leftPanel ul li:hover {
-    background-color: #D96459;
+    background-color: #a03232;
     color: white;
     text-decoration: none;
 }
 
 #rightPanel ul li:hover {
-    background-color: #D96459;
+    background-color: #a03232;
     color: white;
     text-decoration: none;
 }
@@ -114,7 +114,6 @@ body {
 .active {
     background-color: #8C4646;
 }
-
 
 #bottomPanel {
     overflow: hidden;
@@ -125,6 +124,7 @@ body {
     top: 95%;
     left: 0px;
 }
+
 .widgetIcon {
     background-repeat: no-repeat;
     background-position: center center;
@@ -139,13 +139,13 @@ body {
 }
 
 .smallIconLeft {
-    padding-left:70%;
-    width:20%;
+    padding-left: 70%;
+    width: 20%;
 }
 
 .smallIconRight {
-    padding-right:70%;
-    width:20%;
+    padding-right: 70%;
+    width: 20%;
 }
 
 #videoElement {
@@ -157,9 +157,19 @@ body {
     z-index: -100;
     background-size: cover;
     transform: scale(-1, 1) !important;
-    -moz-transform: scale(-1, 1)!important;
-    -webkit-transform: scale(-1, 1)!important;
-    -o-transform: scale(-1, 1)!important;
-    -khtml-transform: scale(-1, 1)!important;
-    -ms-transform: scale(-1, 1)!important;
+    -moz-transform: scale(-1, 1) !important;
+    -webkit-transform: scale(-1, 1) !important;
+    -o-transform: scale(-1, 1) !important;
+    -khtml-transform: scale(-1, 1) !important;
+    -ms-transform: scale(-1, 1) !important;
+}
+
+#shopping {
+    left: 500px;
+    top: 200px;
+}
+
+#tshirt {
+    width: 100px;
+    height: 100px;
 }

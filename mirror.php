@@ -23,6 +23,9 @@ if (!isset($_SESSION['uid']))
     <script src="lib/jquery-dateFormat.js"></script>
     <script src="lib/moment.js"></script>
 
+    <script src="lib/sly.min.js"></script>
+    <script src="lib/jquery.sglide.2.1.2.min.js"></script>
+    <script src="https://w.soundcloud.com/player/api.js"></script>
     <!-- SCRIPTS  JS-  - - -- - - -- - - - --  -- - - - -->
     <script src="js/clock.js"></script>
     <script src="js/video.js"></script>
@@ -45,6 +48,7 @@ if (!isset($_SESSION['uid']))
     <link rel="stylesheet" href="css/weather-icons-wind.min.css">
     <link rel="stylesheet" href="css/font-awesome.min.css">
     <link rel="stylesheet" href="css/hover.css">
+    <link rel="stylesheet" href="css/videoControls.css">
     <!-- - - - - - - - - - - - - - - - - - - - - - - - - -->
 
 </head>
@@ -60,6 +64,7 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/leftPanel.php'); ?>
 
 <?php include_once('./widgets/clock.php'); ?>
+<?php include_once('./widgets/music.php'); ?>
 <?php include_once('./widgets/traffic.php'); ?>
 <?php include_once('./widgets/weather.php'); ?>
 <?php include_once('./widgets/news.php'); ?>
@@ -67,17 +72,21 @@ if (!isset($_SESSION['uid']))
 <?php include_once('./widgets/countdown.php'); ?>
 <?php include_once('./widgets/agenda.php'); ?>
 <?php include_once('./widgets/popup.php'); ?>
-<script>console.log(moment().endOf('day').format());</script>
+
 <div id="container">
     <video autoplay="true" id="videoElement"></video>
 </div>
 
 <!-- VIDEOS LIST PART -->
-<div id="youtube" class="dragscroll grabbable" style="display: none">
-    <div id="videosList"></div>
+<div id="forcecentered" class="frame grabbable" style="display: none">
+    <ul class="clearfix"></ul>
 </div>
 <div id="exit" style="display: none"></div>
 
+
+<div id="shopping" class="widget draggable grabbable" style="display: none;">
+    <img src="images/shirt.png" id="tshirt"/>
+</div>
 
 <div id="bottomPanel">
 </div>
