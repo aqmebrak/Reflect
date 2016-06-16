@@ -1,0 +1,5 @@
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Client\bin\Kinect.Client.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Client\bin\Kinect.Client.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Client\obj\Debug\Kinect.Client.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Client\obj\Debug\Kinect.Client.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Client\obj\Debug\Kinect.Client.pdb

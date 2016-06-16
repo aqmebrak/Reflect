@@ -1,0 +1,14 @@
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\bin\Debug\Kinect.Server.exe.config
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\obj\x86\Debug\Interop.KinectManagement.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\obj\x86\Debug\Kinect.Server.csproj.ResolveComReference.cache
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\bin\Debug\Kinect.Server.exe
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\bin\Debug\Kinect.Server.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\bin\Debug\Fleck.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\bin\Debug\Microsoft.Kinect.dll
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\bin\Debug\Microsoft.Kinect.xml
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\obj\x86\Debug\Kinect.Server.csprojResolveAssemblyReference.cache
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\obj\x86\Debug\Kinect.Server.exe
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\obj\x86\Debug\Kinect.Server.pdb
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\bin\Debug\Emgu.CV.xml
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\bin\Debug\Emgu.CV.UI.xml
+C:\Users\user\Documents\Visual Studio 2015\Projects\KinectWebSocket\Kinect.Server\bin\Debug\Emgu.Util.xml
