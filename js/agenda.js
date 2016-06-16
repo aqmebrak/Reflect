@@ -2,7 +2,7 @@
  * Check if current user has authorized this application.
  */
 function checkAuthInMirror() {
-    console.log("in function");
+    /*console.log("in function");
     $.ajax({
         url: "widgetsPosition/getUid.php"
     }).done(function (uid) {
@@ -14,31 +14,10 @@ function checkAuthInMirror() {
                         //remove
 
                     }
-                    var revokeUrl = 'https://accounts.google.com/o/oauth2/revoke?token=' + val['token']['access_token'];
-                    $.ajax({
-                        type: 'GET',
-                        url: revokeUrl,
-                        async: false,
-                        contentType: "application/json",
-                        dataType: 'jsonp',
-                        success: function (nullResponse) {
-                            console.log("success")
-                        },
-                        error: function (e) {
-                            console.log(e);
-                        }
-                    });
                 }
             });
         });
-    });
-    /*gapi.auth.authorize(
-     {
-     'client_id': CLIENT_ID,
-     'scope': SCOPES.join(' '),
-     'immediate': true,
-     'cookie_policy': 'single_host_origin'
-     }, loadCalendarApi);*/
+    });*/
     loadCalendarApi();
 
 }
@@ -48,7 +27,8 @@ function checkAuthInMirror() {
  * once client library is loaded.
  */
 function loadCalendarApi() {
-    /*$.ajax({
+    //gapi.auth.signOut();
+    $.ajax({
         url: "widgetsPosition/getUid.php"
     }).done(function (uid) {
         var to = "";
@@ -58,35 +38,11 @@ function loadCalendarApi() {
                     to = val['token'];
                 }
             });
-            //gapi.auth.setToken(to);;
-            //gapi.client.load('calendar', 'v3', listUpcomingEvents);
-        });
-    });*/
-    $.ajax({
-        url: "widgetsPosition/getUid.php"
-    }).done(function (uid) {
-        $.getJSON("database/users.json", function (data) {
-            $.each(data, function (key, val) {
-                if (key == uid) {
-                    console.log("uid : "+uid);
-                    var revokeUrl = 'https://accounts.google.com/o/oauth2/revoke?token=' + val['token']['access_token'];
-                    $.ajax({
-                        type: 'GET',
-                        url: revokeUrl,
-                        async: false,
-                        contentType: "application/json",
-                        dataType: 'jsonp',
-                        success: function (nullResponse) {
-                            console.log("success")
-                        },
-                        error: function (e) {
-                            console.log(e);
-                        }
-                    });
-                }
-            });
+            gapi.auth.setToken(to);;
+            gapi.client.load('calendar', 'v3', listUpcomingEvents);
         });
     });
+
 }
 
 /**
