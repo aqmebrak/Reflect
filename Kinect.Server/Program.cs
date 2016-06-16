@@ -11,6 +11,10 @@ using System.Windows.Media.Imaging;
 using System.Windows;
 using System.Net;
 using System.Threading;
+using System.ServiceModel;
+using System.ServiceModel.Web;
+using Kinect.Service;
+using FaceRecogConsole;
 
 namespace Kinect.Server
 {
@@ -59,7 +63,7 @@ namespace Kinect.Server
         private UserInfo[] userInfos;
 
         //WEBSOCKET/////////////////////////////////////////////////////////////////////////
-        static List<IWebSocketConnection> _clients = new List<IWebSocketConnection>();
+        public static List<IWebSocketConnection> _clients = new List<IWebSocketConnection>();
 
         static Mode _mode = Mode.Color;
 
@@ -67,11 +71,18 @@ namespace Kinect.Server
 
         static CoordinateMapper _coordinateMapper;
 
+        public static FaceRecognizer facerecognizer;
+
+       
+
         static void Main(string[] args)
         {
             Program p = new Program();
             InitializeConnection();
             p.InitilizeKinect();
+            facerecognizer = new FaceRecognizer();
+
+            LauchFaceRecogServer(null);
 
             Console.ReadLine();
         }
@@ -427,5 +438,34 @@ namespace Kinect.Server
             wrGETURL.GetResponse();
 
         }
+
+
+        public static void LauchFaceRecogServer(string[] args)
+        {
+            Console.Write("Starting a WCF self-hosted .Net server... ");
+            string hostname = "localhost";
+            string port = "8282";
+            
+            // Decalring an HTTP Binding and instantiating an host
+            string url = "http://" + hostname + ":" + port;
+
+            WebHttpBinding b = new WebHttpBinding();
+            var host = new WebServiceHost(typeof(KinectFaceRecognizerService), new Uri(url));
+
+            // Adding the service to the host
+            host.AddServiceEndpoint(typeof(IKinectFaceRecognizerService), b, "");
+
+            // Staring the Host server
+            host.Open();
+            Console.WriteLine("done!\n");
+            Console.WriteLine("  Listening to " + hostname + ":" + port + "\n\n");
+            Console.WriteLine("Hit Return to shutdown the server.");
+            Console.ReadLine();
+
+            // Cleaning up and ending the hosting
+            host.Close();
+            Console.WriteLine("Server shutdown complete!");
+        }
+
     }
 }

@@ -41,6 +41,18 @@
     </StartupObject>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Emgu.CV, Version=2.4.10.1939, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Emgu.CV.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.CV.UI, Version=2.4.10.1939, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="Emgu.Util, Version=2.4.10.1939, Culture=neutral, PublicKeyToken=7281126722ab4438, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\Emgu.Util.dll</HintPath>
+    </Reference>
     <Reference Include="Fleck">
       <HintPath>..\packages\Fleck.0.13.0.57\lib\net40\Fleck.dll</HintPath>
     </Reference>
@@ -68,6 +80,9 @@
     <Reference Include="System.Drawing" />
     <Reference Include="System.Net" />
     <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Web.Extensions" />
     <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
@@ -78,10 +93,15 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusinessObjects.cs" />
     <Compile Include="ColorSerializer.cs" />
     <Compile Include="Constants.cs" />
     <Compile Include="DepthSerializer.cs" />
+    <Compile Include="EigenObjectRecognizer.cs" />
+    <Compile Include="FaceRecognizer.cs" />
     <Compile Include="FrameSerializer.cs" />
+    <Compile Include="IKinectFaceRecognizerService.cs" />
+    <Compile Include="KinectFaceRecognizerService.cs" />
     <Compile Include="Mode.cs" />
     <Compile Include="MyCursor.cs" />
     <Compile Include="Program.cs" />
