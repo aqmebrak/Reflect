@@ -73,12 +73,14 @@ namespace Kinect.Server
 
         public static FaceRecognizer facerecognizer;
 
-       
+        //WEBSOCKET CURSOR/////////////////////////////////////////////////////////////////////////
+        public static List<IWebSocketConnection> _clients2 = new List<IWebSocketConnection>();
 
         static void Main(string[] args)
         {
             Program p = new Program();
             InitializeConnection();
+            InitializeConnectionCursor();
             p.InitilizeKinect();
             facerecognizer = new FaceRecognizer();
 
@@ -121,6 +123,32 @@ namespace Kinect.Server
                 };
             });
         }
+
+
+        private static void InitializeConnectionCursor()
+        {
+            var server2 = new WebSocketServer("ws://0.0.0.0:8484");
+
+            server2.Start(socket2 =>
+            {
+                socket2.OnOpen = () =>
+                {
+                    _clients2.Add(socket2);
+                };
+
+                socket2.OnClose = () =>
+                {
+                    _clients2.Remove(socket2);
+                };
+
+                socket2.OnMessage = message =>
+                {
+                    
+                   
+                };
+            });
+        }
+
 
         private void InitilizeKinect()
         {
@@ -192,6 +220,9 @@ namespace Kinect.Server
 
         private void notifyCursorImageChanged(Skeleton user)
         {
+
+            Console.WriteLine(user.Joints[JointType.HandRight].Position.X);
+
             float zShoulder = user.Joints[JointType.ShoulderRight].Position.Z;
             float zHand = user.Joints[JointType.HandRight].Position.Z;
 
@@ -207,33 +238,39 @@ namespace Kinect.Server
 
             if (diff < (MIN_Z_KINECT_BETWEEN_HAND_SHOULDER + pas))
             {
-                sendInfosCursorToMirror("CLICKER");
+                //sendInfosCursorToMirror("CLICKER");
+                sendCursorPos("CLICKER");
                 onclick = false;
             }
             else if (diff < (MIN_Z_KINECT_BETWEEN_HAND_SHOULDER + 2 * pas))
             {
-                sendInfosCursorToMirror("VERY_CLOSE");
+                //sendInfosCursorToMirror("VERY_CLOSE");
+                sendCursorPos("VERY_CLOSE");
                 onclick = false;
             }
             else if (diff < (MIN_Z_KINECT_BETWEEN_HAND_SHOULDER + 3 * pas))
             {
-                sendInfosCursorToMirror("CLOSE");
+                //sendInfosCursorToMirror("CLOSE");
+                sendCursorPos("CLOSE");
                 onclick = false;
             }
             else if (diff < (MIN_Z_KINECT_BETWEEN_HAND_SHOULDER + 4 * pas))
             {
-                sendInfosCursorToMirror("MID");
+                //sendInfosCursorToMirror("MID");
+                sendCursorPos("MID");
                 onclick = true;
             }
             else if (diff < (MIN_Z_KINECT_BETWEEN_HAND_SHOULDER + 5 * pas))
             {
-                sendInfosCursorToMirror("FAR_AWAY");
+                //sendInfosCursorToMirror("FAR_AWAY");
+                sendCursorPos("FAR_AWAY");
                 onclick = true;
             }
             else if (diff < (MIN_Z_KINECT_BETWEEN_HAND_SHOULDER + 6 * pas))
             {
                 onclick = true;
-                sendInfosCursorToMirror("CLIC");
+                //sendInfosCursorToMirror("CLIC");
+                sendCursorPos("CLIC");
                 //Thread.Sleep(30); //pour qu'on ait le temps de changer le curseur avant le vrai clic
                 detectClickRightHand(user);
             }
@@ -466,6 +503,15 @@ namespace Kinect.Server
             host.Close();
             Console.WriteLine("Server shutdown complete!");
         }
+
+        private void sendCursorPos(string pos)
+        {
+            foreach (var socket in _clients2)
+            {
+                socket.Send("{ \"status\" : \""+pos+"\" }");
+            }
+        }
+
 
     }
 }
