@@ -1,4 +1,4 @@
-<div id="weather" class="draggable grabbable widget"></div>
+<div id="weather" class="draggable grabbable widget hvr-glow"></div>
 
 <?php
 $jsonString = file_get_contents('database/' . $_SESSION['uid'] . '.json');
@@ -24,6 +24,7 @@ $degree = $data['weather']['degree'];
             document.cookie = "currentWidget=" + weather;
         })
         .mouseup(function () {
+            document.cookie = "currentWidget=";
             setTimeout(function(){
                 var left = $("#" + weather).css("left");
                 var top = $("#" + weather).css("top");

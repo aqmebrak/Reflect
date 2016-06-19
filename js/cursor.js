@@ -11,9 +11,12 @@ function loopChangeCursor() {
 
 
 function checkAndChangeCursorImage() {
+	
+	checkAndChangeCursorImage.count = (++checkAndChangeCursorImage.count)%100000 || 0; //0 au debut quand ce n'est pas initialise
+	
 	var url = "http://localhost:8080/reflect";
 	
-	$.getJSON(url+"/database/cursor/cursor_status.json", function(json) {
+	$.getJSON(url+"/database/cursor/cursor_status.json?"+checkAndChangeCursorImage.count, function(json) {
 		
 		switch(json.status) {
 			case "CLICKER" : $('html').css("cursor","url("+url+"/images/curs/clicker.cur), pointer"); $('a').css("cursor","url("+url+"/images/curs/clicker.cur), pointer"); break;
@@ -25,6 +28,7 @@ function checkAndChangeCursorImage() {
 			default : $('html').css("cursor","url("+url+"/images/curs/clicker.cur), pointer");$('a').css("cursor","url("+url+"/images/curs/clicker.cur), pointer"); break;
 		}
 		
+		
 	});
 }
 
@@ -32,7 +36,7 @@ function checkAndChangeCursorImage() {
 function redirectConfig() {
 	var millisecondsToWait = 200;
 	setTimeout(function() {
-		document.location.href='http://localhost:8080/reflect/config/weather-config.php';
+		document.location.href='http://localhost:8080/reflect/config/config.php';
 	}, millisecondsToWait);
 	
 }

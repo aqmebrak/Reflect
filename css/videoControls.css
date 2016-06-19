@@ -1,0 +1,13 @@
+#time-controls, #sound-controls {
+    border: white solid medium;
+    margin-right: 0 !important;
+    background-color: rgba(0,0,0,0.7);
+}
+
+#time-controls {
+    float: left;
+}
+
+#sound-controls {
+    width: 30% !important;
+}

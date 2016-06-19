@@ -1,4 +1,4 @@
-<div id="clock" class="grabbable widget draggable"></div>
+<div id="clock" class="grabbable widget draggable hvr-glow"></div>
 
 <?php
 $jsonString = file_get_contents('database/' . $_SESSION['uid'] . '.json');
@@ -23,6 +23,7 @@ $timezone = $data['clock']['timezone'];
             document.cookie = "currentWidget=" + clock;
         })
         .mouseup(function () {
+            document.cookie = "currentWidget=";
             setTimeout(function(){
                 var left = $("#" + clock).css("left");
                 var top = $("#" + clock).css("top");

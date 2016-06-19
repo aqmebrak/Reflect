@@ -2,24 +2,26 @@ html, a {
     cursor: url(../images/curs/clicker.cur), pointer;
 }
 
-#rightPanel ul a:active{
-	cursor: url(../images/curs/clicker5.png), pointer !important;
+#rightPanel ul a:active {
+    cursor: url(../images/curs/clicker5.png), pointer !important;
 }
 
 html {
+    height: 100%;
     overflow-y: hidden;
     overflow-x: hidden;
     -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none;   /* Chrome/Safari/Opera */
-    -khtml-user-select: none;    /* Konqueror */
-    -moz-user-select: none;      /* Firefox */
-    -ms-user-select: none;       /* Internet Explorer/Edge */
+    -webkit-user-select: none; /* Chrome/Safari/Opera */
+    -khtml-user-select: none; /* Konqueror */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
     user-select: none;
 }
 
 body {
     font-family: 'Open Sans', sans-serif;
     margin: 0;
+    height: 100%;
 }
 
 .grabbable:active:hover {
@@ -28,25 +30,26 @@ body {
 
 .widget {
     position: absolute;
+    text-shadow: #000000 1px 1px, #000000 -1px 1px, #000000 -1px -1px, #000000 1px -1px !important;
+
 }
 
 #rightPanel {
     float: right;
-    margin-left: 95%;
+    margin-left: 98%;
     width: 22%;
     position: fixed;
     margin-top: 0%;
 }
 
 #rightPanel:hover {
-    margin-left: 80%;
+    margin-left: 91%;
 }
 
 #rightPanel ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
-
     overflow: auto; /* Enable scrolling if the sidenav has too much content */
 }
 
@@ -54,30 +57,13 @@ body {
     border-radius: 7px;
     border: medium solid white;
     display: block;
-    padding: 20% 0 20% 0;
     text-decoration: none;
     text-align: center;
     color: white;
-    padding-top: 10%;
-    padding-bottom: 10%;
-    height: 100px;
+    padding-top: 9%;
+    padding-bottom: 9%;
+    height: 10%;
     /*width:200px;*/
-}
-
-#rightPanel ul li div {
-    padding-top: 0px;
-    margin-left: 29%;
-    width: 100px;
-    height: 100px;
-}
-
-#rightPanel ul li a {
-    margin-top: 10%;
-    display: block;
-}
-
-#rightPanel ul li div a {
-    margin-top: 0;
 }
 
 #leftPanel {
@@ -89,7 +75,7 @@ body {
 }
 
 #leftPanel:hover {
-    margin-left:-13%;
+    margin-left: -13%;
 }
 
 #leftPanel ul {
@@ -113,8 +99,14 @@ body {
 }
 
 /* Change the link color on hover */
-ul li:hover {
-    background-color: #D96459;
+#leftPanel ul li:hover {
+    background-color: #a03232;
+    color: white;
+    text-decoration: none;
+}
+
+#rightPanel ul li:hover {
+    background-color: #a03232;
     color: white;
     text-decoration: none;
 }
@@ -122,7 +114,6 @@ ul li:hover {
 .active {
     background-color: #8C4646;
 }
-
 
 #bottomPanel {
     overflow: hidden;
@@ -133,26 +124,11 @@ ul li:hover {
     top: 95%;
     left: 0px;
 }
+
 .widgetIcon {
     background-repeat: no-repeat;
     background-position: center center;
     background-size: 100% 100%;
-}
-
-#maquillageIcon {
-    background-image: url(../images/maquillage.png);
-}
-
-#ecrouIcon {
-    background-image: url(../images/ecrou.png);
-}
-
-#exitIcon {
-    background-image: url(../images/exit.png);
-}
-
-#closeIcon {
-    background-image: url(../images/close.png);
 }
 
 #loadingScreen {
@@ -162,7 +138,38 @@ ul li:hover {
     background-color: black;
 }
 
-.smallIcon {
-    padding-left:70%;
-   width:20%;
+.smallIconLeft {
+    padding-left: 70%;
+    width: 20%;
+}
+
+.smallIconRight {
+    padding-right: 70%;
+    width: 20%;
+}
+
+#videoElement {
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    background-size: cover;
+    transform: scale(-1, 1) !important;
+    -moz-transform: scale(-1, 1) !important;
+    -webkit-transform: scale(-1, 1) !important;
+    -o-transform: scale(-1, 1) !important;
+    -khtml-transform: scale(-1, 1) !important;
+    -ms-transform: scale(-1, 1) !important;
+}
+
+#shopping {
+    left: 500px;
+    top: 200px;
+}
+
+#tshirt {
+    width: 100px;
+    height: 100px;
 }

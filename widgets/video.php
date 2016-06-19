@@ -1,5 +1,7 @@
-<div id="video" class="widget grabbable draggable">
+<div id="video" class="widget grabbable draggable hvr-glow">
     <div id="player"></div>
+    <div id="time-controls" class="grabbable"></div>
+    <div id="sound-controls" class="grabbable"></div>
 </div>
 
 <script>
@@ -15,6 +17,7 @@
             document.cookie = "currentWidget=" + video2;
         })
         .mouseup(function () {
+            document.cookie = "currentWidget=";
             setTimeout(function () {
                 var left = $("#" + video2).css("left");
                 var top = $("#" + video2).css("top");

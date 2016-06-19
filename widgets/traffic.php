@@ -5,18 +5,22 @@ $data = json_decode($jsonString, true);
 $from = $data['traffic']['from'];
 $to = $data['traffic']['to']; ?>
 
-<div class="draggable grabbable widget" id="traffic">
-    <div id="output">
-        <i class="fa fa-car" aria-hidden="true"></i>
-    </div>
+<div class="draggable grabbable widget hvr-glow" id="traffic">
+    <i class="fa fa-car" aria-hidden="true"></i>
+    <span id="output">
+
+    </span>
 </div>
 <div id="map" style="display:none;"></div>
 <style>
     #traffic{
-        padding: 1em;
+        padding: 0.5em;
     }
 </style>
 <script>
+    window.setInterval(function () {
+        initMap();
+    }, (60000*3));
     function initMap() {
         var bounds = new google.maps.LatLngBounds;
         var markersArray = [];
@@ -49,6 +53,7 @@ $to = $data['traffic']['to']; ?>
                 var originList = response.originAddresses;
                 var destinationList = response.destinationAddresses;
                 var outputDiv = document.getElementById('output');
+                outputDiv.innerHTML = '';
                 deleteMarkers(markersArray);
 
                 var showGeocodedAddressOnMap = function (asDestination) {
@@ -91,6 +96,8 @@ $to = $data['traffic']['to']; ?>
         markersArray = [];
     }
 
+    
+    
 </script>
 <script
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCPjTonWpMnclazoTL22ibJOdAPyb4CmaA&signed_in=true&callback=initMap"
@@ -106,7 +113,8 @@ $to = $data['traffic']['to']; ?>
             document.cookie = "currentWidget=" + traffic;
         })
         .mouseup(function () {
-            setTimeout(function () {
+            document.cookie = "currentWidget=";
+            setTimeout(function(){
                 var left = $("#" + traffic).css("left");
                 var top = $("#" + traffic).css("top");
                 $.ajax({

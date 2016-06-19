@@ -1,23 +1,20 @@
 <div id="rightPanel">
     <ul>
-        <li onclick="searchMaquillageVideos()">
-            <div id="maquillageIcon" class="widgetIcon">
-            </div>
+        <li onclick="searchVideos()">
+            <img class="smallIconRight" src="images/video.svg">
         </li>
-        <li>
-            <a>Lorem</a>
+        <li onclick="amazonShopping()">
+            <img class="smallIconRight" src="images/shirt_widget.png">
         </li>
-        
-            <li onclick="redirectConfig()">
-                <div id="ecrouIcon" class="widgetIcon">
-                </div>
-            </li>
-        
-        <li>
-            <a href="index.php">
-                <div id="exitIcon" class="widgetIcon">
-                </div>
-            </a>
+        <li onclick="displayWidget('agenda')">
+            <img class="smallIconRight" src="images/agenda.svg">
         </li>
+        <li onclick="redirectConfig()">
+            <img class="smallIconRight" src="images/config.svg">
+        </li>
+        <li onclick="window.location.href = 'index.php';">
+            <img class="smallIconRight" src="images/exit.svg">
+        </li>
+
     </ul>
 </div>

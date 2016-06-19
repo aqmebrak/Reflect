@@ -1,4 +1,4 @@
-<div id="news" class="draggable grabbable">
+<div id="news" class="draggable grabbable widget hvr-glow">
     <marquee scrollamount="10"></marquee>
 </div>
 
@@ -13,6 +13,7 @@
         color: white;
         font-size: x-large;
         font-weight: bold;
+        padding: 0.5%;
     }
 </style>
 
@@ -68,6 +69,7 @@ $final = json_encode($news);
             document.cookie = "currentWidget=" + news;
         })
         .mouseup(function () {
+            document.cookie = "currentWidget=";
             setTimeout(function(){
                 var left = $("#" + news).css("left");
                 var top = $("#" + news).css("top");

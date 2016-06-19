@@ -23,12 +23,11 @@ if (isset($_SESSION['uid'])) {
 
 <img
     class="logo"
-    src="images/logo.png"/>
+    src="images/logo.svg"/>
 <div class="row">
 
 </div>
 <button onclick="location.href = 'createUser.php';" class="create-button">Create new profile</button>
-
 
 <script>
     printUsers();

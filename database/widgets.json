@@ -3,8 +3,8 @@
     "display": true,
     "left": "150px",
     "top": "10px",
-    "degree": "f",
-    "location": "London"
+    "degree": "c",
+    "location": "Valbonne"
   },
   "clock": {
     "display": true,
@@ -14,8 +14,8 @@
   },
   "news": {
     "display": true,
-    "left": "30px",
-    "top": "585px",
+    "left": "150px",
+    "top": "600px",
     "news": "url",
     "url": "http:\/\/www.bfmtv.com\/rss\/societe\/"
   },
@@ -29,6 +29,22 @@
   "video": {
     "display": false,
     "left": "411px",
-    "top": "101px"
+    "top": "101px",
+    "tag": "maquillage"
+  },
+  "countdown": {
+    "display": false,
+    "left": "600px",
+    "top": "220px"
+  },
+  "music": {
+    "display": false,
+    "left": "1001px",
+    "top": "275px"
+  },
+  "agenda": {
+    "display": false,
+    "left": "1001px",
+    "top": "275px"
   }
 }

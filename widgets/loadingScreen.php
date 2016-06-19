@@ -8,10 +8,8 @@
 $jsonString = file_get_contents('database/users.json');
 $data = json_decode($jsonString, true);
 
-foreach($data['user'] as $elem) {
-    if($elem['id'] == $_SESSION['uid'])
-        $firstName = $elem['firstname'];
-}
+$firstName = $data[$_SESSION['uid']]['firstname'];
+
 ?>
 
 <!---------------------------------------------------->
@@ -22,7 +20,7 @@ foreach($data['user'] as $elem) {
         <span></span>
     </div>
     <div id="name" class="fadeIn animated">
-        Bonjour <?php echo $firstName ?>
+        Hi <?php echo $firstName ?>
     </div>
 </div>
 
@@ -46,7 +44,7 @@ foreach($data['user'] as $elem) {
         height: 100%;
         background-color: black;
         position: relative;
-        z-index:1;
+        z-index:15;
     }
 
     #name {

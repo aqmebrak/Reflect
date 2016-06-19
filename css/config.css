@@ -176,6 +176,37 @@ input {
 }
 
 /*******************************************/
+/************** AGENDA PART ***************/
+/*******************************************/
+
+#authorize-div {
+    padding:5%;
+    text-align: center;
+    margin: 0 auto;
+    width: 100%;
+}
+
+#authorize-button{
+    font-size: 16px;
+    font-weight: bold;
+    height: 20%;
+    color: #494d59;
+    text-align: center;
+    text-shadow: 0 1px rgba(255, 255, 255, 0.5);
+    background: #fcfcfc;
+    border: 1px solid;
+    border-color: #d8d8d8 #d1d1d1 #c3c3c3;
+    border-radius: 2px;
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #fefefe, #eeeeee);
+    background-image: -moz-linear-gradient(top, #fefefe, #eeeeee);
+    background-image: -o-linear-gradient(top, #fefefe, #eeeeee);
+    background-image: linear-gradient(to bottom, #fefefe, #eeeeee);
+    -webkit-box-shadow: inset 0 -1px rgba(0, 0, 0, 0.03), 0 1px rgba(0, 0, 0, 0.04);
+    box-shadow: inset 0 -1px rgba(0, 0, 0, 0.03), 0 1px rgba(0, 0, 0, 0.04);
+}
+
+/*******************************************/
 /**************** NEWS PART ****************/
 /*******************************************/
 
@@ -209,63 +240,64 @@ input {
 }
 
 /*******************************************/
-/************* LEFT PANEL PART *************/
+/************* CONFIG NAV PART *************/
 /*******************************************/
 
-.panel-left {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-flow: row wrap;
-    justify-content: center;
+#config-nav {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
 }
 
-.panel-left-item {
+#config-nav ul {
+    white-space: nowrap;
+}
+
+#config-nav ul li {
+    width: 15vw;
+    height: 15vw;
+    display: inline-block;
     border-radius: 10px;
-    width: 8vw;
-    height: 8vw;
-    color: white;
-    text-align: center;
-    white-space: pre-wrap;
     margin: 3vw;
 }
 
-.panel-left a {
-    display: block;
-    width: 100%;
-    height: 100%;
-}
-.panel-left .cloud a {
+.cloud {
     background: url("../images/config-icons/cloud.svg");
     background-size: 100%;
 }
 
-.panel-left .time {
+.time {
     background: url("../images/config-icons/time.svg");
     background-size: 100%;
 }
 
-.panel-left .rss {
+.rss {
     background: url("../images/config-icons/rss.svg");
     background-size: 100%;
 }
 
-.panel-left .car {
+.car {
     background: url("../images/config-icons/car.svg");
     background-size: 100%;
 }
 
-.panel-left .exit {
+.agenda {
+    background: url("../images/config-icons/agenda.svg");
+    background-size: 100%;
+}
+
+.video {
+    background: url("../images/config-icons/video.svg");
+    background-size: 100%;
+}
+
+.exit {
     background: url("../images/config-icons/exit.svg");
     background-size: 100%;
 }
 
-.panel-left span {
+#config-nav span {
     display: none;
 }
 
@@ -280,6 +312,10 @@ input {
     line-height: 10vw;
     font-family: 'Kanit', sans-serif;
     font-size: 7vw;
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none;   /* Chrome/Safari/Opera */
+    -moz-user-select: none;      /* Firefox */
+    -ms-user-select: none;       /* Internet Explorer/Edge */
 }
 
 /*******************************************/
@@ -294,8 +330,8 @@ input {
     display: inline-block;
     color: white;
     padding: 20px 30px;
-    height: 10vw;
-    width: 10vw;
+    height: 11vw;
+    width: 11vw;
     position: absolute;
 }
 

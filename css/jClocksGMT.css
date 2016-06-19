@@ -33,19 +33,13 @@
     height:100px;
 }
 .jcgmt-digital{
-    border-radius:7px;
-    border-style:solid;
-    border-width: 3px;
-    border-color:white;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    padding-left: 10px;
-    padding-right: 10px;
+    border: 0;
+    padding: 5px 10px;
     font-weight:bold;
     font-size: 40px;
     color: white;
     text-align:center;
-    margin-left:8px;
+    margin: 0;
 }
 .jcgmt-date {
     font-weight:bold;
@@ -53,4 +47,9 @@
     color: white;
     text-align:center;
     margin-left:8px;
+}
+
+#clock{
+    border-radius:7px;
+    border: white solid medium;
 }
